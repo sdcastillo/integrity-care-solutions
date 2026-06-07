@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrity Care Solutions, Inc. | Trade Skills Training</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading-font { font-family: 'Space Grotesk', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(15, 118, 110, 0.85), rgba(15, 118, 110, 0.85)), 
+                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        }
+        .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+    </style>
+</head>
+<body class="bg-zinc-50 text-zinc-800">
+    <!-- Navbar -->
+    <nav class="bg-white border-b sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-x-3">
+                <div class="w-10 h-10 bg-teal-700 rounded-xl flex items-center justify-center text-white font-bold text-2xl">ICS</div>
+                <span class="heading-font text-2xl font-semibold tracking-tight text-teal-800">Integrity Care</span>
+            </div>
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#programs" class="hover:text-teal-700">Programs</a>
+                <a href="#" class="hover:text-teal-700">For Students</a>
+                <a href="#" class="hover:text-teal-700">Employers</a>
+                <a href="#" class="hover:text-teal-700">About</a>
+            </div>
+            <div class="flex gap-x-4">
+                <a href="#" class="px-5 py-2.5 text-sm font-semibold border border-teal-700 text-teal-700 hover:bg-teal-50 rounded-2xl">Apply Now</a>
+                <a href="#" class="px-6 py-2.5 bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold rounded-2xl">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg text-white py-24 md:py-32">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white/20 px-4 py-1.5 rounded-3xl text-sm mb-6">
+                <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                Now Enrolling Summer 2026
+            </div>
+            <h1 class="heading-font text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-6">
+                Build a Skilled Future.<br>
+                <span class="text-teal-200">With Integrity.</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-xl text-white/90 mb-10">
+                Integrity Care Solutions, Inc. — Nonprofit hands-on trade skills training in Western Massachusetts.
+            </p>
+            <a href="#programs" class="inline-flex items-center gap-x-3 bg-white text-teal-800 font-semibold text-lg px-10 py-5 rounded-3xl hover:bg-white/90">
+                Explore Programs →
+            </a>
+        </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="py-20 bg-zinc-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading-font text-5xl font-semibold text-center mb-12">In-Demand Trade Programs</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl overflow-hidden card-hover">
+                    <div class="h-56 bg-[url('https://picsum.photos/id/201/800/600')] bg-cover"></div>
+                    <div class="p-8"><h3 class="text-2xl font-semibold mb-3">Electrical & Renewable Energy</h3><p>Solar installation, wiring, smart home tech.</p></div>
+                </div>
+                <div class="bg-white rounded-3xl overflow-hidden card-hover">
+                    <div class="h-56 bg-[url('https://picsum.photos/id/251/800/600')] bg-cover"></div>
+                    <div class="p-8"><h3 class="text-2xl font-semibold mb-3">HVAC & Plumbing</h3><p>Heating, cooling, and plumbing systems.</p></div>
+                </div>
+                <div class="bg-white rounded-3xl overflow-hidden card-hover">
+                    <div class="h-56 bg-[url('https://picsum.photos/id/180/800/600')] bg-cover"></div>
+                    <div class="p-8"><h3 class="text-2xl font-semibold mb-3">Welding & Fabrication</h3><p>MIG/TIG welding certification prep.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-zinc-400 py-12 text-center">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="w-10 h-10 bg-teal-700 rounded-xl mx-auto mb-4 flex items-center justify-center text-white font-bold text-2xl">ICS</div>
+            <p class="mb-2">Integrity Care Solutions, Inc. • 501(c)(3) Nonprofit</p>
+            <div class="text-lg font-semibold mb-6">UNDER CONSTRUCTION</div>
+            <div class="text-xs">© 2026 Integrity Care Solutions, Inc. Northampton, MA</div>
+        </div>
+    </footer>
+</body>
+</html>
