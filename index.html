@@ -99,51 +99,65 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-bg text-white py-20 md:py-28">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-3xl text-sm mb-6">
-                <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-                <span class="font-medium">Now Enrolling for Summer 2026 Cohorts</span>
+   <!-- Optimized Hero Section -->
+<section class="hero-bg text-white py-20 md:py-28">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+        
+        <!-- Top Badge -->
+        <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-3xl text-sm mb-8">
+            <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+            <span class="font-medium">Now Enrolling for Summer 2026 Cohorts</span>
+        </div>
+
+        <!-- Logo -->
+        <div class="mb-6 flex justify-center">
+            <img src="myintegrity_alternate.png" 
+                 alt="Integrity Care Solutions Logo" 
+                 class="h-16 md:h-20 w-auto">
+        </div>
+
+        <!-- Headline -->
+        <h1 class="heading-font text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-6">
+            Build a Skilled Future.<br>
+            <span class="text-teal-200">With Integrity.</span>
+        </h1>
+
+        <!-- Description -->
+        <p class="max-w-2xl mx-auto text-xl text-white/90 mb-10">
+            Integrity Care Solutions, Inc. is a 501(c)(3) nonprofit delivering hands-on trade skills training, 
+            reentry support, and career pathways that lead to stable, meaningful employment in Western Massachusetts.
+        </p>
+
+        <!-- Call to Actions -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#programs" 
+               class="inline-flex items-center justify-center gap-x-3 bg-white text-teal-800 hover:bg-white/90 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
+                Explore Training Programs
+            </a>
+            <a href="#get-involved" 
+               class="inline-flex items-center justify-center gap-x-3 border-2 border-white hover:bg-white/10 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
+                Partner With Us
+            </a>
+        </div>
+
+        <!-- Stats / Key Info -->
+        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto text-center">
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
+                <div class="text-3xl font-semibold mb-1">First Cohort</div>
+                <div class="text-sm text-white/80">Starting Summer 2026</div>
             </div>
-            
-            <h1 class="heading-font text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-6">
-                Build a Skilled Future.<br>
-                <span class="text-teal-200">With Integrity.</span>
-            </h1>
-            
-            <p class="max-w-2xl mx-auto text-xl text-white/90 mb-10">
-                Integrity Care Solutions, Inc. is a 501(c)(3) nonprofit delivering hands-on trade skills training, 
-                reentry support, and career pathways that lead to stable, meaningful employment in Western Massachusetts.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#programs" 
-                   class="inline-flex items-center justify-center gap-x-3 bg-white text-teal-800 hover:bg-white/90 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
-                    Explore Training Programs
-                </a>
-                <a href="#get-involved" 
-                   class="inline-flex items-center justify-center gap-x-3 border-2 border-white hover:bg-white/10 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
-                    Partner With Us
-                </a>
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
+                <div class="text-3xl font-semibold mb-1">8–12 Week</div>
+                <div class="text-sm text-white/80">Core Training Programs</div>
             </div>
-            
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto text-center">
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
-                    <div class="text-3xl font-semibold mb-1">First Cohort</div>
-                    <div class="text-sm text-white/80">Starting Summer 2026</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
-                    <div class="text-3xl font-semibold mb-1">8–12 Week</div>
-                    <div class="text-sm text-white/80">Core Training Programs</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
-                    <div class="text-3xl font-semibold mb-1">6–12 Months</div>
-                    <div class="text-sm text-white/80">Mentorship & Job Support</div>
-                </div>
+            <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
+                <div class="text-3xl font-semibold mb-1">6–12 Months</div>
+                <div class="text-sm text-white/80">Mentorship & Job Support</div>
             </div>
         </div>
-    </section>
 
+    </div>
+</section>
     <!-- About / Mission -->
     <section class="py-16 bg-white border-b">
         <div class="max-w-5xl mx-auto px-6 text-center">
@@ -377,9 +391,8 @@
                 <div>
                     <div class="flex items-center gap-x-4 mb-4">
                         <!-- Light logo -->
-                        <img src="logo.png" alt="Integrity Care Solutions Logo" class="h-10 w-auto">
                         <!-- Dark version of logo further down -->
-                        <img src="myintegrity_dark.jpg" alt="Integrity Care Solutions Dark Logo" class="h-10 w-auto hidden md:block">
+                        <img src="myintegrity_alternate.jpg" alt="Integrity Care Solutions Dark Logo" class="h-10 w-auto hidden md:block">
                     </div>
                     <p class="max-w-xs text-sm">A 501(c)(3) nonprofit building stronger communities through skills training and opportunity.</p>
                 </div>
