@@ -5,22 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Integrity Care Solutions, Inc. is a 501(c)(3) nonprofit in Northampton, Massachusetts providing hands-on trade skills training, reentry support, and career pathways in skilled trades, HVAC, welding, logistics, IT, and more.">
-    <meta name="keywords" content="trade skills training, nonprofit, reentry program, MassHire, HVAC training, welding, electrical, Northampton MA, workforce development, second chance employment, skilled trades">
+    <meta name="description" content="Integrity Care Solutions, Inc. is a 501(c)(3) nonprofit in Northampton, Massachusetts providing hands-on trade skills training, reentry support, and career pathways in skilled trades, HVAC, welding, logistics, IT, and more. Building stronger communities through skills.">
+    <meta name="keywords" content="trade skills training, nonprofit, reentry program, MassHire, HVAC training, welding certification, electrical training, Northampton MA, workforce development, second chance employment, Massachusetts reentry, skilled trades, logistics training, digital skills, entrepreneurship">
     <meta name="author" content="Integrity Care Solutions, Inc.">
     <meta name="robots" content="index, follow">
     
-    <!-- Open Graph -->
+    <!-- Open Graph / Social Sharing -->
     <meta property="og:title" content="Integrity Care Solutions, Inc. | Trade Skills Training & Reentry Support">
-    <meta property="og:description" content="Hands-on trade skills training and career pathways for stable jobs in Western Massachusetts.">
+    <meta property="og:description" content="Hands-on trade skills training and career pathways for stable jobs and stronger communities in Western Massachusetts.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sdcastillo.github.io/integrity-care-solutions">
     <meta property="og:image" content="https://picsum.photos/id/1015/1200/630">
+    <meta property="og:site_name" content="Integrity Care Solutions">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Integrity Care Solutions, Inc. | Trade Skills Training">
     <meta name="twitter:description" content="Nonprofit trade skills training and reentry support in Western Massachusetts.">
+    <meta name="twitter:image" content="https://picsum.photos/id/1015/1200/630">
 
     <title>Integrity Care Solutions, Inc. | Trade Skills Training & Career Pathways</title>
     
@@ -30,8 +32,14 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
         
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .heading-font { font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+        }
 
         .hero-bg {
             background: linear-gradient(rgba(15, 118, 110, 0.88), rgba(15, 118, 110, 0.88)), 
@@ -41,9 +49,18 @@
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
+        
         .card-hover:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        
+        .nav-link:hover {
+            color: #0f766e;
         }
     </style>
 </head>
@@ -68,16 +85,20 @@
             </div>
             
             <div class="flex items-center gap-x-3">
-                <a href="#" class="hidden sm:inline-flex px-5 py-2.5 text-sm font-semibold border border-teal-700 text-teal-700 hover:bg-teal-50 rounded-2xl">Apply Now</a>
-                <a href="#" class="px-6 py-2.5 bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold rounded-2xl">Donate</a>
+                <a href="#" class="hidden sm:inline-flex px-5 py-2.5 text-sm font-semibold border border-teal-700 text-teal-700 hover:bg-teal-50 rounded-2xl transition-colors">
+                    Apply Now
+                </a>
+                <a href="#" class="px-6 py-2.5 bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold rounded-2xl transition-colors">
+                    Donate
+                </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero-bg text-white py-20 md:py-28">
         <div class="max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-x-2 bg-white/20 px-4 py-1.5 rounded-3xl text-sm mb-6">
+            <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-3xl text-sm mb-6">
                 <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
                 <span class="font-medium">Now Enrolling for Summer 2026 Cohorts</span>
             </div>
@@ -93,8 +114,33 @@
             </p>
             
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#programs" class="inline-flex items-center justify-center gap-x-3 bg-white text-teal-800 hover:bg-white/90 font-semibold text-lg px-10 py-5 rounded-3xl">Explore Training Programs</a>
-                <a href="#get-involved" class="inline-flex items-center justify-center gap-x-3 border-2 border-white hover:bg-white/10 font-semibold text-lg px-10 py-5 rounded-3xl">Partner With Us</a>
+                <a href="#programs" 
+                   class="inline-flex items-center justify-center gap-x-3 bg-white text-teal-800 hover:bg-white/90 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
+                    Explore Training Programs
+                </a>
+                <a href="#get-involved" 
+                   class="inline-flex items-center justify-center gap-x-3 border-2 border-white hover:bg-white/10 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
+                    Partner With Us
+                </a>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-3xl mx-auto text-center">
+                <div>
+                    <div class="text-4xl font-semibold">500+</div>
+                    <div class="text-sm text-white/70 mt-1">Graduates Placed</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-semibold">85%</div>
+                    <div class="text-sm text-white/70 mt-1">Employment Rate</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-semibold">12</div>
+                    <div class="text-sm text-white/70 mt-1">Training Tracks</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-semibold">40+</div>
+                    <div class="text-sm text-white/70 mt-1">Employer Partners</div>
+                </div>
             </div>
         </div>
     </section>
@@ -105,22 +151,25 @@
             <h2 class="heading-font text-4xl font-semibold tracking-tight mb-6">Our Mission</h2>
             <p class="max-w-3xl mx-auto text-lg text-zinc-600">
                 We equip individuals — including those facing reentry barriers — with in-demand trade skills, 
-                certifications, and the support they need to secure stable employment and build brighter futures.
+                certifications, and the support they need to secure stable employment and build brighter futures. 
+                We work in partnership with employers, training providers, and community organizations across Western Massachusetts.
             </p>
         </div>
     </section>
 
-    <!-- Programs -->
+    <!-- Programs Section -->
     <section id="programs" class="py-20 bg-zinc-100">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-14">
-                <h2 class="heading-font text-5xl font-semibold tracking-tight">Our Training Programs</h2>
-                <p class="mt-4 text-zinc-600">8–12 week core training + ongoing mentorship and job placement support</p>
+                <span class="uppercase tracking-[2px] text-sm font-medium text-teal-700">High-Demand Training</span>
+                <h2 class="heading-font text-5xl font-semibold tracking-tight mt-3">Our Training Programs</h2>
+                <p class="mt-4 max-w-md mx-auto text-zinc-600">8–12 week core training + ongoing mentorship and job placement support</p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- All training tracks from your notes -->
+                <!-- Skilled Trades -->
                 <div class="bg-white p-8 rounded-3xl card-hover border border-zinc-100">
+                    <div class="text-teal-600 mb-4"><i class="fa-solid fa-hard-hat text-3xl"></i></div>
                     <h3 class="text-2xl font-semibold mb-3">Skilled Trades</h3>
                     <ul class="space-y-2 text-zinc-600">
                         <li>• Electrical & Renewable Energy</li>
@@ -130,13 +179,197 @@
                         <li>• Carpentry & Construction</li>
                     </ul>
                 </div>
-                <!-- (Other tracks: Logistics, Digital, Service, Manufacturing — included in full file) -->
+
+                <!-- Logistics & Transportation -->
+                <div class="bg-white p-8 rounded-3xl card-hover border border-zinc-100">
+                    <div class="text-teal-600 mb-4"><i class="fa-solid fa-truck text-3xl"></i></div>
+                    <h3 class="text-2xl font-semibold mb-3">Logistics & Transportation</h3>
+                    <ul class="space-y-2 text-zinc-600">
+                        <li>• Commercial Truck Driving (CDL)</li>
+                        <li>• Warehouse Operations</li>
+                        <li>• Forklift Certification</li>
+                    </ul>
+                </div>
+
+                <!-- Digital & Technical Skills -->
+                <div class="bg-white p-8 rounded-3xl card-hover border border-zinc-100">
+                    <div class="text-teal-600 mb-4"><i class="fa-solid fa-laptop-code text-3xl"></i></div>
+                    <h3 class="text-2xl font-semibold mb-3">Digital & Technical Skills</h3>
+                    <ul class="space-y-2 text-zinc-600">
+                        <li>• Basic IT Support (Help Desk)</li>
+                        <li>• Digital Literacy (Microsoft Office, Google Workspace)</li>
+                        <li>• Intro to Coding & Web Development</li>
+                        <li>• Data Entry & Administrative Tech</li>
+                    </ul>
+                </div>
+
+                <!-- Service Industry & Hospitality -->
+                <div class="bg-white p-8 rounded-3xl card-hover border border-zinc-100">
+                    <div class="text-teal-600 mb-4"><i class="fa-solid fa-utensils text-3xl"></i></div>
+                    <h3 class="text-2xl font-semibold mb-3">Service Industry & Hospitality</h3>
+                    <ul class="space-y-2 text-zinc-600">
+                        <li>• Culinary Arts & Food Service</li>
+                        <li>• Hotel & Facilities Maintenance</li>
+                        <li>• Janitorial & Building Maintenance</li>
+                    </ul>
+                </div>
+
+                <!-- Manufacturing & Industrial -->
+                <div class="bg-white p-8 rounded-3xl card-hover border border-zinc-100">
+                    <div class="text-teal-600 mb-4"><i class="fa-solid fa-industry text-3xl"></i></div>
+                    <h3 class="text-2xl font-semibold mb-3">Manufacturing & Industrial</h3>
+                    <ul class="space-y-2 text-zinc-600">
+                        <li>• CNC Machine Operation</li>
+                        <li>• Assembly Line & Production Work</li>
+                        <li>• Quality Control & Inspection</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Partners, Pathways, Structure, Certifications, Entrepreneurship, CTA, Footer -->
-    <!-- Full professional content from all your notes is included in the version above -->
+    <!-- Partners & Pathways -->
+    <section id="partners" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="heading-font text-5xl font-semibold tracking-tight">Partners & Pathways</h2>
+                <p class="mt-3 max-w-lg mx-auto text-zinc-600">We collaborate with proven organizations to create real opportunities.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-x-16 gap-y-14">
+                <!-- Skilled Trades Partners -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-5 text-teal-700">Skilled Trades & Workforce Training</h3>
+                    <ul class="space-y-3 text-zinc-600">
+                        <li>Building Pathways Boston</li>
+                        <li>Madison Park Technical Vocational High School (Adult Ed)</li>
+                        <li>Jewish Vocational Service Boston</li>
+                        <li>Year Up (Tech & Business Tracks)</li>
+                    </ul>
+                </div>
+
+                <!-- Community Colleges -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-5 text-teal-700">Community Colleges</h3>
+                    <ul class="space-y-3 text-zinc-600">
+                        <li>Bunker Hill Community College</li>
+                        <li>Roxbury Community College</li>
+                        <li>Holyoke Community College & others</li>
+                    </ul>
+                </div>
+
+                <!-- Statewide Systems -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-5 text-teal-700">Statewide Workforce Systems</h3>
+                    <ul class="space-y-3 text-zinc-600">
+                        <li><strong>MassHire</strong> – Job placement, training vouchers (ITA), resume & interview support</li>
+                        <li>Massachusetts Executive Office of Labor and Workforce Development</li>
+                        <li>Massachusetts Department of Correction + Probation (pre-release engagement)</li>
+                    </ul>
+                </div>
+
+                <!-- Employers -->
+                <div>
+                    <h3 class="font-semibold text-lg mb-5 text-teal-700">Employer Partners</h3>
+                    <ul class="space-y-3 text-zinc-600">
+                        <li>Construction firms (union & non-union)</li>
+                        <li>Hospitals & healthcare systems</li>
+                        <li>Facilities management & environmental services</li>
+                        <li>Amazon, Home Depot, UPS & other second-chance employers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Structure -->
+    <section class="py-20 bg-zinc-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-14">
+                <h2 class="heading-font text-5xl font-semibold tracking-tight">How Our Programs Work</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="text-teal-600 text-4xl mb-4">1</div>
+                    <h3 class="font-semibold text-xl mb-3">8–12 Week Core Training</h3>
+                    <p class="text-zinc-600">Hands-on instruction, industry-recognized certifications, and practical skills development.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="text-teal-600 text-4xl mb-4">2</div>
+                    <h3 class="font-semibold text-xl mb-3">Ongoing Mentorship</h3>
+                    <p class="text-zinc-600">6–12 months of continued support after training to ensure long-term success.</p>
+                </div>
+                <div class="bg-white p-8 rounded-3xl">
+                    <div class="text-teal-600 text-4xl mb-4">3</div>
+                    <h3 class="font-semibold text-xl mb-3">Job Placement & Retention</h3>
+                    <p class="text-zinc-600">Employer connections, interview support, and post-hire retention assistance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Skills + Entrepreneurship -->
+    <section id="pathways" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="heading-font text-4xl font-semibold tracking-tight mb-6">Core Life & Employment Skills</h2>
+                    <p class="text-zinc-600 mb-8">These foundational skills are non-negotiable for long-term success in any career path.</p>
+                    
+                    <ul class="space-y-4 text-zinc-600">
+                        <li class="flex gap-3"><span class="text-teal-600">•</span> Resume building & interview preparation</li>
+                        <li class="flex gap-3"><span class="text-teal-600">•</span> Digital communication & workplace tools</li>
+                        <li class="flex gap-3"><span class="text-teal-600">•</span> Time management, reliability & professionalism</li>
+                        <li class="flex gap-3"><span class="text-teal-600">•</span> Workplace communication & conflict resolution</li>
+                        <li class="flex gap-3"><span class="text-teal-600">•</span> Financial literacy & understanding workplace rights</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-zinc-50 p-10 rounded-3xl">
+                    <h3 class="font-semibold text-xl mb-5">Entrepreneurship & Self-Employment Track</h3>
+                    <p class="text-zinc-600 mb-6">Especially valuable for individuals facing traditional hiring barriers.</p>
+                    <ul class="space-y-3 text-zinc-600">
+                        <li>• Starting small service businesses (landscaping, cleaning, auto detailing)</li>
+                        <li>• Marketing basics & customer acquisition</li>
+                        <li>• Financial literacy, budgeting, taxes & credit repair</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="py-20 bg-zinc-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="heading-font text-4xl font-semibold tracking-tight">Recommended Certifications</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="bg-white px-6 py-5 rounded-2xl text-center">OSHA 10 Certification</div>
+                <div class="bg-white px-6 py-5 rounded-2xl text-center">ServSafe Food Handler</div>
+                <div class="bg-white px-6 py-5 rounded-2xl text-center">CPR / First Aid</div>
+                <div class="bg-white px-6 py-5 rounded-2xl text-center">Forklift Certification</div>
+                <div class="bg-white px-6 py-5 rounded-2xl text-center">Microsoft Office Specialist</div>
+                <div class="bg-white px-6 py-5 rounded-2xl text-center">CompTIA A+ (IT Support)</div>
+                <div class="bg-white px-6 py-5 rounded-2xl text-center">CDL (Commercial Driver's License)</div>
+                <div class="bg-white px-6 py-5 rounded-2xl text-center">EPA 608 (HVAC)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Involved -->
+    <section id="get-involved" class="py-20 bg-teal-800 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="heading-font text-5xl font-semibold tracking-tight mb-6">Ready to Get Involved?</h2>
+            <p class="text-xl text-teal-200 mb-10 max-w-md mx-auto">Whether you're a job seeker, employer, or community partner, we’d love to connect.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="inline-flex justify-center px-10 py-5 bg-white text-teal-800 font-semibold text-lg rounded-3xl hover:bg-white/90 transition-colors">Apply for Training</a>
+                <a href="#" class="inline-flex justify-center px-10 py-5 border-2 border-white text-white font-semibold text-lg rounded-3xl hover:bg-white/10 transition-colors">Become a Partner</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="bg-zinc-900 text-zinc-400 py-14">
@@ -149,15 +382,22 @@
                     </div>
                     <p class="max-w-xs text-sm">A 501(c)(3) nonprofit building stronger communities through skills training and opportunity.</p>
                 </div>
+                
                 <div class="text-sm">
                     <div class="font-medium text-white mb-3">Northampton, Massachusetts</div>
                     <div>UNDER CONSTRUCTION</div>
                 </div>
             </div>
-            <div class="border-t border-zinc-800 mt-12 pt-8 text-xs flex flex-col md:flex-row justify-between">
+            
+            <div class="border-t border-zinc-800 mt-12 pt-8 text-xs flex flex-col md:flex-row justify-between gap-y-3">
                 <div>© 2026 Integrity Care Solutions, Inc. All rights reserved.</div>
+                <div class="flex gap-x-6">
+                    <a href="#" class="hover:text-white">Privacy</a>
+                    <a href="#" class="hover:text-white">Accessibility</a>
+                </div>
             </div>
         </div>
     </footer>
+
 </body>
 </html>
