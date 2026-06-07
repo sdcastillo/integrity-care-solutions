@@ -4,7 +4,7 @@
 
 A modern, professional website for **Integrity Care Solutions, Inc.**, a nonprofit organization based in Northampton, Massachusetts. The site provides information about hands-on trade skills training programs, workforce development pathways, and reentry support services.
 
-**Live Site:** [https://sdcastillo.github.io/integrity-care-solutions](https://sdcastillo.github.io/integrity-care-solutions)
+**Published Site:** [https://my-integrity-hub.org/](https://my-integrity-hub.org/)
 
 ---
 
