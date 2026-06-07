@@ -1,64 +1,47 @@
-# Astro Starter Kit: Blog
+# Integrity Care Solutions, Inc.
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/astro-blog-starter-template)
+**Trade Skills Training & Reentry Support | 501(c)(3) Nonprofit**
 
-![Astro Template Preview](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
+A modern, professional website for **Integrity Care Solutions, Inc.**, a nonprofit organization based in Northampton, Massachusetts. The site provides information about hands-on trade skills training programs, workforce development pathways, and reentry support services.
 
-<!-- dash-content-start -->
+**Live Site:** [https://sdcastillo.github.io/integrity-care-solutions](https://sdcastillo.github.io/integrity-care-solutions)
 
-Create a blog with Astro and deploy it on Cloudflare Workers as a [static website](https://developers.cloudflare.com/workers/static-assets/).
+---
 
-Features:
+## About
+Website Author: Samuel Castillo with SuperGrok.  
+Integrity Care Solutions, Inc. equips individuals — including those facing reentry barriers — with in-demand trade skills, certifications, and the support needed to secure stable employment. 
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-- ✅ Built-in Observability logging
+The organization partners with employers, training providers, and community organizations across Western Massachusetts to build stronger communities through skills training.
 
-<!-- dash-content-end -->
+---
+
+## Current Features
+
+- **Professional Homepage** with strong nonprofit branding
+- **Training Programs** — Skilled Trades, Logistics, Digital Skills, Service Industry, and Manufacturing
+- **Partners & Pathways** — MassHire, community colleges, second-chance employers, and statewide workforce systems
+- **Program Structure** — 8–12 week core training + 6–12 months of mentorship and job support
+- **Core Life & Employment Skills** + Entrepreneurship track
+- **Recommended Certifications**
+- **SEO Optimized** with proper meta tags and social preview images
+- Fully responsive design
+
+---
+
+## Tech Stack
+
+- Pure HTML + Tailwind CSS (via CDN)
+- Font Awesome icons
+- Static site (no build process required)
+
+---
 
 ## Getting Started
 
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+### View Locally
 
-```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/astro-blog-starter-template
-```
-
-A live public deployment of this template is available at [https://astro-blog-starter-template.templates.workers.dev](https://astro-blog-starter-template.templates.workers.dev)
-
-## 🚀 Project Structure
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                           | Action                                           |
-| :-------------------------------- | :----------------------------------------------- |
-| `npm install`                     | Installs dependencies                            |
-| `npm run dev`                     | Starts local dev server at `localhost:4321`      |
-| `npm run build`                   | Build your production site to `./dist/`          |
-| `npm run preview`                 | Preview your build locally, before deploying     |
-| `npm run astro ...`               | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help`         | Get help using the Astro CLI                     |
-| `npm run build && npm run deploy` | Deploy your production site to Cloudflare        |
-| `npm wrangler tail`               | View real-time logs for all Workers              |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/sdcastillo/integrity-care-solutions.git
+   cd integrity-care-solutions
