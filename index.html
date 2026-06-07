@@ -18,6 +18,7 @@
     </style>
 </head>
 <body class="bg-zinc-50 text-zinc-800">
+
     <!-- Navbar -->
     <nav class="bg-white border-b sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
@@ -28,8 +29,8 @@
             <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
                 <a href="#programs" class="hover:text-teal-700">Programs</a>
                 <a href="#partners" class="hover:text-teal-700">Partners</a>
-                <a href="#" class="hover:text-teal-700">For Students</a>
-                <a href="#" class="hover:text-teal-700">Employers</a>
+                <a href="#pathways" class="hover:text-teal-700">Pathways</a>
+                <a href="#" class="hover:text-teal-700">Get Involved</a>
             </div>
             <div class="flex gap-x-4">
                 <a href="#" class="px-5 py-2.5 text-sm font-semibold border border-teal-700 text-teal-700 hover:bg-teal-50 rounded-2xl">Apply Now</a>
@@ -50,7 +51,7 @@
                 <span class="text-teal-200">With Integrity.</span>
             </h1>
             <p class="max-w-2xl mx-auto text-xl text-white/90 mb-10">
-                Integrity Care Solutions, Inc. — Nonprofit hands-on trade skills training and career pathways in Western Massachusetts.
+                Integrity Care Solutions, Inc. — 501(c)(3) nonprofit providing hands-on trade skills training and career pathways in Western Massachusetts.
             </p>
             <a href="#programs" class="inline-flex items-center gap-x-3 bg-white text-teal-800 font-semibold text-lg px-10 py-5 rounded-3xl hover:bg-white/90">
                 Explore Programs →
@@ -61,84 +62,105 @@
     <!-- Programs -->
     <section id="programs" class="py-20 bg-zinc-100">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading-font text-5xl font-semibold text-center mb-12">In-Demand Trade Programs</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-3xl overflow-hidden card-hover">
-                    <div class="h-56 bg-[url('https://picsum.photos/id/201/800/600')] bg-cover"></div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Electrical & Renewable Energy</h3>
-                        <p class="text-zinc-600 mb-6">Solar installation, residential wiring, smart home technology.</p>
-                    </div>
+            <h2 class="heading-font text-5xl font-semibold text-center mb-4">High-Demand Training Tracks</h2>
+            <p class="text-center text-zinc-600 mb-12">8–12 Week Core Training + 6–12 Month Mentorship & Employment Follow-Up</p>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skilled Trades -->
+                <div class="bg-white p-8 rounded-3xl card-hover">
+                    <h3 class="text-2xl font-semibold mb-4 text-teal-700">Skilled Trades (High Demand)</h3>
+                    <ul class="space-y-3 text-zinc-600">
+                        <li>• Electrical / Electrical Technician</li>
+                        <li>• HVAC, Ventilation & Air Conditioning</li>
+                        <li>• Plumbing</li>
+                        <li>• Carpentry & Construction</li>
+                        <li>• Welding</li>
+                    </ul>
                 </div>
-                <div class="bg-white rounded-3xl overflow-hidden card-hover">
-                    <div class="h-56 bg-[url('https://picsum.photos/id/251/800/600')] bg-cover"></div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">HVAC & Plumbing</h3>
-                        <p class="text-zinc-600 mb-6">Heating, ventilation, air conditioning & plumbing systems.</p>
-                    </div>
+
+                <!-- Logistics -->
+                <div class="bg-white p-8 rounded-3xl card-hover">
+                    <h3 class="text-2xl font-semibold mb-4 text-teal-700">Logistics & Transportation</h3>
+                    <ul class="space-y-3 text-zinc-600">
+                        <li>• Commercial Truck Driving (CDL)</li>
+                        <li>• Warehouse & Forklift Operation</li>
+                    </ul>
                 </div>
-                <div class="bg-white rounded-3xl overflow-hidden card-hover">
-                    <div class="h-56 bg-[url('https://picsum.photos/id/180/800/600')] bg-cover"></div>
-                    <div class="p-8">
-                        <h3 class="text-2xl font-semibold mb-3">Welding & Fabrication</h3>
-                        <p class="text-zinc-600 mb-6">MIG, TIG, stick welding with certification prep.</p>
-                    </div>
+
+                <!-- Digital -->
+                <div class="bg-white p-8 rounded-3xl card-hover">
+                    <h3 class="text-2xl font-semibold mb-4 text-teal-700">Digital & Technical Skills</h3>
+                    <ul class="space-y-3 text-zinc-600">
+                        <li>• Basic IT Support (Help Desk, CompTIA A+)</li>
+                        <li>• Digital Literacy (Microsoft Office, Google Workspace)</li>
+                        <li>• Intro to Coding / Web Development</li>
+                        <li>• Data Entry & Administrative Tech</li>
+                    </ul>
+                </div>
+
+                <!-- Service -->
+                <div class="bg-white p-8 rounded-3xl card-hover">
+                    <h3 class="text-2xl font-semibold mb-4 text-teal-700">Service Industry & Hospitality</h3>
+                    <ul class="space-y-3 text-zinc-600">
+                        <li>• Culinary Arts / Food Service</li>
+                        <li>• Hotel & Facilities Maintenance</li>
+                        <li>• Janitorial & Building Maintenance</li>
+                    </ul>
+                </div>
+
+                <!-- Manufacturing -->
+                <div class="bg-white p-8 rounded-3xl card-hover">
+                    <h3 class="text-2xl font-semibold mb-4 text-teal-700">Manufacturing & Industrial</h3>
+                    <ul class="space-y-3 text-zinc-600">
+                        <li>• CNC Machine Operation</li>
+                        <li>• Assembly Line & Production Work</li>
+                        <li>• Quality Control / Inspection</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Partners & Pathways -->
-    <section id="partners" class="py-20 bg-white">
+    <!-- Certifications -->
+    <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="heading-font text-5xl font-semibold text-center mb-4">Our Partners & Pathways</h2>
-            <p class="text-center text-zinc-600 mb-12 max-w-2xl mx-auto">Building strong connections for training, placement, and long-term success.</p>
-
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Skilled Trades -->
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-teal-700">Skilled Trades</h3>
-                    <ul class="space-y-3 text-zinc-600">
-                        <li>• Building Pathways Boston</li>
-                        <li>• Madison Park Technical Vocational High School (adult ed programs)</li>
-                        <li>• Jewish Vocational Service Boston</li>
-                        <li>• Year Up (tech/business tracks)</li>
-                    </ul>
-                </div>
-
-                <!-- Community Colleges -->
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-teal-700">Community Colleges (High Value)</h3>
-                    <ul class="space-y-3 text-zinc-600">
-                        <li>• Bunker Hill Community College</li>
-                        <li>• Roxbury Community College</li>
-                        <li>• Holyoke Community College, etc.</li>
-                    </ul>
-                </div>
-
-                <!-- Second-Chance Employers -->
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-teal-700">Second-Chance Employers</h3>
-                    <ul class="space-y-3 text-zinc-600">
-                        <li>• Large Employers Known for Fair Chance Hiring</li>
-                        <li>• Amazon, Home Depot, UPS, etc.</li>
-                    </ul>
-                </div>
-
-                <!-- Massachusetts Employers -->
-                <div>
-                    <h3 class="text-2xl font-semibold mb-6 text-teal-700">Massachusetts-Based Employers</h3>
-                    <ul class="space-y-3 text-zinc-600">
-                        <li>• Construction firms (union + non-union)</li>
-                        <li>• Facilities management / environmental services</li>
-                        <li>• Hospitals & healthcare</li>
-                        <li>• Food service & hospitality</li>
-                    </ul>
-                </div>
+            <h2 class="heading-font text-5xl font-semibold text-center mb-12">Recommended Certifications</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-zinc-50 p-6 rounded-3xl">OSHA 10 Certification</div>
+                <div class="bg-zinc-50 p-6 rounded-3xl">ServSafe Food Handler</div>
+                <div class="bg-zinc-50 p-6 rounded-3xl">CPR / First Aid</div>
+                <div class="bg-zinc-50 p-6 rounded-3xl">Forklift Certification</div>
+                <div class="bg-zinc-50 p-6 rounded-3xl">Microsoft Office Basics</div>
+                <div class="bg-zinc-50 p-6 rounded-3xl">CompTIA A+ / IT Fundamentals</div>
             </div>
+        </div>
+    </section>
 
-            <div class="mt-16 text-center">
-                <p class="italic text-zinc-500">"Reentry & Social Support Partners — Offer retention support to employers (reduces risk perception)"</p>
+    <!-- Pathways & Entrepreneurship -->
+    <section id="pathways" class="py-20 bg-zinc-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <!-- Previous Entrepreneurship + Core Skills content kept here -->
+            <h2 class="heading-font text-4xl font-semibold text-center mb-8">Core Life & Employment Skills</h2>
+            <p class="text-center max-w-2xl mx-auto mb-12">Resume building, workplace communication, financial literacy, reliability, and more — non-negotiable for success.</p>
+        </div>
+    </section>
+
+    <!-- Funding -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="heading-font text-5xl font-semibold text-center mb-12">Funding Opportunities</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-zinc-600">
+                <ul class="space-y-4">
+                    <li>• MassHire / Workforce Innovation & Opportunity Act (WIOA)</li>
+                    <li>• Department of Labor Grants</li>
+                    <li>• Second Chance / Reentry Funding</li>
+                    <li>• Community Foundations & Private Donors</li>
+                </ul>
+                <ul class="space-y-4">
+                    <li>• State Reentry Initiatives</li>
+                    <li>• Corporate Sponsorships</li>
+                    <li>• 501(c)(3) Partnership Grants</li>
+                </ul>
             </div>
         </div>
     </section>
@@ -149,7 +171,7 @@
             <div class="w-10 h-10 bg-teal-700 rounded-xl mx-auto mb-4 flex items-center justify-center text-white font-bold text-2xl">ICS</div>
             <p class="mb-2">Integrity Care Solutions, Inc. • 501(c)(3) Nonprofit</p>
             <div class="text-lg font-semibold mb-6">UNDER CONSTRUCTION</div>
-            <div class="text-xs">© 2026 Integrity Care Solutions, Inc. • Northampton, MA</div>
+            <div class="text-xs">© 2026 • Northampton, MA • Building Stronger Communities Through Skills</div>
         </div>
     </footer>
 </body>
