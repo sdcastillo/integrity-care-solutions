@@ -35,14 +35,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
         
-        body {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-        
-        .heading-font {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
-        }
+        body { font-family: 'Inter', system_ui, sans-serif; }
+        .heading-font { font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
 
         .hero-bg {
             background: linear-gradient(rgba(15, 118, 110, 0.88), rgba(15, 118, 110, 0.88)), 
@@ -52,18 +46,9 @@
         .card-hover {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
         .card-hover:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-
-        .nav-link {
-            transition: color 0.2s ease;
-        }
-        
-        .nav-link:hover {
-            color: #0f766e;
         }
     </style>
 </head>
@@ -99,65 +84,67 @@
     </nav>
 
     <!-- Hero Section -->
-   <!-- Optimized Hero Section -->
-<section class="hero-bg text-white py-20 md:py-28">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-        
-        <!-- Top Badge -->
-        <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-3xl text-sm mb-8">
-            <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-            <span class="font-medium">Now Enrolling for Summer 2026 Cohorts</span>
-        </div>
-
-        <!-- Logo -->
-        <div class="mb-6 flex justify-center">
-            <img src="myintegrity_alternate.png" 
-                 alt="Integrity Care Solutions Logo" 
-                 class="h-16 md:h-20 w-auto">
-        </div>
-
-        <!-- Headline -->
-        <h1 class="heading-font text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-6">
-            Build a Skilled Future.<br>
-            <span class="text-teal-200">With Integrity.</span>
-        </h1>
-
-        <!-- Description -->
-        <p class="max-w-2xl mx-auto text-xl text-white/90 mb-10">
-            Integrity Care Solutions, Inc. is a 501(c)(3) nonprofit delivering hands-on trade skills training, 
-            reentry support, and career pathways that lead to stable, meaningful employment in Western Massachusetts.
-        </p>
-
-        <!-- Call to Actions -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#programs" 
-               class="inline-flex items-center justify-center gap-x-3 bg-white text-teal-800 hover:bg-white/90 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
-                Explore Training Programs
-            </a>
-            <a href="#get-involved" 
-               class="inline-flex items-center justify-center gap-x-3 border-2 border-white hover:bg-white/10 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
-                Partner With Us
-            </a>
-        </div>
-
-        <!-- Stats / Key Info -->
-        <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto text-center">
-            <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
-                <div class="text-3xl font-semibold mb-1">First Cohort</div>
-                <div class="text-sm text-white/80">Starting Summer 2026</div>
+    <section class="hero-bg text-white py-20 md:py-28">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-3xl text-sm mb-6">
+                <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
+                <span class="font-medium">Now Enrolling for Summer 2026 Cohorts</span>
             </div>
-            <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
-                <div class="text-3xl font-semibold mb-1">8–12 Week</div>
-                <div class="text-sm text-white/80">Core Training Programs</div>
+            
+            <h1 class="heading-font text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-6">
+                Build a Skilled Future.<br>
+                <span class="text-teal-200">With Integrity.</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-xl text-white/90 mb-10">
+                Integrity Care Solutions, Inc. is a 501(c)(3) nonprofit delivering hands-on trade skills training, 
+                reentry support, and career pathways that lead to stable, meaningful employment in Western Massachusetts.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#programs" class="inline-flex items-center justify-center gap-x-3 bg-white text-teal-800 hover:bg-white/90 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
+                    Explore Training Programs
+                </a>
+                <a href="#get-involved" class="inline-flex items-center justify-center gap-x-3 border-2 border-white hover:bg-white/10 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
+                    Partner With Us
+                </a>
             </div>
-            <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
-                <div class="text-3xl font-semibold mb-1">6–12 Months</div>
-                <div class="text-sm text-white/80">Mentorship & Job Support</div>
+            
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto text-center">
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
+                    <div class="text-3xl font-semibold mb-1">First Cohort</div>
+                    <div class="text-sm text-white/80">Starting Summer 2026</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
+                    <div class="text-3xl font-semibold mb-1">8–12 Week</div>
+                    <div class="text-sm text-white/80">Core Training Programs</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
+                    <div class="text-3xl font-semibold mb-1">6–12 Months</div>
+                    <div class="text-sm text-white/80">Mentorship & Job Support</div>
+                </div>
             </div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- Veterans Priority Section (Placed high on page) -->
+    <section class="bg-[#0f4c5c] py-12 text-white">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-8">
+                <span class="inline-block bg-white/20 text-white text-xs font-semibold tracking-widest px-4 py-1 rounded-full mb-4">VETERANS FIRST</span>
+                <h2 class="heading-font text-3xl md:text-4xl font-semibold tracking-tight">Veterans: The Backbone of Our Operations</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto text-center space-y-4 text-lg text-white/90">
+                <p>Veterans will serve as the workforce and backbone of our operations.</p>
+                <p>Their military experience positions them strongly for meaningful employment in the reentry field.</p>
+                <p class="font-medium text-white">It’s a true win-win for everyone.</p>
+                <p>We will actively recruit veterans through the VA to fill key positions across our programs.</p>
+                <p>Unemployed or underemployed individuals can also enroll in our fast-paced training programs.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- About / Mission -->
     <section class="py-16 bg-white border-b">
         <div class="max-w-5xl mx-auto px-6 text-center">
@@ -390,7 +377,6 @@
             <div class="flex flex-col md:flex-row justify-between gap-y-10">
                 <div>
                     <div class="flex items-center gap-x-4 mb-4">
-                        <!-- Light logo -->
                         <!-- Dark version of logo further down -->
                         <img src="myintegrity_alternate.jpg" alt="Integrity Care Solutions Dark Logo" class="h-10 w-auto hidden md:block">
                     </div>
