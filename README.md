@@ -19,13 +19,13 @@ The organization partners with employers, training providers, and community orga
 ## Current Features
 
 - **Professional Homepage** with strong nonprofit branding
-- **Training Programs** — Skilled Trades, Logistics, Digital Skills, Service Industry, and Manufacturing
-- **Partners & Pathways** — MassHire, community colleges, second-chance employers, and statewide workforce systems
-- **Program Structure** — 8–12 week core training + 6–12 months of mentorship and job support
-- **Core Life & Employment Skills** + Entrepreneurship track
-- **Recommended Certifications**
-- **SEO Optimized** with proper meta tags and social preview images
-- Fully responsive design
+- **V-REP** — Veterans Re-Entry Employment Pathway
+- **Fast-Track** employability skills program
+- **Industrial Logistics & Transportation** training page
+- **New Facility** / construction update page
+- **Donation modal** and contact form
+- **SEO Optimized** with proper meta tags
+- Fully responsive, static HTML (no build step)
 
 ---
 

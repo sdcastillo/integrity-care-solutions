@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="V-REP (Veterans Re-Entry Employment Pathway) prepares justice-involved military veterans within 6-18 months of release, probation, or parole for sustainable employment by addressing employment gaps, PTSD, trauma, limited digital literacy, housing instability, and lack of recent job skills and certifications.">
+    <title>V-REP: Veterans Re-Entry Employment Pathway | Integrity Care Resources</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 0 0 rgb(15 23 42 / 0.06);
+        }
+
+        .section-header {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .nav-link {
+            transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #0D9488;
+        }
+
+        .pillar-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .journey-step {
+            position: relative;
+        }
+        
+        .journey-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 23px;
+            top: 48px;
+            bottom: -12px;
+            width: 2px;
+            background: #E2E8F0;
+        }
+
+        .care-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #134E4A 100%);
+        }
+
+        .military-accent {
+            background: linear-gradient(90deg, #0F172A, #1E3A5F);
+        }
+
+        .stat-card {
+            transition: transform 0.2s ease;
+        }
+
+        .modal {
+            animation: modalPop 0.2s cubic-bezier(0.32, 0.72, 0, 1);
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: scale(0.96) translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .made-in-america {
+            background: linear-gradient(145deg, #0F172A 0%, #1E3A5F 100%);
+        }
+
+        .veteran-badge {
+            background: #F1F5F9;
+            color: #334155;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body class="text-slate-800 bg-white">
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="bg-white border-b border-slate-100 sticky top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <img src="images/logo.jpeg" alt="Integrity Care Resources" class="h-10 w-auto rounded object-contain flex-shrink-0">
+                    <div>
+                        <div class="font-semibold text-2xl tracking-tighter text-slate-900">INTEGRITY CARE</div>
+                        <div class="text-[10px] font-medium tracking-[1.5px] text-teal-700 -mt-1.5">RESOURCES</div>
+                        <div class="text-[9px] text-teal-600 -mt-0.5">Ecumenical Collaborative Initiative</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-slate-600 hover:text-slate-900">Home</a>
+                    <a href="index.html#about" class="nav-link text-slate-600 hover:text-slate-900">About</a>
+                    <a href="index.html#programs" class="nav-link text-slate-600 hover:text-slate-900">Programs</a>
+                    <a href="employability-skills-fast-track.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">Fast-Track</a>
+                    <a href="construction.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">New Facility</a>
+                    <a href="index.html#involved" class="nav-link text-slate-600 hover:text-slate-900">Get Involved</a>
+                    <a href="index.html#contact" class="nav-link text-slate-600 hover:text-slate-900">Contact</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex items-center gap-x-3">
+                    <button onclick="showApplyModal()"
+                            class="hidden sm:flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-full transition-colors">
+                        <i class="fa-solid fa-file-alt mr-2"></i>
+                        <span>Apply Now</span>
+                    </button>
+                    
+                    <a href="index.html" 
+                       class="hidden sm:flex items-center px-5 py-2.5 text-sm font-semibold border border-slate-300 hover:bg-slate-50 rounded-full transition-colors text-slate-700">
+                        Back to Home
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                            class="md:hidden w-11 h-11 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors"
+                            aria-label="Open menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-base font-medium">
+                <a href="index.html" class="mobile-link py-1 text-slate-700">Home</a>
+                <a href="index.html#about" class="mobile-link py-1 text-slate-700">About Us</a>
+                <a href="index.html#programs" class="mobile-link py-1 text-slate-700">Our Programs</a>
+                <a href="employability-skills-fast-track.html" class="mobile-link py-1 text-teal-700 font-semibold">Fast-Track Program</a>
+                <a href="construction.html" class="mobile-link py-1 text-teal-700 font-semibold">New Facility</a>
+                <a href="index.html#involved" class="mobile-link py-1 text-slate-700">Get Involved</a>
+                <a href="index.html#contact" class="mobile-link py-1 text-slate-700">Contact</a>
+                
+                <div class="pt-4 border-t border-slate-100 space-y-3">
+                    <button onclick="showApplyModal(); closeMobileMenu();"
+                            class="w-full flex items-center justify-center gap-x-2 px-6 py-3 text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-full transition-colors">
+                        <i class="fa-solid fa-file-alt"></i>
+                        <span>Apply to V-REP</span>
+                    </button>
+                    <a href="index.html" class="block text-center text-sm font-medium text-slate-600">Back to Main Site</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="military-accent text-white">
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-20 md:pb-24">
+            <div class="max-w-3xl">
+                <div class="flex items-center gap-x-3 mb-6">
+                    <div class="veteran-badge px-3.5 py-1 rounded-full text-xs tracking-wider flex items-center gap-x-2">
+                        <i class="fa-solid fa-flag-usa"></i>
+                        <span>MADE IN AMERICA INITIATIVE</span>
+                    </div>
+                    <div class="hidden sm:block h-px w-8 bg-white/30"></div>
+                    <div class="text-xs uppercase tracking-[2px] text-white/60">501(c)(3) Program</div>
+                </div>
+                
+                <h1 class="text-6xl md:text-7xl leading-[1.02] font-semibold tracking-tighter mb-5">
+                    Veterans Re-Entry<br>Employment Pathway
+                </h1>
+                <p class="text-2xl md:text-3xl font-light text-white/90 tracking-tight mb-3">V-REP</p>
+                
+                <p class="max-w-xl text-xl text-white/90 leading-tight mb-10">
+                    Preparing justice-involved military veterans — those within 6-18 months of release 
+                    or currently on probation or parole — for sustainable careers through targeted training, 
+                    trauma support, and direct employment placement.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="showApplyModal()"
+                            class="group inline-flex items-center justify-center gap-x-3 bg-white text-slate-900 hover:bg-slate-100 transition-colors font-semibold text-lg px-9 h-14 rounded-full">
+                        <span>Apply to V-REP</span>
+                        <i class="fa-solid fa-arrow-right group-active:translate-x-1 transition-transform"></i>
+                    </button>
+                    
+                    <a href="#program"
+                       class="inline-flex items-center justify-center gap-x-3 border border-white/40 hover:bg-white/10 transition-colors font-semibold text-lg px-8 h-14 rounded-full">
+                        <span>Explore the Program</span>
+                    </a>
+                </div>
+
+                <div class="mt-8 flex items-center gap-x-6 text-sm">
+                    <div class="flex items-center gap-x-2 text-white/80">
+                        <i class="fa-solid fa-check text-emerald-400"></i>
+                        <span>No cost to eligible veterans</span>
+                    </div>
+                    <div class="hidden sm:block h-3 w-px bg-white/30"></div>
+                    <div class="text-white/70 text-sm">Cohort-based • 16–20 weeks</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- TRUST / QUICK FACTS -->
+    <div class="border-b border-slate-100 bg-slate-50 py-4">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-wrap justify-center md:justify-between items-center gap-x-8 gap-y-3 text-sm text-slate-600">
+                <div class="flex items-center gap-x-2">
+                    <i class="fa-solid fa-medal text-teal-700"></i>
+                    <span><strong>100%</strong> of graduates receive job placement support</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fa-solid fa-industry text-teal-700"></i>
+                    <span>Partnered with <strong>38 American manufacturers</strong></span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="fa-solid fa-handshake text-teal-700"></i>
+                    <span>Priority hiring agreements with defense contractors</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGRAM OVERVIEW -->
+    <section id="program" class="max-w-7xl mx-auto px-6 pt-16 pb-14">
+        <div class="max-w-3xl mx-auto text-center mb-12">
+            <div class="inline-block px-4 py-1 rounded-full bg-teal-50 text-teal-700 text-xs font-semibold tracking-widest mb-4">CAREER DEVELOPMENT TRAINING PROGRAM</div>
+            <h2 class="text-4xl font-semibold tracking-tight leading-none mb-4">Purpose-Built for Veterans Within 6-18 Months of Release</h2>
+            <p class="text-xl text-slate-600">
+                V-REP prepares military veterans within 6-18 months of release or currently on probation or parole 
+                for sustainable employment. The program is specifically designed to overcome the barriers these 
+                veterans face: gaps in employment, PTSD and trauma history, limited digital literacy, home instability 
+                or homelessness, and lack of certifications or recent job skills.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div class="bg-white border border-slate-100 rounded-3xl p-7">
+                <div class="text-teal-700 mb-3"><i class="fa-solid fa-bullseye text-3xl"></i></div>
+                <div class="font-semibold text-lg mb-2">Our Mission</div>
+                <p class="text-sm text-slate-600">Remove barriers to meaningful employment for military veterans within 6-18 months of release or on probation/parole. We equip them with the skills, certifications, digital literacy, and trauma support needed to succeed in American manufacturing and skilled trades.</p>
+            </div>
+            <div class="bg-white border border-slate-100 rounded-3xl p-7">
+                <div class="text-teal-700 mb-3"><i class="fa-solid fa-globe text-3xl"></i></div>
+                <div class="font-semibold text-lg mb-2">Made in America Alignment</div>
+                <p class="text-sm text-slate-600">Every participant is trained for roles that strengthen domestic supply chains, support reshoring efforts, and contribute to national economic and defense resilience.</p>
+            </div>
+            <div class="bg-white border border-slate-100 rounded-3xl p-7">
+                <div class="text-teal-700 mb-3"><i class="fa-solid fa-users text-3xl"></i></div>
+                <div class="font-semibold text-lg mb-2">Trauma-Informed Approach</div>
+                <p class="text-sm text-slate-600">We recognize the compounded impact of military service and incarceration. All programming is delivered with military cultural competency, PTSD awareness, and deep respect for the trauma history many participants carry.</p>
+            </div>
+        </div>
+
+        <!-- Photo: Veterans in training -->
+        <div class="mt-10">
+            <img src="images/integrity-care-workers (5).jpeg" 
+                 alt="Justice-involved veterans participating in vocational skills training and career readiness through the V-REP program" 
+                 class="w-full h-[420px] md:h-[520px] lg:h-[620px] object-contain rounded-3xl shadow">
+        </div>
+    </section>
+
+    <!-- THE FOUR PILLARS -->
+    <section class="bg-slate-900 py-16 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <div class="uppercase text-teal-400 tracking-[2px] text-xs font-semibold mb-2">THE V-REP MODEL</div>
+                <h2 class="text-4xl font-semibold tracking-tight">Four Integrated Pillars</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Pillar 1 -->
+                <div class="pillar-card bg-white/5 border border-white/10 rounded-3xl p-7">
+                    <div class="w-12 h-12 bg-teal-800 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-briefcase text-teal-300 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Career Readiness</h3>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Resume &amp; LinkedIn optimization</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Interview mastery &amp; mock interviews</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Professional communication &amp; workplace norms</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Financial literacy for new earners</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="pillar-card bg-white/5 border border-white/10 rounded-3xl p-7">
+                    <div class="w-12 h-12 bg-teal-800 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-tools text-teal-300 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Vocational Skill Building</h3>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Welding, CNC machining &amp; fabrication</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Industrial electrical &amp; mechanical maintenance</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Advanced manufacturing &amp; quality control</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> OSHA 10/30, forklift, CDL, and digital literacy training</li>
+                    </ul>
+                    <div class="mt-4 text-xs text-teal-400 font-medium">Built-in digital skills + credentials stackable toward apprenticeships</div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="pillar-card bg-white/5 border border-white/10 rounded-3xl p-7">
+                    <div class="w-12 h-12 bg-teal-800 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-heart text-teal-300 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Trauma-Informed Support</h3>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Individual peer coaching with veteran mentors</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> PTSD-aware wellness groups and mental health navigation</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Family reintegration and relationship repair support</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Housing stability coaching + connection to VA benefits &amp; legal aid</li>
+                    </ul>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="pillar-card bg-white/5 border border-white/10 rounded-3xl p-7">
+                    <div class="w-12 h-12 bg-teal-800 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-handshake text-teal-300 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Employment Placement</h3>
+                    <ul class="space-y-2 text-sm text-white/80">
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Direct employer matchmaking</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> On-site job fairs with American manufacturers</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> 12-month post-placement retention support</li>
+                        <li class="flex gap-x-2"><i class="fa-solid fa-check mt-1 text-xs text-teal-400"></i> Wage &amp; benefits negotiation coaching</li>
+                    </ul>
+                    <div class="mt-4 text-xs text-teal-400 font-medium">Average starting wage for graduates: $23.40/hr — many overcoming multi-year employment gaps</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE VETERANS WORKFORCE DEVELOPMENT AND TRAINING INCUBATOR (VWDTI) -->
+    <section class="max-w-7xl mx-auto px-6 py-16 bg-slate-50">
+        <div class="rounded-3xl bg-white border border-slate-200 p-10 md:p-12">
+            <div class="max-w-4xl">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">EXPANDING CAREER PIPELINES</div>
+                <h2 class="text-4xl font-semibold tracking-tight leading-none mb-5">The Veterans Workforce Development and Training Incubator (VWDTI)</h2>
+                
+                <p class="text-lg text-slate-700 leading-relaxed">
+                    The Veterans Workforce Development and Training Incubator (VWDTI) will leverage Integrity Care Resources' commitment to integrity, service, and community impact by creating career pipelines in healthcare, behavioral health, home care, social services, information technology, logistics, and small business development. The initiative aligns with national workforce development priorities and leading career wisdom.
+                </p>
+            </div>
+
+            <div class="mt-8">
+                <div class="uppercase tracking-[1.5px] text-xs font-semibold text-teal-600 mb-3">Career Pipelines</div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-hospital text-teal-600"></i>
+                        <span>Healthcare</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-brain text-teal-600"></i>
+                        <span>Behavioral Health</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-home text-teal-600"></i>
+                        <span>Home Care</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-hands-helping text-teal-600"></i>
+                        <span>Social Services</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-laptop-code text-teal-600"></i>
+                        <span>Information Technology</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-truck text-teal-600"></i>
+                        <span>Logistics</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-briefcase text-teal-600"></i>
+                        <span>Small Business Development</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 grid md:grid-cols-2 gap-6">
+                <div>
+                    <div class="uppercase tracking-[1.5px] text-xs font-semibold text-teal-600 mb-1.5">MISSION</div>
+                    <p class="text-slate-700 leading-relaxed">
+                        To equip veterans and their families with specialized training and strategic career placements that accelerate professional development and maximize their potential for executive leadership and advancement to the highest levels of the career ladder.
+                    </p>
+                </div>
+                <div>
+                    <div class="uppercase tracking-[1.5px] text-xs font-semibold text-teal-600 mb-1.5">VISION</div>
+                    <p class="text-slate-700 leading-relaxed">
+                        To become the premier veteran-focused workforce development hub that transforms battle-tested military experience into civilian career success while strengthening communities through skilled, purpose-driven leadership.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <div class="uppercase tracking-[1.5px] text-xs font-semibold text-teal-600 mb-3">Key Objectives</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 text-sm text-slate-700">
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">1.</span> Increase veteran employment and long-term job retention.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">2.</span> Provide industry-recognized credentials and professional certifications.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">3.</span> Develop leadership and entrepreneurship abilities.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">4.</span> Connect veterans to form networks of colleagues and professional connections in new fields.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">5.</span> Support veteran-owned startups and turn brilliant ideas into profitable business ventures.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">6.</span> Create strategic partnerships with companies committed to hiring veterans.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">7.</span> Improve economic outcomes for military families, spouses, and children.</div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <div class="uppercase tracking-[1.5px] text-xs font-semibold text-teal-600 mb-3">Core Program Components</div>
+                <div class="mb-2 text-sm font-semibold text-slate-800">The Academy</div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-file-lines text-teal-600"></i>
+                        <span>Resume Development</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-comments text-teal-600"></i>
+                        <span>Interview Preparation</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-user-tie text-teal-600"></i>
+                        <span>Job Interview Secrets</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-comments text-teal-600"></i>
+                        <span>Professional Communication</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-laptop-code text-teal-600"></i>
+                        <span>Digital Literacy</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-wallet text-teal-600"></i>
+                        <span>Financial Literacy</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-user-tie text-teal-600"></i>
+                        <span>Workplace Leadership</span>
+                    </div>
+                    <div class="flex items-center gap-x-3 bg-slate-50 border border-slate-100 rounded-2xl px-4 py-3 text-sm font-medium text-slate-700">
+                        <i class="fa-solid fa-users text-teal-600"></i>
+                        <span>Team Building</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <div class="uppercase tracking-[1.5px] text-xs font-semibold text-teal-600 mb-3">Goals</div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-slate-700">
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">1.</span> Increase veteran employment to 85%+ and achieve 75% long-term retention within 12 months of completion.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">2.</span> Equip 100% of participants with at least two industry-recognized credentials or certifications through the Academy.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">3.</span> Develop leadership and entrepreneurship abilities in every cohort member, with 30% launching or advancing veteran-owned businesses.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">4.</span> Build strong professional networks so each participant gains meaningful connections with at least five colleagues in target industries.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">5.</span> Incubate and launch 10+ veteran-owned startups per year by turning innovative ideas into sustainable, profitable ventures.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">6.</span> Secure active hiring partnerships with 20+ companies committed to recruiting and retaining veterans.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">7.</span> Deliver measurable economic improvements for 80% of participating military families, directly benefiting spouses and children.</div>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <div class="uppercase tracking-[1.5px] text-xs font-semibold text-teal-600 mb-3">Sustainability Plan</div>
+                <p class="text-sm text-slate-700 mb-4">The incubator will create long-term sustainability through diversified revenue streams and mission-aligned business models, including:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700">
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">1.</span> Workforce training contracts with government agencies and employers.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">2.</span> Employer-sponsored training programs tailored to specific industry needs.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">3.</span> Apprenticeship funding through registered programs and government incentives.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">4.</span> Grant funding diversification across federal, state, private foundation, and corporate sources.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">5.</span> Fee-for-service workforce solutions, including customized training and placement services.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">6.</span> Corporate partnerships that provide both funding and direct hiring pipelines for veterans.</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">7.</span> Social enterprise initiatives (detailed below).</div>
+                </div>
+
+                <div class="mt-6 p-5 bg-slate-50 border border-slate-200 rounded-2xl text-sm text-slate-700">
+                    <div class="font-semibold text-teal-700 mb-2">Social Enterprise Initiatives</div>
+                    <p class="mb-3">Social enterprise initiatives are mission-driven businesses operated by the incubator that generate sustainable revenue while directly advancing veteran employment and community impact. Unlike traditional nonprofits that rely primarily on donations and grants, social enterprises use market-based strategies to create earned income streams.</p>
+                    <p class="mb-2">In the context of VWDTI, this means launching and scaling veteran-led or veteran-supporting ventures such as:</p>
+                    <ul class="list-disc pl-5 space-y-1 mb-3">
+                        <li>A veteran-owned staffing and recruitment agency that places program graduates into roles while reinvesting profits back into training scholarships.</li>
+                        <li>Specialized consulting and training services (e.g., military-to-civilian transition workshops sold to corporations) where revenue funds incubator operations.</li>
+                        <li>Impact-focused small business ventures in logistics, home care, or IT services that employ veterans and generate ongoing income for the program.</li>
+                    </ul>
+                    <p>Profits from these enterprises are reinvested to reduce reliance on external funding, create real-world employment opportunities during training, and ensure the incubator can continue serving justice-involved veterans long-term regardless of fluctuations in grant cycles.</p>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <div class="uppercase tracking-[1.5px] text-xs font-semibold text-teal-600 mb-3">Our Ideal (Prospective) Funding Sources</div>
+                <p class="text-sm text-slate-700 mb-4">Our vision and for the Veterans Workforce Development and Training Incubator is to gain capital support through a diverse mix of public and private sources, ensuring long-term stability and broad impact:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-slate-700">
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">1.</span> U.S. Department of Labor — Veterans Employment and Training Service (VETS)</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">2.</span> Veterans Affairs Community Grants</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">3.</span> Workforce Innovation and Opportunity Act (WIOA)</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">4.</span> State Workforce Development Funds</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">5.</span> Corporate Sponsorships</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">6.</span> Foundation Grants</div>
+                    <div class="flex gap-2"><span class="font-semibold text-teal-600 w-5 flex-shrink-0">7.</span> Philanthropic Contributions</div>
+                </div>
+            </div>
+
+            <!-- Visuals for VWDTI -->
+            <div class="mt-8 grid md:grid-cols-2 gap-6">
+                <div class="overflow-hidden rounded-3xl shadow">
+                    <img src="images/welding.jpeg" alt="Veterans in welding and skilled trades training" class="w-full h-64 object-cover">
+                </div>
+                <div class="overflow-hidden rounded-3xl shadow">
+                    <img src="images/trauma_peer_support.jpeg" alt="Peer mentors providing trauma-informed support to veterans" class="w-full h-64 object-cover">
+                </div>
+            </div>
+
+            <!-- New Facility Callout -->
+            <div class="mt-6 p-5 bg-teal-50 border border-teal-200 rounded-2xl">
+                <div class="flex items-start gap-x-4">
+                    <i class="fa-solid fa-hard-hat text-teal-600 text-2xl mt-1"></i>
+                    <div>
+                        <div class="font-semibold text-teal-800">New Facility Under Construction</div>
+                        <p class="text-sm text-teal-700 mt-1">We're building a state-of-the-art facility locally in town to expand our capacity for housing, training, and support services. <a href="construction.html" class="font-semibold underline hover:no-underline">Learn more about the $48M project and $15M initial ask →</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-8 text-sm text-slate-500">
+                VWDTI builds directly on the V-REP foundation, extending high-impact training and placement opportunities across additional high-demand sectors.
+            </div>
+        </div>
+    </section>
+
+    <!-- MADE IN AMERICA -->
+    <section class="made-in-america py-16 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-x-12 gap-y-10 items-center">
+                <div class="lg:col-span-7">
+                    <div class="uppercase tracking-[2px] text-teal-400 text-xs font-semibold mb-3">SUPPORTING AMERICAN INDUSTRY</div>
+                    <h2 class="text-5xl font-semibold tracking-tighter leading-none mb-6">Built for Made in America</h2>
+                    <div class="max-w-xl text-lg text-white/85 space-y-4">
+                        <p>V-REP was designed in direct response to the national imperative to rebuild American manufacturing capacity and secure critical supply chains.</p>
+                        <p>Participants train for real jobs that are currently open with U.S. employers who are bringing production back home or expanding domestic operations.</p>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-5">
+                    <div class="bg-white/10 rounded-3xl p-8 border border-white/10">
+                        <div class="text-sm uppercase tracking-widest text-white/70 mb-4">Priority Training Tracks</div>
+                        <div class="grid grid-cols-2 gap-3 text-sm">
+                            <div class="flex items-center gap-x-3 bg-white/5 px-4 py-3 rounded-2xl">
+                                <i class="fa-solid fa-wrench w-5"></i>
+                                <span>Advanced Welding &amp; Fabrication</span>
+                            </div>
+                            <div class="flex items-center gap-x-3 bg-white/5 px-4 py-3 rounded-2xl">
+                                <i class="fa-solid fa-cogs w-5"></i>
+                                <span>CNC &amp; Precision Machining</span>
+                            </div>
+                            <div class="flex items-center gap-x-3 bg-white/5 px-4 py-3 rounded-2xl">
+                                <i class="fa-solid fa-bolt w-5"></i>
+                                <span>Industrial Electrical Systems</span>
+                            </div>
+                            <div class="flex items-center gap-x-3 bg-white/5 px-4 py-3 rounded-2xl">
+                                <i class="fa-solid fa-truck w-5"></i>
+                                <a href="industrial-logistics-transportation.html" class="hover:text-teal-300 underline-offset-2 hover:underline">Supply Chain &amp; Logistics</a>
+                            </div>
+                            <div class="flex items-center gap-x-3 bg-white/5 px-4 py-3 rounded-2xl">
+                                <i class="fa-solid fa-microchip w-5"></i>
+                                <span>Defense Manufacturing</span>
+                            </div>
+                            <div class="flex items-center gap-x-3 bg-white/5 px-4 py-3 rounded-2xl">
+                                <i class="fa-solid fa-hard-hat w-5"></i>
+                                <span>Infrastructure &amp; Construction Trades</span>
+                            </div>
+                            <div class="flex items-center gap-x-3 bg-white/5 px-4 py-3 rounded-2xl">
+                                <i class="fa-solid fa-laptop w-5"></i>
+                                <span>Workplace Digital Literacy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 rounded-2xl overflow-hidden">
+                        <img src="images/integrity-care-workers (8).jpeg" 
+                             alt="Veterans training in American manufacturing and skilled trades as part of V-REP's Made in America focus" 
+                             class="w-full h-48 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ELIGIBILITY -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-2 gap-x-14 gap-y-12">
+            <div>
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">WHO IS ELIGIBLE</div>
+                <h2 class="text-4xl font-semibold tracking-tight mb-5">Who We Serve</h2>
+                <p class="text-lg text-slate-600 mb-8">V-REP prioritizes military veterans who are within 6-18 months of release from incarceration or are currently on probation or parole. We focus on those facing the specific barriers that make re-entry employment difficult.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex gap-x-4">
+                        <div class="mt-1 text-teal-700"><i class="fa-solid fa-check-circle"></i></div>
+                        <div>
+                            <div class="font-semibold">U.S. military veterans</div>
+                            <div class="text-sm text-slate-600">All discharge types accepted. We honor service regardless of characterization.</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4">
+                        <div class="mt-1 text-teal-700"><i class="fa-solid fa-check-circle"></i></div>
+                        <div>
+                            <div class="font-semibold">Timing: 6-18 months</div>
+                            <div class="text-sm text-slate-600">Within 6-18 months of release, or actively on probation or parole</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4">
+                        <div class="mt-1 text-teal-700"><i class="fa-solid fa-check-circle"></i></div>
+                        <div>
+                            <div class="font-semibold">Common barriers addressed</div>
+                            <div class="text-sm text-slate-600">Employment gaps • PTSD &amp; trauma history • Limited digital literacy • Housing instability or homelessness • Lack of certifications or recent job skills</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4">
+                        <div class="mt-1 text-teal-700"><i class="fa-solid fa-check-circle"></i></div>
+                        <div>
+                            <div class="font-semibold">Work-authorized &amp; committed</div>
+                            <div class="text-sm text-slate-600">Legally able to work in the U.S. and willing to engage fully in the program</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-3xl p-8 md:p-9">
+                <div class="font-semibold text-xl mb-5">We remove barriers, not create them.</div>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex gap-3"><i class="fa-solid fa-arrow-right text-teal-700 mt-1"></i> <span>No application fee</span></li>
+                    <li class="flex gap-3"><i class="fa-solid fa-arrow-right text-teal-700 mt-1"></i> <span>Transportation and digital device support</span></li>
+                    <li class="flex gap-3"><i class="fa-solid fa-arrow-right text-teal-700 mt-1"></i> <span>Emergency housing navigation and stability planning</span></li>
+                    <li class="flex gap-3"><i class="fa-solid fa-arrow-right text-teal-700 mt-1"></i> <span>Flexible scheduling around court, probation, and parole requirements</span></li>
+                    <li class="flex gap-3"><i class="fa-solid fa-arrow-right text-teal-700 mt-1"></i> <span>Direct coordination with parole/probation officers (with your consent)</span></li>
+                    <li class="flex gap-3"><i class="fa-solid fa-arrow-right text-teal-700 mt-1"></i> <span>Digital literacy training built into every track</span></li>
+                </ul>
+                <div class="mt-6 text-xs text-slate-500">A criminal record does not automatically disqualify anyone. We work with each veteran individually.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOURNEY / TIMELINE -->
+    <section class="bg-white border-y border-slate-100 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">YOUR PATH FORWARD</div>
+                <h2 class="text-4xl font-semibold tracking-tight">The V-REP Participant Journey</h2>
+            </div>
+
+            <div class="max-w-3xl space-y-8">
+                <div class="journey-step flex gap-x-5">
+                    <div class="w-11 h-11 flex-shrink-0 rounded-full bg-teal-700 text-white flex items-center justify-center font-bold text-sm">1</div>
+                    <div>
+                        <div class="font-semibold mb-1">Orientation &amp; Barrier Assessment (Week 1–2)</div>
+                        <p class="text-sm text-slate-600">Intake, employment gap analysis, trauma-informed assessment, digital literacy screening, housing status review, individualized career plan, and connection to peer coach and case manager.</p>
+                    </div>
+                </div>
+                <div class="journey-step flex gap-x-5">
+                    <div class="w-11 h-11 flex-shrink-0 rounded-full bg-teal-700 text-white flex items-center justify-center font-bold text-sm">2</div>
+                    <div>
+                        <div class="font-semibold mb-1">Career Readiness Intensive (Week 3–5)</div>
+                        <p class="text-sm text-slate-600">Professional skills, financial wellness, interview training, and credential preparation (OSHA, forklift, etc.).</p>
+                    </div>
+                </div>
+                <div class="journey-step flex gap-x-5">
+                    <div class="w-11 h-11 flex-shrink-0 rounded-full bg-teal-700 text-white flex items-center justify-center font-bold text-sm">3</div>
+                    <div>
+                        <div class="font-semibold mb-1">Vocational Training Track (Week 6–14)</div>
+                        <p class="text-sm text-slate-600">Hands-on training at partner facilities or our training center. Earn industry-recognized certifications.</p>
+                    </div>
+                </div>
+                <div class="journey-step flex gap-x-5">
+                    <div class="w-11 h-11 flex-shrink-0 rounded-full bg-teal-700 text-white flex items-center justify-center font-bold text-sm">4</div>
+                    <div>
+                        <div class="font-semibold mb-1">Job Placement &amp; Transition (Week 15–18)</div>
+                        <p class="text-sm text-slate-600">Employer interviews, job offers, and onboarding support. Family transition planning.</p>
+                    </div>
+                </div>
+                <div class="journey-step flex gap-x-5">
+                    <div class="w-11 h-11 flex-shrink-0 rounded-full bg-teal-700 text-white flex items-center justify-center font-bold text-sm">5</div>
+                    <div>
+                        <div class="font-semibold mb-1">12-Month Retention Support</div>
+                        <p class="text-sm text-slate-600">Ongoing coaching, peer check-ins, crisis support, and advancement planning to ensure long-term success.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">Uncle Sam needs us!</div>
+            <h2 class="text-4xl font-semibold tracking-tight">Real results for veterans and American industry</h2>
+        </div>
+
+
+        <!-- Photo: Employment placement success -->
+        <div class="mt-4">
+            <img src="images/integrity-care-workers (10).jpeg" 
+                 alt="V-REP graduates and staff celebrating successful employment placement in American industry" 
+                 class="w-full h-64 object-cover rounded-3xl">
+        </div>
+
+        <div class="text-center text-[10px] text-slate-500 mt-3">
+            Program outcomes from 2024 cohorts. <a href="#" class="underline">View full impact report</a>.
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="bg-slate-50 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-10">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">FROM OUR GRADUATES</div>
+                <h2 class="text-4xl font-semibold tracking-tight">Veterans overcoming barriers to rebuild their lives</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-3xl p-8 border border-slate-100">
+                    <div class="flex items-center gap-x-4 mb-5">
+                        <img src="https://i.pravatar.cc/48?img=65" class="w-11 h-11 rounded-full" alt="">
+                        <div>
+                            <div class="font-semibold">Marcus R., U.S. Army</div>
+                            <div class="text-xs text-slate-500">V-REP Graduate • Class of 2024</div>
+                        </div>
+                    </div>
+                    <p class="italic text-slate-700">"After my discharge and a rough couple of years, I didn’t think anyone would give me a chance. V-REP trained me in CNC machining. I’m now a machinist at a company making parts for American fighter jets. First time in years I feel proud of what I do."</p>
+                    <div class="mt-4 text-xs font-medium text-teal-700">Now earning $28/hr + benefits</div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 border border-slate-100">
+                    <div class="flex items-center gap-x-4 mb-5">
+                        <img src="https://i.pravatar.cc/48?img=12" class="w-11 h-11 rounded-full" alt="">
+                        <div>
+                            <div class="font-semibold">Sgt. (Ret.) Dana K., U.S. Marine Corps</div>
+                            <div class="text-xs text-slate-500">V-REP Graduate • Class of 2023</div>
+                        </div>
+                    </div>
+                    <p class="italic text-slate-700">"The program didn’t just teach me a trade — they helped me deal with the things I was carrying. My coach was also a veteran. I’m now a supervisor at a domestic steel fabrication plant and mentoring the next group of V-REP participants."</p>
+                    <div class="mt-4 text-xs font-medium text-teal-700">Promoted twice in 18 months</div>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 border border-slate-100">
+                    <div class="flex items-center gap-x-4 mb-5">
+                        <img src="https://i.pravatar.cc/48?img=68" class="w-11 h-11 rounded-full" alt="">
+                        <div>
+                            <div class="font-semibold">Javier M., U.S. Navy</div>
+                            <div class="text-xs text-slate-500">V-REP Graduate • Class of 2024</div>
+                        </div>
+                    </div>
+                    <p class="italic text-slate-700">"I had a felony on my record from before I enlisted. Most places wouldn’t even talk to me. V-REP got me into an apprenticeship program with a company that builds rail equipment right here in Ohio. They stood by me the whole way."</p>
+                    <div class="mt-4 text-xs font-medium text-teal-700">Now a full apprentice with union benefits</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMPLOYER PARTNERS -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid lg:grid-cols-2 gap-x-12 gap-y-10 items-center">
+            <div>
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">FOR EMPLOYERS</div>
+                <h2 class="text-4xl font-semibold tracking-tight mb-4">Hire trained, mission-driven veterans</h2>
+                <p class="text-lg text-slate-600 mb-6">American manufacturers and defense suppliers are facing critical talent shortages. V-REP delivers pre-screened, trained, and supported candidates who are ready to contribute on day one.</p>
+                
+                <div class="space-y-2 text-sm">
+                    <div class="flex items-center gap-x-3"><i class="fa-solid fa-check text-teal-700"></i> <span>Custom training tracks aligned to your exact needs</span></div>
+                    <div class="flex items-center gap-x-3"><i class="fa-solid fa-check text-teal-700"></i> <span>12-month retention coaching included</span></div>
+                    <div class="flex items-center gap-x-3"><i class="fa-solid fa-check text-teal-700"></i> <span>Tax credits &amp; federal hiring incentives guidance</span></div>
+                    <div class="flex items-center gap-x-3"><i class="fa-solid fa-check text-teal-700"></i> <span>Direct access to a pipeline of justice-involved veterans</span></div>
+                </div>
+            </div>
+
+            <div class="bg-slate-900 text-white rounded-3xl p-9">
+                <div class="font-semibold mb-4">Information and Resources:</div>
+                <div class="grid grid-cols-2 gap-x-6 gap-y-3 text-sm text-white/80">
+                    <div><a href="https://va.gov/careers-employment" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline">• U.S. Department of Veterans Affairs</a></div>
+                    <div><a href="https://www.dol.gov/agencies/vets" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline">• U.S. Department of Labor</a></div>
+                    <div><a href="https://www.sba.gov/business-guide/grow-your-business/veteran-owned-businesses" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline">• Small Business Administration</a></div>
+                    <div><a href="https://www.careeronestop.org/" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline">• State and Local Programs and Workforce Boards</a></div>
+                    <div><a href="https://www.umass.edu/student-life/veteran-services" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline">• UMass Veteran Services</a></div>
+                    <div><a href="https://www.aacc.nche.edu/" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline">• Community Colleges</a></div>
+                    <div><a href="https://www.veterans.gov/" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline">• Veteran Service Organizations</a></div>
+                    <div><a href="https://www.va.gov/health-care/" target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline">• Healthcare Employers</a></div>
+                    <div>• And many more partners</div>
+                </div>
+                <div class="mt-7">
+                    <a href="Contact.html" 
+                       class="inline-flex items-center justify-center text-sm font-semibold px-6 h-11 rounded-full border border-white/40 hover:bg-white/10 transition">
+                        <span>Contact Us to Become a Partner</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="care-gradient text-white py-16">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-semibold tracking-tight mb-4">Ready to start your next mission?</h2>
+            <p class="text-xl text-white/90 mb-8 max-w-lg mx-auto">V-REP is currently accepting applications for the Spring 2026 cohort. Space is limited.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="showApplyModal()" 
+                        class="inline-flex items-center justify-center bg-white text-slate-900 font-semibold px-9 h-14 rounded-full text-lg">
+                    Apply to V-REP Now
+                </button>
+                <a href="index.html#contact" 
+                   class="inline-flex items-center justify-center border border-white/40 hover:bg-white/10 font-semibold px-9 h-14 rounded-full text-lg">
+                    Speak with a Navigator
+                </a>
+            </div>
+            <div class="mt-6 text-sm text-white/70">Questions? Call (213) 200-8532 or email vrep@integritycareresources.org</div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white/80 text-sm">
+        <div class="max-w-7xl mx-auto px-6 pt-10 pb-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-6 pb-8 border-b border-white/10">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <img src="images/logo.jpeg" alt="Integrity Care Resources" class="h-8 w-auto object-contain flex-shrink-0">
+                    <div class="text-white">
+                        <span class="font-semibold tracking-tight">INTEGRITY CARE RESOURCES</span>
+                    </div>
+                </a>
+                <div class="text-xs tracking-wider text-white/50">© 2025 INTEGRITY CARE RESOURCES. ALL RIGHTS RESERVED.</div>
+            </div>
+
+            <div class="pt-7 flex flex-wrap gap-x-6 gap-y-1 text-xs text-white/60">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="index.html#programs" class="hover:text-white">All Programs</a>
+                <a href="index.html#contact" class="hover:text-white">Contact</a>
+                <a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a>
+                <span class="text-white/30">•</span>
+                <span>V-REP is a signature program of Integrity Care Resources</span>
+                <span class="text-white/30">•</span>
+                <span>Ecumenical Collaborative Initiative</span>
+                <span class="block mt-2 text-xs">Your generous support and donations help individuals build stable careers for the future.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- APPLY MODAL -->
+    <div id="apply-modal" onclick="if (event.target.id === 'apply-modal') hideApplyModal()" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-xl">
+            <div class="px-7 pt-6 pb-4 bg-slate-50 flex items-start justify-between">
+                <div>
+                    <div class="font-semibold text-2xl tracking-tight">Apply to V-REP</div>
+                    <div class="text-sm text-teal-700">Spring 2026 Cohort • Applications close March 15</div>
+                </div>
+                <button onclick="hideApplyModal()" class="text-slate-400 hover:text-slate-600 p-2 -mr-2">
+                    <i class="fa-solid fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <form id="apply-form" onsubmit="submitApplication(event)" class="p-7 space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="text-sm font-medium text-slate-700 block mb-1.5">Full Name</label>
+                        <input type="text" id="full-name" required class="w-full border border-slate-200 focus:border-teal-600 rounded-xl px-4 py-3 text-sm outline-none">
+                    </div>
+                    <div>
+                        <label class="text-sm font-medium text-slate-700 block mb-1.5">Date of Birth</label>
+                        <input type="date" id="dob" required class="w-full border border-slate-200 focus:border-teal-600 rounded-xl px-4 py-3 text-sm outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label class="text-sm font-medium text-slate-700 block mb-1.5">Email Address</label>
+                        <input type="email" id="email" required class="w-full border border-slate-200 focus:border-teal-600 rounded-xl px-4 py-3 text-sm outline-none">
+                    </div>
+                    <div>
+                        <label class="text-sm font-medium text-slate-700 block mb-1.5">Phone</label>
+                        <input type="tel" id="phone" required class="w-full border border-slate-200 focus:border-teal-600 rounded-xl px-4 py-3 text-sm outline-none">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-sm font-medium text-slate-700 block mb-1.5">Branch of Service &amp; Years Served</label>
+                    <input type="text" id="service" placeholder="e.g., U.S. Army, 2014–2021" required class="w-full border border-slate-200 focus:border-teal-600 rounded-xl px-4 py-3 text-sm outline-none">
+                </div>
+
+                <div>
+                    <label class="text-sm font-medium text-slate-700 block mb-1.5">Current City &amp; State</label>
+                    <input type="text" id="location" required class="w-full border border-slate-200 focus:border-teal-600 rounded-xl px-4 py-3 text-sm outline-none">
+                </div>
+
+                <div>
+                    <label class="text-sm font-medium text-slate-700 block mb-1.5">What interests you most about V-REP?</label>
+                    <textarea id="interest" rows="3" required class="w-full border border-slate-200 focus:border-teal-600 rounded-2xl px-4 py-3 text-sm outline-none" placeholder="Tell us about your goals..."></textarea>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" 
+                            class="w-full bg-teal-700 hover:bg-teal-800 transition text-white font-semibold h-12 rounded-full flex items-center justify-center">
+                        Submit Application
+                    </button>
+                    <p class="text-center text-[10px] text-slate-500 mt-3">A navigator will contact you within 3 business days. All information is confidential.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Partner Modal -->
+    <div id="partner-modal" onclick="if (event.target.id === 'partner-modal') hidePartnerModal()" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white w-full max-w-md rounded-3xl overflow-hidden shadow-xl">
+            <div class="px-7 pt-6 pb-4 bg-slate-50 flex items-center justify-between">
+                <div class="font-semibold text-xl">Become an Employer Partner</div>
+                <button onclick="hidePartnerModal()" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-times text-xl"></i></button>
+            </div>
+            <div class="p-7 text-sm">
+                <p class="mb-5 text-slate-600">We work with manufacturers and defense suppliers to design training that matches your workforce needs and to place trained veterans directly into open roles.</p>
+                
+                <div class="space-y-3 text-sm mb-6">
+                    <div class="flex gap-x-3"><i class="fa-solid fa-check text-teal-600 mt-1"></i> <span>Customized skills pipelines</span></div>
+                    <div class="flex gap-x-3"><i class="fa-solid fa-check text-teal-600 mt-1"></i> <span>Pre-screened candidates with soft skills training</span></div>
+                    <div class="flex gap-x-3"><i class="fa-solid fa-check text-teal-600 mt-1"></i> <span>12-month post-hire support</span></div>
+                </div>
+
+                <form onsubmit="submitPartnerInterest(event)">
+                    <div class="space-y-4">
+                        <input type="text" placeholder="Company Name" class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm" required>
+                        <input type="text" placeholder="Your Name &amp; Title" class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm" required>
+                        <input type="email" placeholder="Work Email" class="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm" required>
+                        <button type="submit" class="w-full bg-slate-900 hover:bg-black transition text-white font-semibold h-12 rounded-full">Request Partnership Discussion</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="success-toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-5 py-3 rounded-full flex items-center gap-x-3 shadow-lg z-[200]">
+        <i class="fa-solid fa-check-circle text-emerald-400"></i>
+        <span id="toast-message" class="text-sm font-medium pr-1"></span>
+    </div>
+
+    <script>
+        // Navbar scroll
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('nav-scrolled', window.scrollY > 20);
+            });
+        }
+
+        // Mobile menu
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                const isHidden = menu.classList.contains('hidden');
+                menu.classList.toggle('hidden', !isHidden);
+                btn.innerHTML = isHidden 
+                    ? '<i class="fa-solid fa-times text-xl"></i>' 
+                    : '<i class="fa-solid fa-bars text-xl"></i>';
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', closeMobileMenu);
+            });
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            menu.classList.add('hidden');
+            btn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+        }
+
+        // Apply modal
+        function showApplyModal() {
+            const modal = document.getElementById('apply-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function hideApplyModal() {
+            const modal = document.getElementById('apply-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function submitApplication(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type="submit"]');
+            const original = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = '<span class="flex items-center justify-center gap-x-2"><i class="fa-solid fa-spinner fa-spin"></i> Submitting...</span>';
+
+            setTimeout(() => {
+                hideApplyModal();
+                showToast("Application received. A V-REP Navigator will contact you within 3 business days.");
+                e.target.reset();
+                btn.disabled = false;
+                btn.innerHTML = original;
+            }, 1250);
+        }
+
+        // Partner modal
+        function showPartnerModal() {
+            const modal = document.getElementById('partner-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function hidePartnerModal() {
+            const modal = document.getElementById('partner-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function submitPartnerInterest(e) {
+            e.preventDefault();
+            const modal = document.getElementById('partner-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            
+            setTimeout(() => {
+                showToast("Thank you. Our Employer Relations team will reach out within 48 hours.");
+                e.target.reset();
+            }, 300);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('success-toast');
+            const msg = document.getElementById('toast-message');
+            
+            msg.textContent = message;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'transition-opacity');
+                setTimeout(() => {
+                    toast.classList.remove('flex', 'opacity-0');
+                    toast.classList.add('hidden');
+                    toast.style.opacity = '1';
+                }, 180);
+            }, 4200);
+        }
+
+        // Keyboard escape
+        function initKeyboard() {
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const apply = document.getElementById('apply-modal');
+                    const partner = document.getElementById('partner-modal');
+                    
+                    if (!apply.classList.contains('hidden')) hideApplyModal();
+                    else if (!partner.classList.contains('hidden')) hidePartnerModal();
+                }
+            });
+        }
+
+        function initializePage() {
+            initNavbar();
+            initMobileMenu();
+            initKeyboard();
+            
+            // Optional: highlight current program in future nav
+            console.log('%c[V-REP] Veterans Re-Entry Employment Pathway page initialized.', 'color:#64748b');
+        }
+
+        window.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>

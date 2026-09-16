@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Integrity Care Resources is building a new facility in Southampton, Massachusetts to expand housing, training, and support services for veterans. Total project cost $48M with an initial ask of $15M.">
+    <title>Our New Facility | Integrity Care Resources</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 0 0 rgb(15 23 42 / 0.06);
+        }
+
+        .nav-link {
+            transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #0D9488;
+        }
+
+        .budget-row {
+            transition: background-color 0.2s ease;
+        }
+        
+        .budget-row:hover {
+            background-color: #f8fafc;
+        }
+
+        .care-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #134E4A 100%);
+        }
+
+        .impact-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .impact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="text-slate-800 bg-white">
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="bg-white border-b border-slate-100 sticky top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <img src="images/logo.jpeg" alt="Integrity Care Resources" class="h-10 w-auto rounded object-contain flex-shrink-0">
+                    <div>
+                        <div class="font-semibold text-2xl tracking-tighter text-slate-900">INTEGRITY CARE</div>
+                        <div class="text-[10px] font-medium tracking-[1.5px] text-teal-700 -mt-1.5">RESOURCES</div>
+                        <div class="text-[9px] text-teal-600 -mt-0.5">Ecumenical Collaborative Initiative</div>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="index.html" class="nav-link text-slate-600 hover:text-slate-900">Home</a>
+                    <a href="index.html#about" class="nav-link text-slate-600 hover:text-slate-900">About</a>
+                    <a href="index.html#programs" class="nav-link text-slate-600 hover:text-slate-900">Programs</a>
+                    <a href="v-rep.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">V-REP</a>
+                    <a href="employability-skills-fast-track.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">Fast-Track</a>
+                    <a href="index.html#contact" class="nav-link text-slate-600 hover:text-slate-900">Contact</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex items-center gap-x-3">
+                    <a href="index.html#contact" 
+                       class="hidden sm:flex items-center px-6 py-2.5 text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-full transition-colors">
+                        <span>Support the Project</span>
+                    </a>
+                    
+                    <a href="index.html" 
+                       class="hidden sm:flex items-center px-5 py-2.5 text-sm font-semibold border border-slate-300 hover:bg-slate-50 rounded-full transition-colors text-slate-700">
+                        Back to Home
+                    </a>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                            class="md:hidden w-11 h-11 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors"
+                            aria-label="Open menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-base font-medium">
+                <a href="index.html" class="mobile-link py-1 text-slate-700">Home</a>
+                <a href="index.html#about" class="mobile-link py-1 text-slate-700">About Us</a>
+                <a href="index.html#programs" class="mobile-link py-1 text-slate-700">Our Programs</a>
+                <a href="v-rep.html" class="mobile-link py-1 text-teal-700 font-semibold">V-REP Program</a>
+                <a href="employability-skills-fast-track.html" class="mobile-link py-1 text-teal-700 font-semibold">Fast-Track Program</a>
+                <a href="index.html#contact" class="mobile-link py-1 text-slate-700">Contact</a>
+                
+                <div class="pt-4 border-t border-slate-100">
+                    <a href="index.html#contact" 
+                       class="w-full flex items-center justify-center gap-x-2 px-6 py-3 text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-full transition-colors">
+                        <span>Support the New Facility</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="care-gradient text-white">
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-20 md:pb-24">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium mb-6 backdrop-blur">
+                    <i class="fa-solid fa-hard-hat"></i>
+                    <span>Local Construction • Community Impact</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter leading-none mb-6">
+                    Building Our Future:<br>
+                    A New Home for Veterans in Southampton
+                </h1>
+                
+                <p class="max-w-xl text-xl text-white/90 leading-tight mb-10">
+                    We are constructing a state-of-the-art facility right here in town to expand housing, training, and comprehensive support services for veterans and their families.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="index.html#contact" 
+                       class="group inline-flex items-center justify-center gap-x-3 bg-white text-slate-900 hover:bg-slate-100 transition-colors font-semibold text-lg px-9 h-14 rounded-full">
+                        <span>Support the Project</span>
+                        <i class="fa-solid fa-arrow-right group-active:translate-x-1 transition-transform"></i>
+                    </a>
+                    
+                    <a href="#budget" 
+                       class="inline-flex items-center justify-center gap-x-3 border border-white/40 hover:bg-white/10 transition-colors font-semibold text-lg px-8 h-14 rounded-full">
+                        <span>View the Budget</span>
+                    </a>
+                </div>
+
+                <div class="mt-8 text-sm text-white/80">
+                    <strong>Total Project Cost:</strong> $48 Million &nbsp;|&nbsp; <strong>Initial Funding Ask:</strong> $15 Million
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- THE VISION -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-center">
+            <div class="md:col-span-7">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-3">OUR VISION</div>
+                <h2 class="text-4xl font-semibold tracking-tight leading-none mb-6">
+                    A Permanent Home for Hope, Healing, and Opportunity
+                </h2>
+                <div class="prose prose-lg text-slate-600">
+                    <p>
+                        This new facility will serve as the cornerstone of our mission in Southampton, Massachusetts. 
+                        Built locally by our community, it will provide integrated housing, intensive training programs, 
+                        and wraparound support services under one roof.
+                    </p>
+                    <p>
+                        By constructing here in town, we are not only creating a lasting resource for veterans but also 
+                        generating local jobs, supporting the economy, and strengthening our community for generations to come.
+                    </p>
+                </div>
+            </div>
+            <div class="md:col-span-5">
+                <div class="bg-slate-50 rounded-3xl p-8 border border-slate-200">
+                    <h3 class="font-semibold text-xl mb-4">What the Facility Will Include</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-teal-600 mt-1"></i> <span>Long-term supportive housing units</span></li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-teal-600 mt-1"></i> <span>State-of-the-art training classrooms and workshops</span></li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-teal-600 mt-1"></i> <span>On-site mental health and wellness services</span></li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-teal-600 mt-1"></i> <span>Job placement and career development center</span></li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-teal-600 mt-1"></i> <span>Community spaces for veterans and families</span></li>
+                        <li class="flex gap-3"><i class="fa-solid fa-check text-teal-600 mt-1"></i> <span>Administrative and program operations headquarters</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONSTRUCTION VISUALS -->
+    <section class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="overflow-hidden rounded-3xl shadow-lg">
+                <img src="images/machineshop.jpg" alt="Local machine shop and construction training environment" class="w-full h-80 object-cover">
+            </div>
+            <div class="overflow-hidden rounded-3xl shadow-lg">
+                <video autoplay muted loop playsinline class="w-full h-80 object-cover">
+                    <source src="images/rollout.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="overflow-hidden rounded-3xl shadow-lg md:col-span-2">
+                <video autoplay muted loop playsinline class="w-full h-64 object-cover">
+                    <source src="images/machine.mp4" type="video/mp4">
+                </video>
+                <div class="text-center mt-2 text-sm text-slate-500">Local build in progress — creating lasting impact for our community.</div>
+            </div>
+        </div>
+        <div class="mt-4 text-center text-sm text-slate-500">Local construction in action — building skills and futures together.</div>
+    </section>
+
+    <!-- BUDGET BREAKDOWN -->
+    <section id="budget" class="bg-slate-50 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">PROJECT BUDGET</div>
+                <h2 class="text-4xl font-semibold tracking-tight">Transparent Breakdown of the $48 Million Project</h2>
+                <p class="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">
+                    Every dollar is carefully allocated to create a sustainable, high-impact facility that will serve veterans for decades.
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm">
+                <table class="w-full">
+                    <thead>
+                        <tr class="bg-slate-900 text-white">
+                            <th class="text-left px-8 py-5 font-semibold">Category</th>
+                            <th class="text-right px-8 py-5 font-semibold">Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-200 text-sm">
+                        <tr class="budget-row">
+                            <td class="px-8 py-4 font-medium">Land Acquisition</td>
+                            <td class="px-8 py-4 text-right font-semibold">$8,000,000</td>
+                        </tr>
+                        <tr class="budget-row">
+                            <td class="px-8 py-4 font-medium">Construction (Local Build)</td>
+                            <td class="px-8 py-4 text-right font-semibold">$30,000,000</td>
+                        </tr>
+                        <tr class="budget-row">
+                            <td class="px-8 py-4 font-medium">Furnishings &amp; Equipment</td>
+                            <td class="px-8 py-4 text-right font-semibold">$3,000,000</td>
+                        </tr>
+                        <tr class="budget-row">
+                            <td class="px-8 py-4 font-medium">Staffing (First Year)</td>
+                            <td class="px-8 py-4 text-right font-semibold">$4,500,000</td>
+                        </tr>
+                        <tr class="budget-row">
+                            <td class="px-8 py-4 font-medium">Program Operations</td>
+                            <td class="px-8 py-4 text-right font-semibold">$2,500,000</td>
+                        </tr>
+                        <tr class="bg-slate-100 font-semibold">
+                            <td class="px-8 py-4">Total Project Cost</td>
+                            <td class="px-8 py-4 text-right">$48,000,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mt-8 max-w-4xl mx-auto">
+                <div class="bg-white border-2 border-teal-700 rounded-3xl p-8 text-center">
+                    <div class="text-sm uppercase tracking-widest text-teal-700 font-semibold mb-1">Initial Funding Request</div>
+                    <div class="text-6xl font-semibold tracking-tighter text-slate-900 mb-2">$15,000,000</div>
+                    <p class="text-slate-600 max-w-md mx-auto">
+                        This initial ask will fund land acquisition, site preparation, and the first phase of construction. 
+                        Additional phases will be supported through diversified funding sources as outlined in our Sustainability Plan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCAL IMPACT -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">WHY LOCAL CONSTRUCTION MATTERS</div>
+            <h2 class="text-4xl font-semibold tracking-tight">Building Community While Building the Future</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="impact-card bg-white border border-slate-200 rounded-3xl p-7">
+                <i class="fa-solid fa-hard-hat text-3xl text-teal-600 mb-4"></i>
+                <div class="font-semibold text-xl mb-2">Local Jobs &amp; Economy</div>
+                <p class="text-sm text-slate-600">Construction will create hundreds of local jobs and support Southampton businesses through the use of regional contractors, suppliers, and tradespeople.</p>
+            </div>
+            <div class="impact-card bg-white border border-slate-200 rounded-3xl p-7">
+                <i class="fa-solid fa-leaf text-3xl text-teal-600 mb-4"></i>
+                <div class="font-semibold text-xl mb-2">Sustainable &amp; Modern Design</div>
+                <p class="text-sm text-slate-600">The facility will be built to high environmental standards, reducing long-term operating costs and serving as a model for community development.</p>
+            </div>
+            <div class="impact-card bg-white border border-slate-200 rounded-3xl p-7">
+                <i class="fa-solid fa-users text-3xl text-teal-600 mb-4"></i>
+                <div class="font-semibold text-xl mb-2">Lasting Community Asset</div>
+                <p class="text-sm text-slate-600">A permanent, purpose-built space that will serve veterans and families for decades while strengthening the fabric of our town.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAFFING ORGANIZATION -->
+    <section id="staffing" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="text-center mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">TEAM &amp; OPERATIONS</div>
+            <h2 class="text-4xl font-semibold tracking-tight">Staffing Organization</h2>
+            <p class="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">The new facility will be operated by a highly qualified, veteran-centered team dedicated to delivering integrated housing, training, and support services.</p>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
+            <!-- Program Director -->
+            <div class="bg-white border border-slate-200 rounded-3xl p-6">
+                <div class="flex items-center gap-x-3 mb-3">
+                    <div class="w-10 h-10 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-user-tie text-lg"></i>
+                    </div>
+                    <div class="font-semibold text-lg">Program Director (Veteran Services Lead)</div>
+                </div>
+                <p class="text-sm text-slate-600">Oversees all program operations, strategic planning, and service delivery. Ensures alignment with veteran-centered values and coordinates across housing, training, and support teams.</p>
+            </div>
+
+            <!-- Career Development Coaches -->
+            <div class="bg-white border border-slate-200 rounded-3xl p-6">
+                <div class="flex items-center gap-x-3 mb-3">
+                    <div class="w-10 h-10 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-chalkboard-teacher text-lg"></i>
+                    </div>
+                    <div class="font-semibold text-lg">Career Development Coaches</div>
+                </div>
+                <p class="text-sm text-slate-600">Provide one-on-one guidance on career planning, resume building, interview skills, and professional development to help veterans achieve sustainable employment.</p>
+            </div>
+
+            <!-- Licensed Behavioral Health Counselor -->
+            <div class="bg-white border border-slate-200 rounded-3xl p-6">
+                <div class="flex items-center gap-x-3 mb-3">
+                    <div class="w-10 h-10 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-brain text-lg"></i>
+                    </div>
+                    <div class="font-semibold text-lg">Licensed Behavioral Health Counselor (Trauma-Informed)</div>
+                </div>
+                <p class="text-sm text-slate-600">Delivers trauma-informed mental health support, counseling, and crisis intervention tailored to the unique experiences of justice-involved and transitioning veterans.</p>
+            </div>
+
+            <!-- Employment Placement Specialist -->
+            <div class="bg-white border border-slate-200 rounded-3xl p-6">
+                <div class="flex items-center gap-x-3 mb-3">
+                    <div class="w-10 h-10 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-handshake text-lg"></i>
+                    </div>
+                    <div class="font-semibold text-lg">Employment Placement Specialist <span class="text-xs text-teal-600 font-normal">(Key Role)</span></div>
+                </div>
+                <p class="text-sm text-slate-600">Builds and maintains employer partnerships, matches veterans to job opportunities, and provides ongoing job retention support to ensure long-term success.</p>
+            </div>
+
+            <!-- Peer Veteran Mentors -->
+            <div class="bg-white border border-slate-200 rounded-3xl p-6">
+                <div class="flex items-center gap-x-3 mb-3">
+                    <div class="w-10 h-10 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-users text-lg"></i>
+                    </div>
+                    <div class="font-semibold text-lg">Peer Veteran Mentors</div>
+                </div>
+                <p class="text-sm text-slate-600">Lived-experience mentors who provide peer support, navigation assistance, and role modeling to help participants build confidence and community.</p>
+            </div>
+
+            <!-- Administrative/Case Management Support -->
+            <div class="bg-white border border-slate-200 rounded-3xl p-6">
+                <div class="flex items-center gap-x-3 mb-3">
+                    <div class="w-10 h-10 bg-teal-100 text-teal-700 rounded-2xl flex items-center justify-center flex-shrink-0">
+                        <i class="fa-solid fa-clipboard-list text-lg"></i>
+                    </div>
+                    <div class="font-semibold text-lg">Administrative &amp; Case Management Support</div>
+                </div>
+                <p class="text-sm text-slate-600">Handles intake, case coordination, benefits navigation, scheduling, and administrative functions to ensure seamless service delivery and accurate record-keeping.</p>
+            </div>
+        </div>
+
+        <div class="mt-8 text-center text-sm text-slate-600">
+            This multidisciplinary team will work collaboratively to deliver holistic, veteran-centered services in the new facility.
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="care-gradient text-white py-16">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-semibold tracking-tight mb-4">Help Us Build the Future</h2>
+            <p class="text-xl text-white/90 mb-8">Your support will help us create a transformative space that provides housing, training, and hope for hundreds of veterans each year.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#contact" 
+                   class="inline-flex items-center justify-center bg-white text-slate-900 font-semibold px-9 h-14 rounded-full text-lg">
+                    Make a Gift Today
+                </a>
+                <a href="index.html#contact" 
+                   class="inline-flex items-center justify-center border border-white/40 hover:bg-white/10 font-semibold px-9 h-14 rounded-full text-lg">
+                    Become a Construction Partner
+                </a>
+            </div>
+            
+            <p class="mt-6 text-sm text-white/70">All contributions are tax-deductible. Learn more about our funding strategy on the V-REP page.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white/80 text-sm">
+        <div class="max-w-7xl mx-auto px-6 pt-10 pb-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-6 pb-8 border-b border-white/10">
+                <a href="index.html" class="flex items-center gap-x-3">
+                    <img src="images/logo.jpeg" alt="Integrity Care Resources" class="h-8 w-auto object-contain flex-shrink-0">
+                    <div class="text-white">
+                        <span class="font-semibold tracking-tight">INTEGRITY CARE RESOURCES</span>
+                    </div>
+                </a>
+                <div class="text-xs tracking-wider text-white/50">© 2025 INTEGRITY CARE RESOURCES. ALL RIGHTS RESERVED.</div>
+            </div>
+
+            <div class="pt-7 flex flex-wrap gap-x-6 gap-y-1 text-xs text-white/60">
+                <a href="index.html" class="hover:text-white">Home</a>
+                <a href="v-rep.html" class="hover:text-white">V-REP &amp; VWDTI</a>
+                <a href="employability-skills-fast-track.html" class="hover:text-white">Fast-Track Program</a>
+                <a href="index.html#contact" class="hover:text-white">Contact</a>
+                <span class="text-white/30">•</span>
+                <span>Building a brighter future for veterans, locally and sustainably.</span>
+                <span class="block mt-2 text-xs">Your generous support and donations help individuals build stable careers for the future.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple navbar scroll effect
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+        }
+
+        // Mobile menu
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            if (!btn || !menu) return;
+
+            btn.addEventListener('click', () => {
+                const isHidden = menu.classList.contains('hidden');
+                menu.classList.toggle('hidden', !isHidden);
+                btn.innerHTML = isHidden 
+                    ? '<i class="fa-solid fa-times text-xl"></i>' 
+                    : '<i class="fa-solid fa-bars text-xl"></i>';
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    btn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+                });
+            });
+        }
+
+        function initializePage() {
+            initNavbar();
+            initMobileMenu();
+        }
+
+        window.addEventListener('DOMContentLoaded', initializePage);
+    </script>
+</body>
+</html>

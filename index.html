@@ -3,403 +3,1474 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Integrity Care Resources offers hands-on trade skills training, reentry support, and career pathways in Western Massachusetts. 501(c)(3) nonprofit helping veterans, first responders, and emergency services professionals build stable careers in HVAC, welding, electrical, logistics, and more through 8-12 week programs with mentorship.">
-    <meta name="keywords" content="trade skills training, nonprofit, reentry program, veterans, first responders, firefighters, EMS, emergency services, MassHire, HVAC training, welding certification, electrical training, Northampton MA, workforce development, second chance employment, Massachusetts reentry, skilled trades, logistics training, digital skills, entrepreneurship">
-    <meta name="author" content="Integrity Care Resources">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Social Sharing -->
-    <meta property="og:title" content="Integrity Care Resources | Trade Skills Training & Reentry Support">
-    <meta property="og:description" content="Hands-on trade skills training and career pathways for stable jobs and stronger communities in Western Massachusetts.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sdcastillo.github.io/integrity-care-solutions">
-    <meta property="og:image" content="myintegritysquare.jpg">
-    <meta property="og:site_name" content="Integrity Care Resources">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Integrity Care Resources | Trade Skills Training">
-    <meta name="twitter:description" content="Nonprofit trade skills training and reentry support in Western Massachusetts.">
-    <meta name="twitter:image" content="myintegritysquare.jpg">
-
-    <title>Integrity Care Resources | Trade Skills Training & Career Pathways</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
+    <meta name="description" content="Integrity Care Resources is a 501(c)(3) nonprofit providing re-entry support, career training, trauma-informed services, and employment pathways for military veterans, firefighters, EMS, law enforcement, dispatchers, and other emergency services professionals.">
+    <meta name="keywords" content="veterans re-entry, justice-involved veterans, veteran employment, firefighters, EMS, law enforcement, dispatchers, first responders, emergency services, reentry program, military veterans, probation parole support, V-REP, integrity care resources">
+    <title>Integrity Care Resources • Compassionate Care. Unwavering Integrity.</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
         
-        body { font-family: 'Inter', system_ui, sans-serif; }
-        .heading-font { font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
-
-        .hero-bg {
-            background: linear-gradient(rgba(15, 118, 110, 0.88), rgba(15, 118, 110, 0.88)), 
-                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        :root {
+            --primary: #0F172A;
+            --accent: #0D9488;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .heading-serif {
+            font-family: 'Playfair Display', Georgia, serif;
         }
 
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 0 0 rgb(15 23 42 / 0.06);
         }
-        .card-hover:hover {
-            transform: translateY(-8px);
+
+        .section-header {
+            font-size: 2.25rem;
+            line-height: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .nav-link {
+            transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:hover {
+            color: #0D9488;
+        }
+
+        .program-card {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+                        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .program-card:hover {
+            transform: translateY(-4px);
             box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .value-icon {
+            transition: all 0.3s ease;
+        }
+
+        .impact-stat {
+            transition: transform 0.3s ease;
+        }
+
+        .care-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #134E4A 100%);
+        }
+
+        .trust-badge {
+            background-color: #F8FAFC;
+            border: 1px solid #E2E8F0;
+        }
+
+        .donation-amount {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .donation-amount.active {
+            border-color: #0D9488;
+            background-color: #F0FDFA;
+            color: #0D9488;
+            box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+        }
+
+        .modal {
+            animation: modalPop 0.2s cubic-bezier(0.32, 0.72, 0, 1);
+        }
+
+        @keyframes modalPop {
+            from {
+                opacity: 0;
+                transform: scale(0.96) translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .resource-link {
+            transition: all 0.2s ease;
+        }
+        
+        .resource-link:hover {
+            color: #0D9488;
+            transform: translateX(3px);
+        }
+
+        .testimony-card {
+            position: relative;
+        }
+        
+        .testimony-card::before {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 28px;
+            width: 32px;
+            height: 32px;
+            background: white;
+            transform: rotate(45deg);
+            box-shadow: -2px -2px 4px rgb(0 0 0 / 0.04);
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
-<body class="bg-zinc-50 text-zinc-800">
+<body class="smooth-scroll text-slate-800 bg-white">
+    <!-- NAVIGATION -->
+    <nav id="navbar" class="bg-white border-b border-slate-100 sticky top-0 z-50 transition-all">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <img src="images/logo.jpeg" alt="Integrity Care Resources" class="h-10 w-auto rounded object-contain flex-shrink-0">
+                    <div>
+                        <div class="font-semibold text-2xl tracking-tighter text-slate-900">INTEGRITY CARE</div>
+                        <div class="text-[10px] font-medium tracking-[1.5px] text-teal-700 -mt-1.5">RESOURCES</div>
+                        <div class="text-[9px] text-teal-600 -mt-0.5">Ecumenical Collaborative Initiative</div>
+                    </div>
+                </div>
 
-    <!-- Navbar -->
-    <nav class="bg-white border-b border-zinc-200 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <div class="flex items-center gap-x-3">
-                <div class="w-11 h-11 bg-teal-700 rounded-2xl flex items-center justify-center text-white font-bold text-2xl tracking-tighter">ICS</div>
-                <div>
-                    <span class="heading-font text-2xl font-semibold tracking-tighter text-teal-800">Integrity Care</span>
-                    <span class="block text-[10px] text-teal-600 -mt-1 tracking-[1.5px]">RESOURCES</span>
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
+                    <a href="#about" class="nav-link text-slate-600 hover:text-slate-900">About</a>
+                    <a href="#who-we-serve" class="nav-link text-slate-600 hover:text-slate-900">Who We Serve</a>
+                    <a href="#programs" class="nav-link text-slate-600 hover:text-slate-900">Programs</a>
+                    <a href="v-rep.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">V-REP</a>
+                    <a href="employability-skills-fast-track.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">Fast-Track</a>
+                    <a href="industrial-logistics-transportation.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">Logistics</a>
+                    <a href="construction.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">New Facility</a>
+                    <a href="#impact" class="nav-link text-slate-600 hover:text-slate-900">Impact</a>
+                    <a href="#involved" class="nav-link text-slate-600 hover:text-slate-900">Get Involved</a>
+                    <a href="#contact" class="nav-link text-slate-600 hover:text-slate-900">Contact</a>
+                </div>
+
+                <!-- CTA Buttons -->
+                <div class="flex items-center gap-x-3">
+                    <button onclick="showDonateModal()"
+                            class="hidden sm:flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-full transition-colors">
+                        <i class="fa-solid fa-heart mr-2"></i>
+                        <span>Donate</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn"
+                            class="md:hidden w-11 h-11 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors"
+                            aria-label="Open menu">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
                 </div>
             </div>
-            
-            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
-                <a href="#programs" class="nav-link text-zinc-700">Programs</a>
-                <a href="#partners" class="nav-link text-zinc-700">Partners</a>
-                <a href="#pathways" class="nav-link text-zinc-700">Pathways</a>
-                <a href="#get-involved" class="nav-link text-zinc-700">Get Involved</a>
-            </div>
-            
-            <div class="flex items-center gap-x-3">
-                <a href="#" class="hidden sm:inline-flex px-5 py-2.5 text-sm font-semibold border border-teal-700 text-teal-700 hover:bg-teal-50 rounded-2xl transition-colors">
-                    Apply Now
-                </a>
-                <a href="#" class="px-6 py-2.5 bg-teal-700 hover:bg-teal-800 text-white text-sm font-semibold rounded-2xl transition-colors">
-                    Donate
-                </a>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
+            <div class="px-6 py-6 flex flex-col gap-y-4 text-base font-medium">
+                <a href="#about" class="mobile-link py-1 text-slate-700">About Us</a>
+                <a href="#who-we-serve" class="mobile-link py-1 text-slate-700">Who We Serve</a>
+                <a href="#programs" class="mobile-link py-1 text-slate-700">Our Programs</a>
+                <a href="v-rep.html" class="mobile-link py-1 text-teal-700 font-semibold">V-REP Program</a>
+                <a href="employability-skills-fast-track.html" class="mobile-link py-1 text-teal-700 font-semibold">Fast-Track Program</a>
+                <a href="industrial-logistics-transportation.html" class="mobile-link py-1 text-teal-700 font-semibold">Industrial Logistics</a>
+                <a href="construction.html" class="mobile-link py-1 text-teal-700 font-semibold">New Facility</a>
+                <a href="#impact" class="mobile-link py-1 text-slate-700">Our Impact</a>
+                <a href="#involved" class="mobile-link py-1 text-slate-700">Get Involved</a>
+                <a href="#contact" class="mobile-link py-1 text-slate-700">Contact</a>
+                
+                <div class="pt-3 border-t border-slate-100">
+                    <button onclick="showDonateModal(); closeMobileMenu();"
+                            class="w-full flex items-center justify-center gap-x-2 px-6 py-3 text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-full transition-colors">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Donate Now</span>
+                    </button>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-bg text-white py-20 md:py-28">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <div class="inline-flex items-center gap-x-2 bg-white/20 backdrop-blur-md px-4 py-1.5 rounded-3xl text-sm mb-6">
-                <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-                <span class="font-medium">Now Enrolling for Summer 2026 Cohorts</span>
-            </div>
-            
-            <h1 class="heading-font text-6xl md:text-7xl font-semibold tracking-tighter leading-none mb-6">
-                Build a Skilled Future.<br>
-                <span class="text-teal-200">With Integrity.</span>
-            </h1>
-            
-            <p class="max-w-2xl mx-auto text-xl text-white/90 mb-10">
-                Integrity Care Resources is a 501(c)(3) nonprofit delivering hands-on trade skills training, 
-                reentry support, and career pathways that lead to stable, meaningful employment in Western Massachusetts.
-            </p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#programs" class="inline-flex items-center justify-center gap-x-3 bg-white text-teal-800 hover:bg-white/90 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
-                    Explore Training Programs
-                </a>
-                <a href="#get-involved" class="inline-flex items-center justify-center gap-x-3 border-2 border-white hover:bg-white/10 font-semibold text-lg px-10 py-5 rounded-3xl transition-all">
-                    Partner With Us
-                </a>
-            </div>
-            
-            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto text-center">
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
-                    <div class="text-3xl font-semibold mb-1">First Cohort</div>
-                    <div class="text-sm text-white/80">Starting Summer 2026</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
-                    <div class="text-3xl font-semibold mb-1">8–12 Week</div>
-                    <div class="text-sm text-white/80">Core Training Programs</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl px-8 py-6">
-                    <div class="text-3xl font-semibold mb-1">6–12 Months</div>
-                    <div class="text-sm text-white/80">Mentorship & Job Support</div>
-                </div>
-            </div>
+    <!-- TOP HERO VIDEO: Embedded Vimeo -->
+    <div class="max-w-5xl mx-auto px-6 mt-4">
+        <div class="aspect-video w-full rounded-2xl overflow-hidden border-[16px] border-slate-900 shadow-2xl bg-black ring-1 ring-slate-700 relative">
+            <iframe src="https://player.vimeo.com/video/1200961322?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;dnt=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Integrity Care Resources for Homeless Veterans"></iframe>
         </div>
-    </section>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
 
-    <!-- Who We Serve Section -->
-    <section class="bg-[#0f4c5c] py-12 text-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-8">
-                <span class="inline-block bg-white/20 text-white text-xs font-semibold tracking-widest px-4 py-1 rounded-full mb-4">WHO WE SERVE</span>
-                <h2 class="heading-font text-3xl md:text-4xl font-semibold tracking-tight">Serving Those Who Serve Others</h2>
-            </div>
-
-            <div class="max-w-3xl mx-auto text-center space-y-4 text-lg text-white/90">
-                <p>Integrity Care Resources supports veterans, firefighters, EMS, law enforcement, dispatchers, and other emergency services professionals.</p>
-                <p>Their experience in high-stakes, uniformed service positions them strongly for meaningful careers in the reentry and workforce development field.</p>
-                <p class="font-medium text-white">It’s a true win-win for everyone.</p>
-                <p>We actively recruit veterans through the VA and partner with first-responder organizations to fill key positions across our programs.</p>
-                <p>Unemployed or underemployed individuals can also enroll in our fast-paced training programs.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About / Mission -->
-    <section class="py-16 bg-white border-b">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="heading-font text-4xl font-semibold tracking-tight mb-6">Our Mission</h2>
-            <p class="max-w-3xl mx-auto text-lg text-zinc-600">
-                We equip individuals — including those facing reentry barriers — with in-demand trade skills, 
-                certifications, and the support they need to secure stable employment and build brighter futures. 
-                We work in partnership with employers, training providers, and community organizations across Western Massachusetts.
-            </p>
-        </div>
-    </section>
-
-    <!-- Programs Section -->
-    <section id="programs" class="py-20 bg-zinc-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-14">
-                <span class="uppercase tracking-[2px] text-sm font-medium text-teal-700">High-Demand Training</span>
-                <h2 class="heading-font text-5xl font-semibold tracking-tight mt-3">Our Training Programs</h2>
-                <p class="mt-4 max-w-md mx-auto text-zinc-600">8–12 week core training + ongoing mentorship and job placement support</p>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Skilled Trades -->
-                <div class="bg-white p-8 rounded-3xl card-hover border border-zinc-100">
-                    <div class="text-teal-600 mb-4"><i class="fa-solid fa-hard-hat text-3xl"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Skilled Trades</h3>
-                    <ul class="space-y-2 text-zinc-600">
-                        <li>• Electrical & Renewable Energy</li>
-                        <li>• HVAC, Ventilation & Air Conditioning</li>
-                        <li>• Plumbing</li>
-                        <li>• Welding & Fabrication</li>
-                        <li>• Carpentry & Construction</li>
-                    </ul>
+    <!-- HERO -->
+    <header class="care-gradient text-white">
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-20 md:pb-24">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-x-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium mb-6 backdrop-blur">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span>501(c)(3) Nonprofit Organization</span>
                 </div>
-
-                <!-- Logistics -->
-                <div class="bg-white p-8 rounded-3xl card-hover border border-zinc-100">
-                    <div class="text-teal-600 mb-4"><i class="fa-solid fa-truck text-3xl"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Logistics & Transportation</h3>
-                    <ul class="space-y-2 text-zinc-600">
-                        <li>• Commercial Truck Driving (CDL)</li>
-                        <li>• Warehouse Operations</li>
-                        <li>• Forklift Certification</li>
-                    </ul>
+                
+                <h1 class="text-6xl md:text-7xl leading-[1.05] font-semibold tracking-tighter mb-6">
+                    Compassionate care.<br>
+                    <span class="text-teal-300">Unwavering integrity.</span>
+                </h1>
+                
+                <div class="text-xl md:text-2xl text-teal-300 font-medium tracking-tight mb-6">
+                    Ecumenical Collaborative Initiative for Re-Entry and Transitional Assistance, and Job Training
                 </div>
+                
+                <p class="max-w-lg text-xl md:text-2xl text-white/90 leading-tight mb-10">
+                    We prepare military veterans and emergency services professionals 
+                    for sustainable employment and successful reintegration.
+                </p>
 
-                <!-- Digital & Technical -->
-                <div class="bg-white p-8 rounded-3xl card-hover border border-zinc-100">
-                    <div class="text-teal-600 mb-4"><i class="fa-solid fa-laptop-code text-3xl"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Digital & Technical Skills</h3>
-                    <ul class="space-y-2 text-zinc-600">
-                        <li>• Basic IT Support (Help Desk)</li>
-                        <li>• Digital Literacy (Microsoft Office, Google Workspace)</li>
-                        <li>• Intro to Coding & Web Development</li>
-                        <li>• Data Entry & Administrative Tech</li>
-                    </ul>
-                </div>
-
-                <!-- Service & Hospitality -->
-                <div class="bg-white p-8 rounded-3xl card-hover border border-zinc-100">
-                    <div class="text-teal-600 mb-4"><i class="fa-solid fa-utensils text-3xl"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Service Industry & Hospitality</h3>
-                    <ul class="space-y-2 text-zinc-600">
-                        <li>• Culinary Arts & Food Service</li>
-                        <li>• Hotel & Facilities Maintenance</li>
-                        <li>• Janitorial & Building Maintenance</li>
-                    </ul>
-                </div>
-
-                <!-- Manufacturing -->
-                <div class="bg-white p-8 rounded-3xl card-hover border border-zinc-100">
-                    <div class="text-teal-600 mb-4"><i class="fa-solid fa-industry text-3xl"></i></div>
-                    <h3 class="text-2xl font-semibold mb-3">Manufacturing & Industrial</h3>
-                    <ul class="space-y-2 text-zinc-600">
-                        <li>• CNC Machine Operation</li>
-                        <li>• Assembly Line & Production Work</li>
-                        <li>• Quality Control & Inspection</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partners & Pathways -->
-    <section id="partners" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-14">
-                <h2 class="heading-font text-5xl font-semibold tracking-tight">Partners & Pathways</h2>
-                <p class="mt-3 max-w-lg mx-auto text-zinc-600">We collaborate with proven organizations to create real opportunities.</p>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-x-16 gap-y-14">
-                <!-- Skilled Trades Partners -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-5 text-teal-700">Skilled Trades & Workforce Training</h3>
-                    <ul class="space-y-3 text-zinc-600">
-                        <li>Building Pathways Boston</li>
-                        <li>Madison Park Technical Vocational High School (Adult Ed)</li>
-                        <li>Jewish Vocational Service Boston</li>
-                        <li>Year Up (Tech & Business Tracks)</li>
-                    </ul>
-                </div>
-
-                <!-- Community Colleges -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-5 text-teal-700">Community Colleges</h3>
-                    <ul class="space-y-3 text-zinc-600">
-                        <li>Bunker Hill Community College</li>
-                        <li>Roxbury Community College</li>
-                        <li>Holyoke Community College & others</li>
-                    </ul>
-                </div>
-
-                <!-- Statewide Systems -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-5 text-teal-700">Statewide Workforce Systems</h3>
-                    <ul class="space-y-3 text-zinc-600">
-                        <li><strong>MassHire</strong> – Job placement, training vouchers (ITA), resume & interview support</li>
-                        <li>Massachusetts Executive Office of Labor and Workforce Development</li>
-                        <li>Massachusetts Department of Correction + Probation (pre-release engagement)</li>
-                    </ul>
-                </div>
-
-                <!-- Employers -->
-                <div>
-                    <h3 class="font-semibold text-lg mb-5 text-teal-700">Employer Partners</h3>
-                    <ul class="space-y-3 text-zinc-600">
-                        <li>Construction firms (union & non-union)</li>
-                        <li>Hospitals & healthcare systems</li>
-                        <li>Facilities management & environmental services</li>
-                        <li>Amazon, Home Depot, UPS & other second-chance employers</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Program Structure & Support -->
-    <section class="py-20 bg-zinc-100">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-14">
-                <h2 class="heading-font text-5xl font-semibold tracking-tight">How Our Programs Work</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl">
-                    <div class="text-teal-600 text-4xl mb-4">1</div>
-                    <h3 class="font-semibold text-xl mb-3">8–12 Week Core Training</h3>
-                    <p class="text-zinc-600">Hands-on instruction, industry-recognized certifications, and practical skills development.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl">
-                    <div class="text-teal-600 text-4xl mb-4">2</div>
-                    <h3 class="font-semibold text-xl mb-3">Ongoing Mentorship</h3>
-                    <p class="text-zinc-600">6–12 months of continued support after training to ensure long-term success.</p>
-                </div>
-                <div class="bg-white p-8 rounded-3xl">
-                    <div class="text-teal-600 text-4xl mb-4">3</div>
-                    <h3 class="font-semibold text-xl mb-3">Job Placement & Retention</h3>
-                    <p class="text-zinc-600">Employer connections, interview support, and post-hire retention assistance.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Core Skills & Entrepreneurship -->
-    <section id="pathways" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h2 class="heading-font text-4xl font-semibold tracking-tight mb-6">Core Life & Employment Skills</h2>
-                    <p class="text-zinc-600 mb-8">These foundational skills are non-negotiable for long-term success in any career path.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button onclick="showDonateModal()"
+                            class="group inline-flex items-center justify-center gap-x-3 bg-white text-slate-900 hover:bg-slate-100 transition-colors font-semibold text-lg px-8 h-14 rounded-full">
+                        <span>Give Today</span>
+                        <i class="fa-solid fa-arrow-right group-active:translate-x-1 transition-transform"></i>
+                    </button>
                     
-                    <ul class="space-y-4 text-zinc-600">
-                        <li class="flex gap-3"><span class="text-teal-600">•</span> Resume building & interview preparation</li>
-                        <li class="flex gap-3"><span class="text-teal-600">•</span> Digital communication & workplace tools</li>
-                        <li class="flex gap-3"><span class="text-teal-600">•</span> Time management, reliability & professionalism</li>
-                        <li class="flex gap-3"><span class="text-teal-600">•</span> Workplace communication & conflict resolution</li>
-                        <li class="flex gap-3"><span class="text-teal-600">•</span> Financial literacy & understanding workplace rights</li>
-                    </ul>
-                </div>
-                
-                <div class="bg-zinc-100 p-10 rounded-3xl">
-                    <h3 class="heading-font text-2xl font-semibold mb-4">Entrepreneurship Track</h3>
-                    <p class="text-zinc-600 mb-6">For those ready to build their own path, we offer guidance on starting a small business or trade service.</p>
-                    <ul class="space-y-3 text-zinc-600">
-                        <li>• Business planning & licensing</li>
-                        <li>• Basic bookkeeping & taxes</li>
-                        <li>• Marketing & client acquisition</li>
-                        <li>• Access to micro-grants and startup resources</li>
-                    </ul>
+                    <a href="#programs"
+                       class="inline-flex items-center justify-center gap-x-3 border border-white/40 hover:bg-white/10 transition-colors font-semibold text-lg px-8 h-14 rounded-full">
+                        <span>Explore Our Work</span>
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- Recommended Certifications -->
-    <section class="py-20 bg-zinc-100">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-14">
-                <h2 class="heading-font text-5xl font-semibold tracking-tight">Recommended Certifications</h2>
-                <p class="mt-3 max-w-lg mx-auto text-zinc-600">Industry-recognized credentials that open doors.</p>
+    <!-- ABOUT / MISSION -->
+    <section id="about" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
+        <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-center">
+            <div class="md:col-span-7">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-3">OUR MISSION</div>
+                <h2 class="section-header tracking-tight leading-none mb-6">
+                    Every person deserves<br>care delivered with<br>honesty and dignity.
+                </h2>
+                <div class="prose prose-lg text-slate-600 max-w-2xl">
+                    <p class="text-[17px]">
+                        Integrity Care Resources was founded in 2026 to address a critical gap: 
+                        military veterans leaving incarceration or under community supervision 
+                        (probation/parole) face overwhelming barriers to stable employment and housing.
+                    </p>
+                    <p class="text-[17px]">
+                        We exist to change that. We provide targeted re-entry navigation, trauma-informed 
+                        support, career readiness, vocational training, and direct employment placement — 
+                        with an unwavering commitment to dignity and integrity for every veteran we serve.
+                    </p>
+                </div>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <div class="bg-white px-6 py-5 rounded-2xl text-center">OSHA 10 / 30</div>
-                <div class="bg-white px-6 py-5 rounded-2xl text-center">ServSafe Food Handler</div>
-                <div class="bg-white px-6 py-5 rounded-2xl text-center">CPR / First Aid</div>
-                <div class="bg-white px-6 py-5 rounded-2xl text-center">Forklift Certification</div>
-                <div class="bg-white px-6 py-5 rounded-2xl text-center">Microsoft Office Specialist</div>
-                <div class="bg-white px-6 py-5 rounded-2xl text-center">IT and Cyber Credentials</div>
-                <div class="bg-white px-6 py-5 rounded-2xl text-center">CDL (Commercial Driver's License)</div>
-                <div class="bg-white px-6 py-5 rounded-2xl text-center">EPA 608 (HVAC)</div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Get Involved / CTA -->
-    <section id="get-involved" class="py-20 bg-teal-800 text-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="heading-font text-5xl font-semibold tracking-tight mb-6">Ready to Get Involved?</h2>
-            <p class="text-xl text-teal-200 mb-10 max-w-md mx-auto">Whether you're a job seeker, employer, or community partner, we’d love to connect.</p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#" class="inline-flex justify-center px-10 py-5 bg-white text-teal-800 font-semibold text-lg rounded-3xl hover:bg-white/90 transition-colors">Apply for Training</a>
-                <a href="#" class="inline-flex justify-center px-10 py-5 border-2 border-white text-white font-semibold text-lg rounded-3xl hover:bg-white/10 transition-colors">Become a Partner</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-zinc-900 text-zinc-400 py-14">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between gap-y-10">
-                <div>
-                    <div class="flex items-center gap-x-4 mb-4">
-                        <!-- Light logo -->
-                        <img src="myintegrity_alternate.jpg" alt="Integrity Care Resources Logo" class="h-10 w-auto">
+            <div class="md:col-span-5 bg-slate-50 rounded-3xl p-8 md:p-9 text-sm">
+                <div class="space-y-6">
+                    <div>
+                        <div class="font-semibold text-slate-900 mb-1">Founded</div>
+                        <div class="text-slate-600">2026 • Southampton, Massachusetts</div>
                     </div>
-                    <p class="max-w-xs text-sm">A 501(c)(3) nonprofit building stronger communities through skills training and opportunity.</p>
+                    <div>
+                        <div class="font-semibold text-slate-900 mb-1">Tax Status</div>
+                        <div class="text-slate-600">501(c)(3) Public Charity • EIN 46-3849217</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-slate-900 mb-1">Leadership</div>
+                        <div class="text-slate-600">Board of Directors with backgrounds in medicine, social work, law, and ethics</div>
+                    </div>
+                    <div class="pt-2">
+                        <a href="#contact" class="inline-flex items-center text-teal-700 hover:text-teal-800 font-semibold group">
+                            Meet our team 
+                            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-0.5 transition"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO WE SERVE -->
+    <section id="who-we-serve" class="max-w-7xl mx-auto px-6 pb-16">
+        <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-3">WHO WE SERVE</div>
+        <h2 class="section-header tracking-tight leading-none mb-4">
+            Veterans and the people who run toward the call.
+        </h2>
+        <p class="max-w-3xl text-[17px] text-slate-600 mb-10">
+            Integrity Care Resources was built first for justice-involved and recently released military veterans.
+            We also walk alongside firefighters, EMS, law enforcement, dispatchers, and other emergency services
+            professionals who carry trauma, employment gaps, or re-entry barriers after service to their communities.
+        </p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div class="rounded-3xl border border-slate-200 bg-white p-7">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
+                    <i class="fa-solid fa-flag-usa text-xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl tracking-tight mb-2">Military veterans</h3>
+                <p class="text-slate-600 text-[15px] leading-relaxed">Justice-involved and recently released veterans, transitioning service members, and military families.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-200 bg-white p-7">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
+                    <i class="fa-solid fa-fire-extinguisher text-xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl tracking-tight mb-2">Firefighters</h3>
+                <p class="text-slate-600 text-[15px] leading-relaxed">Career and volunteer firefighters seeking stable civilian careers, credentials, and trauma-informed support.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-200 bg-white p-7">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
+                    <i class="fa-solid fa-truck-medical text-xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl tracking-tight mb-2">EMS</h3>
+                <p class="text-slate-600 text-[15px] leading-relaxed">EMTs, paramedics, and ambulance personnel navigating burnout, injury, or a transition into new work.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-200 bg-white p-7">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
+                    <i class="fa-solid fa-shield-halved text-xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl tracking-tight mb-2">Law enforcement</h3>
+                <p class="text-slate-600 text-[15px] leading-relaxed">Officers and related public-safety staff who need re-entry, career, or housing support after service.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-200 bg-white p-7">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
+                    <i class="fa-solid fa-headset text-xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl tracking-tight mb-2">Dispatchers</h3>
+                <p class="text-slate-600 text-[15px] leading-relaxed">911 and public-safety dispatchers carrying high-stress service who are ready for a next chapter.</p>
+            </div>
+            <div class="rounded-3xl border border-slate-200 bg-white p-7">
+                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
+                    <i class="fa-solid fa-kit-medical text-xl"></i>
+                </div>
+                <h3 class="font-semibold text-xl tracking-tight mb-2">Other emergency services</h3>
+                <p class="text-slate-600 text-[15px] leading-relaxed">Corrections, search and rescue, and allied emergency professionals who belong in the same circle of care.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATEMENT OF NEED -->
+    <section id="need" class="max-w-7xl mx-auto px-6 py-16 bg-slate-50">
+        <div class="grid md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-7">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">STATEMENT OF NEED</div>
+                <h2 class="text-4xl font-semibold tracking-tight mb-6">The Challenge: Veteran Homelessness in Massachusetts</h2>
+                
+                <p class="text-lg text-slate-600 mb-6">
+                    Massachusetts faces a persistent challenge in addressing veteran homelessness. Despite progress, many veterans continue to experience chronic homelessness, mental health disorders including PTSD, substance use disorders, and limited access to affordable housing.
+                </p>
+                
+                <div class="mb-6">
+                    <div class="font-semibold text-slate-800 mb-3">According to recent data:</div>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">1.</span> 
+                            Thousands of veterans in Massachusetts experience housing instability annually.
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">2.</span> 
+                            Existing facilities lack sufficient capacity for long-term supportive housing.
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">3.</span> 
+                            There is a critical need for integrated care models that combine housing with services.
+                        </li>
+                    </ul>
                 </div>
                 
-                <div class="text-sm">
-                    <div class="font-medium text-white mb-3">Northampton, Massachusetts</div>
-                    <div>UNDER CONSTRUCTION</div>
+                <p class="text-lg text-slate-600">
+                    Without intervention, these veterans remain at high risk for continued homelessness, poor health outcomes, and unemployment.
+                </p>
+                
+                <div class="mt-6 text-xs text-slate-500">
+                    Data drawn from HUD Point-in-Time counts, state reports, and recent analyses (2023–2024). Annual figures reflect cumulative experiences of instability beyond single-night snapshots.
+                </div>
+            </div>
+            <div class="md:col-span-5">
+                <img src="images/housing.jpeg" alt="Veterans finding stable housing through supportive programs" class="w-full h-80 object-cover rounded-3xl shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- GOALS AND OBJECTIVES -->
+    <section id="goals" class="max-w-7xl mx-auto px-6 py-16">
+        <div class="max-w-3xl mx-auto">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">GOALS AND OBJECTIVES</div>
+            <h2 class="text-4xl font-semibold tracking-tight mb-6">Our Goals for Impact</h2>
+            
+            <div class="space-y-8">
+                <!-- Objective Alpha -->
+                <div>
+                    <div class="font-semibold text-xl text-slate-900 mb-3">Objective Alpha: Reduce Veteran Homelessness</div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">•</span> 
+                            House 150 veterans annually through our supportive housing and re-entry programs.
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">•</span> 
+                            Achieve a 75% housing stability rate after 12 months for program participants.
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Objective Bravo -->
+                <div>
+                    <div class="font-semibold text-xl text-slate-900 mb-3">Objective Bravo: Improve Health Outcomes</div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">•</span> 
+                            Provide mental health services to 100% of program residents through trauma-informed care and partnerships.
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">•</span> 
+                            Reduce emergency healthcare utilization by 20% among participants.
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Objective Charlie -->
+                <div>
+                    <div class="font-semibold text-xl text-slate-900 mb-3">Objective Charlie: Increase Employment and Skill Development</div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">•</span> 
+                            Achieve 60-75% job placement within 90 days of release.
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">•</span> 
+                            70% job retention at 6 months.
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">•</span> 
+                            80% completion of core training modules.
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">•</span> 
+                            50-65% certification attainment rate.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Objective Delta -->
+                <div>
+                    <div class="font-semibold text-xl text-slate-900 mb-3">Objective Delta: Reduce Recidivism and Increase Post-Release Stability <span class="text-xs text-teal-600">(Highly Important)</span></div>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">•</span> 
+                            Reduce recidivism rates through comprehensive re-entry support and services.
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="font-semibold text-teal-700 flex-shrink-0">•</span> 
+                            Increased housing stability post-release.
+                        </li>
+                    </ul>
                 </div>
             </div>
             
-            <div class="border-t border-zinc-800 mt-12 pt-8 text-xs flex flex-col md:flex-row justify-between gap-y-3">
-                <div>© 2026 Integrity Care Resources All rights reserved.</div>
-                <div class="flex gap-x-6">
-                    <a href="#" class="hover:text-white">Privacy</a>
-                    <a href="#" class="hover:text-white">Accessibility</a>
+            <div class="mt-8 text-xs text-slate-500">
+                These targets are ambitious yet grounded in our current capacity, partnerships, and the scale of need in Massachusetts. Progress will be tracked annually and reported transparently.
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAUMA-INFORMED PEER SUPPORT VISUAL -->
+    <div class="max-w-7xl mx-auto px-6 py-8">
+        <div class="rounded-3xl overflow-hidden shadow-lg">
+            <img src="images/trauma_peer_support.jpeg" 
+                 alt="Veterans receiving trauma-informed peer support in a group setting" 
+                 class="w-full h-[420px] object-cover">
+        </div>
+        <div class="mt-3 text-sm text-slate-600 max-w-2xl">
+            <span class="font-medium text-teal-700">Trauma-informed peer support</span> — Veterans supporting veterans through shared military and re-entry experiences, building emotional resilience and connection.
+        </div>
+    </div>
+
+    <!-- PROGRAMS -->
+    <section id="programs" class="bg-slate-900 py-16 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10">
+                <div>
+                    <div class="uppercase text-teal-400 tracking-[2px] text-xs font-semibold mb-2">WHAT WE DO</div>
+                    <h2 class="text-4xl font-semibold tracking-tighter">Our Programs</h2>
+                </div>
+                <p class="mt-3 md:mt-0 max-w-md text-slate-400 text-[15px]">
+                    All services are provided at no cost to eligible justice-involved veterans. Our flagship program, <a href="v-rep.html" class="text-teal-400 hover:underline">V-REP</a>, focuses on employment pathways for veterans within 6-18 months of release. We also offer the new <strong>Veterans Workforce Development and Training Accelerator</strong>, the <a href="employability-skills-fast-track.html" class="text-teal-400 hover:underline">Employability Skills Fast-Track Training Program</a>, and our <a href="industrial-logistics-transportation.html" class="text-teal-400 hover:underline">Industrial Logistics &amp; Transportation</a> pathway.
+                </p>
+            </div>
+
+            <!-- Re-entry visual spread through page -->
+            <div class="mb-8">
+                <img src="images/reentry.jpeg" 
+                     alt="Veteran re-entering community life with support from the program" 
+                     class="w-full h-72 md:h-80 object-cover rounded-3xl shadow-lg">
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Program 1 -->
+                <div class="program-card bg-white/5 hover:bg-white/10 border border-white/10 rounded-3xl p-7 group">
+                    <div class="w-12 h-12 bg-teal-900 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-compass text-teal-300 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Re-Entry Navigation</h3>
+                    <p class="text-white/70 leading-relaxed text-[15px] mb-6">
+                        One-on-one advocacy and coordination for veterans navigating parole, probation, 
+                        benefits, court requirements, and complex systems during the critical 6-18 month re-entry window.
+                    </p>
+                    <div class="flex items-center text-sm text-teal-400 font-medium">
+                        <span>Learn more</span> <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Program 2 -->
+                <div class="program-card bg-white/5 hover:bg-white/10 border border-white/10 rounded-3xl p-7 group">
+                    <div class="w-12 h-12 bg-teal-900 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-user-friends text-teal-300 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Trauma &amp; Peer Support</h3>
+                    <p class="text-white/70 leading-relaxed text-[15px] mb-6">
+                        Military-informed peer mentoring, PTSD-aware counseling navigation, family reintegration 
+                        support, and weekly groups for veterans carrying the weight of service and incarceration.
+                    </p>
+                    <div class="flex items-center text-sm text-teal-400 font-medium">
+                        <span>Learn more</span> <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Program 3 -->
+                <div class="program-card bg-white/5 hover:bg-white/10 border border-white/10 rounded-3xl p-7 group">
+                    <div class="w-12 h-12 bg-teal-900 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-home text-teal-300 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Housing &amp; Stability</h3>
+                    <p class="text-white/70 leading-relaxed text-[15px] mb-6">
+                        Emergency shelter coordination, transitional housing navigation, rental assistance, 
+                        and stability planning for veterans facing homelessness or housing instability post-release.
+                    </p>
+                    <div class="flex items-center text-sm text-teal-400 font-medium">
+                        <span>Learn more</span> <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Program 4 -->
+                <div class="program-card bg-white/5 hover:bg-white/10 border border-white/10 rounded-3xl p-7 group">
+                    <div class="w-12 h-12 bg-teal-900 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fa-solid fa-handshake text-teal-300 text-2xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-2xl tracking-tight mb-3">Resource Connection Hub</h3>
+                    <p class="text-white/70 leading-relaxed text-[15px] mb-6">
+                        Direct access to food, transportation, legal aid, VA benefits, identification recovery, 
+                        digital literacy training, and community resources tailored for justice-involved veterans.
+                    </p>
+                    <div class="flex items-center text-sm text-teal-400 font-medium">
+                        <span>Learn more</span> <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Featured Program: V-REP -->
+            <div class="mt-6">
+                <a href="v-rep.html" class="group block bg-white/5 hover:bg-white/10 border border-white/15 rounded-3xl p-8 md:p-9 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-y-6">
+                        <div class="flex items-start gap-x-5">
+                            <div class="w-14 h-14 bg-teal-800 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-flag-usa text-teal-300 text-3xl"></i>
+                            </div>
+                            <div>
+                                <div class="uppercase tracking-[1.5px] text-xs text-teal-400 font-semibold mb-1">NEW • MADE IN AMERICA</div>
+                                <div class="text-white text-2xl font-semibold tracking-tight mb-1">Veterans Re-Entry Employment Pathway (V-REP)</div>
+                                <p class="text-white/75 max-w-xl">Our flagship program prepares justice-involved veterans (within 6-18 months of release or on probation/parole) for sustainable careers through skill-building, trauma support, and direct placement — addressing employment gaps, PTSD, digital literacy, housing instability, and outdated job skills.</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <span class="inline-flex items-center gap-x-2 text-sm font-semibold text-teal-300 group-hover:text-teal-200">
+                                Learn more &amp; apply 
+                                <i class="fa-solid fa-arrow-right group-hover:translate-x-0.5 transition"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Featured: Employability Skills Fast-Track -->
+            <div class="mt-6">
+                <a href="employability-skills-fast-track.html" class="group block bg-white/5 hover:bg-white/10 border border-white/15 rounded-3xl p-8 md:p-9 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-y-6">
+                        <div class="flex items-start gap-x-5">
+                            <div class="w-14 h-14 bg-teal-800 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-rocket text-teal-300 text-3xl"></i>
+                            </div>
+                            <div>
+                                <div class="uppercase tracking-[1.5px] text-xs text-teal-400 font-semibold mb-1">NEW • FAST-TRACK</div>
+                                <div class="text-white text-2xl font-semibold tracking-tight mb-1">Employability Skills Fast-Track Training Program</div>
+                                <p class="text-white/75 max-w-xl">Intensive 2–4 week program (20–40 hours, hybrid) that equips veterans, transitioning service members, military spouses, and job seekers with the essential workplace competencies to secure, retain, and advance across industries.</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <span class="inline-flex items-center gap-x-2 text-sm font-semibold text-teal-300 group-hover:text-teal-200">
+                                Learn more &amp; enroll 
+                                <i class="fa-solid fa-arrow-right group-hover:translate-x-0.5 transition"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Featured: Industrial Logistics & Transportation -->
+            <div class="mt-6">
+                <a href="industrial-logistics-transportation.html" class="group block bg-white/5 hover:bg-white/10 border border-white/15 rounded-3xl p-8 md:p-9 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-y-6">
+                        <div class="flex items-start gap-x-5">
+                            <div class="w-14 h-14 bg-teal-800 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-truck-fast text-teal-300 text-3xl"></i>
+                            </div>
+                            <div>
+                                <div class="uppercase tracking-[1.5px] text-xs text-teal-400 font-semibold mb-1">NEW • CAREER PATHWAY</div>
+                                <div class="text-white text-2xl font-semibold tracking-tight mb-1">Industrial Logistics &amp; Transportation</div>
+                                <p class="text-white/75 max-w-xl">Warehouse operations, forklift certification, supply chain coordination, and commercial driving prep — high-demand roles with stackable credentials and employer placement support.</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <span class="inline-flex items-center gap-x-2 text-sm font-semibold text-teal-300 group-hover:text-teal-200">
+                                Learn more &amp; enroll 
+                                <i class="fa-solid fa-arrow-right group-hover:translate-x-0.5 transition"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Featured: New Facility -->
+            <div class="mt-6">
+                <a href="construction.html" class="group block bg-white/5 hover:bg-white/10 border border-white/15 rounded-3xl p-8 md:p-9 transition-all">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-y-6">
+                        <div class="flex items-start gap-x-5">
+                            <div class="w-14 h-14 bg-teal-800 rounded-2xl flex-shrink-0 flex items-center justify-center">
+                                <i class="fa-solid fa-hard-hat text-teal-300 text-3xl"></i>
+                            </div>
+                            <div>
+                                <div class="uppercase tracking-[1.5px] text-xs text-teal-400 font-semibold mb-1">MAJOR INITIATIVE</div>
+                                <div class="text-white text-2xl font-semibold tracking-tight mb-1">New Facility Construction</div>
+                                <p class="text-white/75 max-w-xl">We're building a state-of-the-art facility locally in Southampton to expand housing, training, and support for veterans. Total project $48M with $15M initial ask.</p>
+                            </div>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <span class="inline-flex items-center gap-x-2 text-sm font-semibold text-teal-300 group-hover:text-teal-200">
+                                Learn more &amp; support 
+                                <i class="fa-solid fa-arrow-right group-hover:translate-x-0.5 transition"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHOTO FEATURE: Our team in action -->
+    <div class="max-w-7xl mx-auto px-6 pb-8">
+        <div>
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-400 mb-2">OUR TEAM &amp; VETERANS</div>
+            <div class="text-3xl font-semibold tracking-tight leading-none mb-6">Real people. Real second chances.<br>Real careers in America.</div>
+        </div>
+        <div class="flex gap-6 items-start">
+            <div class="w-96 flex-shrink-0">
+                <img src="images/integrity-care-workers (5).jpeg" 
+                     alt="Integrity Care Resources staff and veteran participants collaborating on re-entry and career development" 
+                     class="w-full h-auto rounded-3xl shadow-sm">
+            </div>
+            <div class="flex-1">
+                <h3 class="font-semibold text-xl mb-2 text-teal-700">Manufacturing &amp; Industrial Work</h3>
+                <p class="text-sm text-slate-600 mb-3">Often overlooked, but very accessible. Past life challenges—such as military service, incarceration, trauma, or justice involvement—forge resilience, focus, and a strong work ethic that uniquely arm these individuals to excel in trade and machine jobs.</p>
+                <ul class="text-sm text-slate-600 space-y-1">
+                    <li><strong>CNC Machine Operation</strong> — Short training, good pay potential. The precision, attention to detail, and ability to follow strict protocols—honed through high-stakes past experiences like military discipline or structured prison routines—enable quick mastery of CNC machines. Their proven capacity to maintain composure under pressure turns potential barriers into a competitive edge for stable, high-paying roles in manufacturing.</li>
+                    <li><strong>Assembly Line &amp; Production Work</strong> — Entry-level with opportunities to specialize. Challenges like overcoming PTSD, employment gaps, or re-entry barriers build exceptional reliability, teamwork, and perseverance. These individuals thrive in structured, repetitive environments, bringing a no-excuses work ethic that allows them to adapt quickly, deliver consistent results, and advance into specialized positions through demonstrated grit and problem-solving honed from real-life adversity.</li>
+                    <li><strong>Quality Control / Inspection</strong> — Adds a technical layer that increases wages. Navigating the justice system, trauma, or personal setbacks sharpens critical thinking, attention to detail, and an unshakeable sense of integrity—core to QC work. Veterans and justice-involved participants often excel at spotting inconsistencies and upholding standards, transforming past obstacles into assets that command higher pay and open doors to technical leadership in industrial settings.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- VOCATIONAL TRAINING VISUALS (spread throughout) -->
+    <div class="max-w-7xl mx-auto px-6 pb-12">
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <img src="images/welding.jpeg" 
+                     alt="Veterans learning skilled trades like welding in a professional training environment" 
+                     class="w-full h-72 object-cover rounded-3xl shadow-lg">
+                <div class="mt-2 text-sm text-slate-600">Vocational skills training — building precision, focus, and confidence in high-demand trades.</div>
+            </div>
+            <div>
+                <img src="images/machineshop.jpg" 
+                     alt="Veterans in machine shop training environment working with industrial equipment" 
+                     class="w-full h-72 object-cover rounded-3xl shadow-lg">
+                <div class="mt-2 text-sm text-slate-600">Hands-on machine shop training prepares participants for real manufacturing and industrial careers.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VETERANS WORKFORCE DEVELOPMENT AND TRAINING ACCELERATOR -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="bg-slate-900 text-white rounded-3xl p-10 md:p-14">
+            <div class="max-w-3xl">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-400 mb-3">NEW INITIATIVE</div>
+                <h2 class="text-4xl font-semibold tracking-tight leading-none mb-5">Veterans Workforce Development and Training Accelerator</h2>
+                
+                <p class="text-xl text-white/90 leading-relaxed">
+                    The Veterans Workforce Development and Training Accelerator is a high-speed training bootcamp that equips military veterans, transitioning service members, military spouses, and caregivers with the skills and support they need. With entrepreneurial support designed to help participants achieve economic wealth and independence.
+                </p>
+            </div>
+
+            <div class="mt-8 grid md:grid-cols-3 gap-4 text-sm">
+                <div class="bg-white/5 rounded-2xl p-5 border border-white/10">
+                    <div class="font-semibold mb-1 text-teal-300">Rapid Bootcamp Training</div>
+                    <p class="text-white/70 text-sm">Intensive, accelerated skills development tailored for fast entry into high-demand careers.</p>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-5 border border-white/10">
+                    <div class="font-semibold mb-1 text-teal-300">Entrepreneurial Support</div>
+                    <p class="text-white/70 text-sm">Dedicated training and resources to launch businesses and build generational wealth.</p>
+                </div>
+                <div class="bg-white/5 rounded-2xl p-5 border border-white/10">
+                    <div class="font-semibold mb-1 text-teal-300">Wraparound Services</div>
+                    <p class="text-white/70 text-sm">Career coaching, mentorship, and family support for veterans, spouses, and caregivers.</p>
+                </div>
+            </div>
+
+            <div class="mt-8">
+                <a href="#contact" 
+                   class="inline-flex items-center gap-x-3 bg-white text-slate-900 hover:bg-slate-100 transition-colors font-semibold px-8 h-12 rounded-full text-sm">
+                    <span>Apply or Get More Information</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- INDUSTRY-SPECIFIC TRAINING TRACKS -->
+    <section class="max-w-7xl mx-auto px-6 py-16 bg-white">
+        <div class="text-center mb-10">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">EXPANDED CAREER PATHWAYS</div>
+            <h2 class="text-4xl font-semibold tracking-tight">Industry-Specific Training Tracks</h2>
+            <p class="mt-3 text-lg text-slate-600 max-w-2xl mx-auto">Our programs offer targeted training in high-demand fields, with clear pathways for advancement and certification.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- Industrial Logistics & Transportation -->
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6">
+                <h3 class="font-semibold text-xl mb-2 text-teal-700">Industrial Logistics &amp; Transportation</h3>
+                <p class="text-sm text-slate-600 mb-3">High-demand warehouse, distribution, and freight careers with stackable credentials and clear advancement.</p>
+                <ul class="text-sm text-slate-600 space-y-1 mt-2">
+                    <li><strong>Warehouse &amp; Material Handling</strong> — Receiving, shipping, pick/pack, inventory accuracy, and safety culture.</li>
+                    <li><strong>Forklift &amp; Powered Industrial Trucks</strong> — Operator training with OSHA-aligned inspections and employer evaluation readiness.</li>
+                    <li><strong>Supply Chain Coordination</strong> — Order fulfillment workflows, basic WMS/TMS concepts, and lead/team communication.</li>
+                    <li><strong>Transportation &amp; CDL Prep</strong> — Local delivery pathways, DOT basics, and Class A/B commercial driving readiness support.</li>
+                </ul>
+                <a href="industrial-logistics-transportation.html" class="inline-flex items-center gap-x-2 mt-4 text-sm font-semibold text-teal-700 hover:text-teal-800">
+                    Learn more about this pathway <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <!-- Digital & Technical Skills -->
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6">
+                <h3 class="font-semibold text-xl mb-2 text-teal-700">Digital &amp; Technical Skills</h3>
+                <p class="text-sm text-slate-600 mb-3">Not everyone will pursue tech, but offering it expands opportunities.</p>
+                <ul class="text-sm text-slate-600 space-y-1 mt-2">
+                    <li><strong>Basic IT Support (Help Desk, CompTIA A+)</strong> — Entry-level tech roles with certification-based hiring.</li>
+                    <li><strong>Digital Literacy (Microsoft Office, Google Workspace)</strong> — Essential for almost any modern job.</li>
+                    <li><strong>Intro to Coding / Web Development</strong> — Best as an optional track for motivated participants.</li>
+                    <li><strong>Data Entry &amp; Administrative Tech Skills</strong> — Remote-friendly opportunities.</li>
+                </ul>
+            </div>
+
+            <!-- Service Industry & Hospitality -->
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6">
+                <h3 class="font-semibold text-xl mb-2 text-teal-700">Service Industry &amp; Hospitality</h3>
+                <p class="text-sm text-slate-600 mb-3">These jobs are often more open to hiring individuals with records.</p>
+                <ul class="text-sm text-slate-600 space-y-1 mt-2">
+                    <li><strong>Culinary Arts / Food Service</strong> — Includes kitchen training, food safety certification.</li>
+                    <li><strong>Hotel &amp; Facilities Maintenance</strong> — Combines hospitality with technical skills.</li>
+                    <li><strong>Janitorial &amp; Building Maintenance</strong> — Reliable entry-level work with advancement potential.</li>
+                </ul>
+            </div>
+
+            <!-- Manufacturing & Industrial Work -->
+            <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6">
+                <h3 class="font-semibold text-xl mb-2 text-teal-700">Manufacturing &amp; Industrial Work</h3>
+                <p class="text-sm text-slate-600 mb-3">Often overlooked, but very accessible.</p>
+                <ul class="text-sm text-slate-600 space-y-1 mt-2">
+                    <li><strong>CNC Machine Operation</strong> — Short training, good pay potential.</li>
+                    <li><strong>Assembly Line &amp; Production Work</strong> — Entry-level with opportunities to specialize.</li>
+                    <li><strong>Quality Control / Inspection</strong> — Adds a technical layer that increases wages.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- JOB READINESS FOR INMATE RE-ENTRY -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+        <div class="bg-white border border-slate-200 rounded-3xl p-8 md:p-12">
+            <div class="text-center mb-8">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">FOR INMATE RE-ENTRY PARTICIPANTS</div>
+                <h2 class="text-3xl font-semibold tracking-tight">Job Readiness Skills and Training Program</h2>
+                <p class="text-sm text-slate-500 mt-1">By INTEGRITY CARE RESOURCES INC</p>
+            </div>
+
+            <div class="prose max-w-none text-slate-600">
+                <h3 class="text-xl font-semibold text-slate-900">Program Overview</h3>
+                <p>The Job Readiness Skills and Training Program is designed to prepare formerly incarcerated individuals for successful reintegration into society through employment readiness, life skills development, career training, and supportive services. The program focuses on reducing recidivism, increasing self-sufficiency, and helping participants secure stable employment and long-term career opportunities.</p>
+
+                <p>Research and community reentry programs consistently identify employment, housing stability, mental health support, and life-skills coaching as critical factors in successful reentry.</p>
+
+                <h3 class="text-xl font-semibold text-slate-900 mt-6">Program Goals</h3>
+                <ol class="list-decimal pl-5 space-y-2">
+                    <li>Equip participants with workforce readiness skills.</li>
+                    <li>Increase employment opportunities for returning citizens.</li>
+                    <li>Build confidence, responsibility, and professionalism.</li>
+                    <li>Provide career pathways through vocational and soft-skills training.</li>
+                    <li>Reduce barriers to successful community reintegration.</li>
+                    <li>Promote financial independence and personal stability.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACT STATS -->
+    <section id="impact" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="text-center mb-12">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">BY THE NUMBERS</div>
+            <h2 class="text-4xl font-semibold tracking-tighter">Real impact, measured transparently</h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+            <div class="impact-stat bg-white border border-slate-100 rounded-3xl px-8 py-8 text-center">
+                <div class="text-5xl font-semibold tracking-tighter text-slate-900 stat-number" data-target="200">0</div>
+                <div class="mt-2 text-sm font-medium text-slate-600">Clients trained through our programs</div>
+            </div>
+            <div class="impact-stat bg-white border border-slate-100 rounded-3xl px-8 py-8 text-center">
+                <div class="text-5xl font-semibold tracking-tighter text-slate-900 stat-number" data-target="20">0</div>
+                <div class="mt-2 text-sm font-medium text-slate-600">Volunteers supporting our mission</div>
+            </div>
+            <div class="impact-stat bg-white border border-slate-100 rounded-3xl px-8 py-8 text-center">
+                <div class="text-5xl font-semibold tracking-tighter text-slate-900 stat-number" data-target="97">0</div>
+                <div class="mt-2 text-sm font-medium text-slate-600">Percent of funds spent on programs</div>
+            </div>
+            <div class="impact-stat bg-white border border-slate-100 rounded-3xl px-8 py-8 text-center">
+                <div class="text-5xl font-semibold tracking-tighter text-slate-900 stat-number" data-target="7">0</div>
+                <div class="mt-2 text-sm font-medium text-slate-600">Veterans' share of the U.S. incarcerated population<super class="text-xs align-super">1</super></div>
+            </div>
+        </div>
+
+        <div class="mt-6 text-center text-xs text-slate-500">
+            All figures independently verified. View our latest <a href="#" class="underline hover:text-slate-700">Annual Report &amp; Form 990</a>.
+            <div class="mt-2 text-[10px] leading-relaxed max-w-3xl mx-auto text-slate-400">
+                <span class="font-medium text-slate-500">Footnotes:</span><br>
+                [1] Fact-checked against U.S. Bureau of Justice Statistics and Department of Veterans Affairs data (veterans represent approximately 7% of the state and federal prison population while comprising a smaller percentage of the overall U.S. adult population). This overrepresentation highlights the urgent need for targeted re-entry support.
+            </div>
+        </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="bg-slate-50 py-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-2xl mb-10">
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">OUR PROMISE</div>
+                <h2 class="text-4xl font-semibold tracking-tight">What integrity looks like in practice</h2>
+            </div>
+
+            <!-- Team photo in Values (moved to photo feature above) -->
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                    <div class="value-icon w-11 h-11 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-balance-scale text-xl"></i>
+                    </div>
+                    <div class="font-semibold text-lg mb-2">Integrity First</div>
+                    <p class="text-sm text-slate-600">We never accept referral fees, commissions, or incentives from providers. Our recommendations are always unbiased.</p>
+                </div>
+                <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                    <div class="value-icon w-11 h-11 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-eye text-xl"></i>
+                    </div>
+                    <div class="font-semibold text-lg mb-2">Radical Transparency</div>
+                    <p class="text-sm text-slate-600">Financials, outcomes, and decision criteria are published publicly. We share what works and what doesn’t.</p>
+                </div>
+                <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                    <div class="value-icon w-11 h-11 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-user-shield text-xl"></i>
+                    </div>
+                    <div class="font-semibold text-lg mb-2">Dignity &amp; Respect</div>
+                    <p class="text-sm text-slate-600">We treat every person as the expert in their own life. No paternalism. No shortcuts.</p>
+                </div>
+                <div class="bg-white p-7 rounded-3xl border border-slate-100">
+                    <div class="value-icon w-11 h-11 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center mb-5">
+                        <i class="fa-solid fa-link text-xl"></i>
+                    </div>
+                    <div class="font-semibold text-lg mb-2">Community Partnership</div>
+                    <p class="text-sm text-slate-600">We build long-term relationships with local organizations instead of duplicating services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GET INVOLVED -->
+    <section id="involved" class="bg-slate-900 py-16 text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-x-12 gap-y-12 items-start">
+                <div class="lg:col-span-5">
+                    <div class="uppercase tracking-[2px] text-teal-400 text-xs font-semibold mb-3">TAKE ACTION</div>
+                    <h2 class="text-5xl font-semibold tracking-tighter leading-none">Get involved.<br>Make a difference.</h2>
+                    <p class="mt-5 text-white/70 max-w-md text-lg">
+                        Whether you give, volunteer as a mentor, or hire through our programs, 
+                        your generous support and donations help individuals build stable careers for the future.
+                    </p>
+                </div>
+
+                <div class="lg:col-span-7 grid sm:grid-cols-3 gap-5">
+                    <!-- Donate -->
+                    <div onclick="showDonateModal()" class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-3xl p-6 cursor-pointer group">
+                        <div class="w-10 h-10 bg-white/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20 transition">
+                            <i class="fa-solid fa-donate text-2xl text-teal-400"></i>
+                        </div>
+                        <div class="font-semibold text-xl mb-2">Donate</div>
+                        <p class="text-sm text-white/70 mb-4">Your generous support and donations help individuals build stable careers for the future. 100% of donations go directly to programs.</p>
+                        <div class="text-teal-400 text-sm font-medium flex items-center">Give now <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></div>
+                    </div>
+
+                    <!-- Volunteer -->
+                    <div class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-3xl p-6">
+                        <div class="w-10 h-10 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-hands-helping text-2xl text-teal-400"></i>
+                        </div>
+                        <div class="font-semibold text-xl mb-2">Volunteer</div>
+                        <p class="text-sm text-white/70 mb-4">Become a friendly visitor, help with transportation, or share your professional skills.</p>
+                        <a href="#contact" class="text-teal-400 text-sm font-medium flex items-center">Join our volunteer team <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+
+                    <!-- Partner -->
+                    <div class="bg-white/5 hover:bg-white/10 border border-white/10 rounded-3xl p-6">
+                        <div class="w-10 h-10 bg-white/10 rounded-2xl flex items-center justify-center mb-6">
+                            <i class="fa-solid fa-building text-2xl text-teal-400"></i>
+                        </div>
+                        <div class="font-semibold text-xl mb-2">Partner With Us</div>
+                        <p class="text-sm text-white/70 mb-4">Healthcare systems, faith communities, and businesses: explore strategic partnerships.</p>
+                        <a href="#contact" class="text-teal-400 text-sm font-medium flex items-center">Start a conversation <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-x-16 gap-y-12">
+            <div>
+                <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-2">CONTACT US</div>
+                <h2 class="text-4xl font-semibold tracking-tight mb-4">We’re here to help.</h2>
+                <p class="text-lg text-slate-600 mb-8 max-w-md">
+                    Whether you are a veteran seeking support, a family member, a potential mentor, 
+                    or an employer ready to hire, we would love to hear from you.
+                </p>
+
+                <div class="space-y-6 text-sm">
+                    <div class="flex gap-x-4">
+                        <i class="fa-solid fa-phone text-teal-700 mt-1 w-4"></i>
+                        <div>
+                            <div class="font-semibold">Main Line</div>
+                            <a href="tel:2132008532" class="text-slate-700 hover:text-teal-700">(213) 200-8532</a>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4">
+                        <i class="fa-solid fa-envelope text-teal-700 mt-1 w-4"></i>
+                        <div>
+                            <div class="font-semibold">Email</div>
+                            <a href="mailto:hello@integritycareresources.org" class="text-slate-700 hover:text-teal-700">hello@integritycareresources.org</a>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4">
+                        <i class="fa-solid fa-map-marker-alt text-teal-700 mt-1 w-4"></i>
+                        <div>
+                            <div class="font-semibold">Office</div>
+                            <div class="text-slate-700">Southampton, Massachusetts</div>
+                        </div>
+                    </div>
+                    <div class="flex gap-x-4 pt-2">
+                        <div class="flex gap-x-3 text-xl text-slate-400">
+                            <a href="#" class="hover:text-teal-700"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="hover:text-teal-700"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" class="hover:text-teal-700"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div>
+                <form id="contact-form" class="space-y-5" onsubmit="handleContactSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label class="text-sm font-medium text-slate-700 block mb-1.5">Full Name</label>
+                            <input type="text" id="name" required class="w-full border border-slate-200 focus:border-teal-600 focus:ring-1 focus:ring-teal-600 rounded-xl px-4 py-3 text-sm outline-none">
+                        </div>
+                        <div>
+                            <label class="text-sm font-medium text-slate-700 block mb-1.5">Email Address</label>
+                            <input type="email" id="email" required class="w-full border border-slate-200 focus:border-teal-600 focus:ring-1 focus:ring-teal-600 rounded-xl px-4 py-3 text-sm outline-none">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="text-sm font-medium text-slate-700 block mb-1.5">I am interested in</label>
+                        <select id="interest" class="w-full border border-slate-200 focus:border-teal-600 focus:ring-1 focus:ring-teal-600 rounded-xl px-4 py-3 text-sm outline-none bg-white">
+                            <option value="Receiving support as a veteran or family member">Receiving support</option>
+                            <option value="V-REP or the Workforce Accelerator bootcamp">V-REP or Workforce Accelerator bootcamp</option>
+                            <option value="Volunteering">Volunteering</option>
+                            <option value="Partnership or corporate giving">Partnership / Corporate giving</option>
+                            <option value="Media or speaking">Media inquiry</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-sm font-medium text-slate-700 block mb-1.5">Message</label>
+                        <textarea id="message" rows="4" required placeholder="Tell us how we can help..." class="w-full border border-slate-200 focus:border-teal-600 focus:ring-1 focus:ring-teal-600 rounded-2xl px-4 py-3 text-sm outline-none resize-y"></textarea>
+                    </div>
+
+                    <button type="submit" 
+                            class="w-full sm:w-auto flex items-center justify-center gap-x-2 bg-teal-700 hover:bg-teal-800 transition-colors text-white font-semibold px-8 h-12 rounded-full text-sm">
+                        <span>Send Message</span>
+                    </button>
+                    <p class="text-xs text-slate-500">We typically respond within 1 business day.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="border-t border-slate-100 bg-white">
+        <div class="max-w-5xl mx-auto px-6 py-14 text-center">
+            <div class="mb-8 rounded-3xl overflow-hidden">
+                <img src="images/integrity-care-workers (7).jpeg" 
+                     alt="Veterans in skilled trades training through the V-REP program at Integrity Care Resources" 
+                     class="w-full h-48 md:h-64 object-cover">
+            </div>
+            <h3 class="text-3xl font-semibold tracking-tight mb-3">Ready to help veterans rebuild their lives?</h3>
+            <p class="text-slate-600 mb-8 max-w-md mx-auto">Your generous support and donations help individuals build stable careers for the future. Your support today helps justice-involved veterans overcome barriers to employment, housing, and stability.</p>
+            <button onclick="showDonateModal()" 
+                    class="inline-flex items-center gap-x-3 bg-teal-700 hover:bg-teal-800 text-white px-9 h-14 rounded-full font-semibold text-lg transition">
+                <span>Donate Now</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-white/80 text-sm">
+        <div class="max-w-7xl mx-auto px-6 pt-12 pb-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-8 pb-9 border-b border-white/10">
+                <div class="flex items-center gap-x-3">
+                    <img src="images/logo.jpeg" alt="Integrity Care Resources" class="h-8 w-auto object-contain flex-shrink-0">
+                    <div class="text-white">
+                        <span class="font-semibold tracking-tight">INTEGRITY CARE RESOURCES</span>
+                    </div>
+                </div>
+                
+                <div class="text-xs tracking-wider text-white/50">© 2025 INTEGRITY CARE RESOURCES. ALL RIGHTS RESERVED.</div>
+            </div>
+
+            <div class="pt-8 grid md:grid-cols-2 gap-y-8 text-xs">
+                <div class="flex flex-wrap gap-x-6 gap-y-1 text-white/60">
+                    <a href="privacy-policy.html" class="hover:text-white">Privacy Policy</a>
+                    <a href="#" class="hover:text-white">Financials &amp; 990s</a>
+                    <a href="#" class="hover:text-white">Annual Reports</a>
+                    <a href="#" class="hover:text-white">Code of Ethics</a>
+                    <a href="#" class="hover:text-white">Whistleblower Policy</a>
+                </div>
+                
+                <div class="md:text-right text-white/50 text-[11px]">
+                    Integrity Care Resources is a registered 501(c)(3) nonprofit organization. 
+                    All donations are tax-deductible to the fullest extent allowed by law.
+                    <span class="block mt-1">Ecumenical Collaborative Initiative</span>
+                    <span class="block mt-1 text-xs">Your generous support and donations help individuals build stable careers for the future.</span>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- DONATE MODAL -->
+    <div id="donate-modal" onclick="if (event.target.id === 'donate-modal') hideDonateModal()" class="hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+        <div onclick="event.stopImmediatePropagation()" class="modal bg-white w-full max-w-md rounded-3xl overflow-hidden shadow-xl">
+            <!-- Modal Header -->
+            <div class="px-7 pt-6 pb-4 bg-slate-50 flex items-start justify-between">
+                <div>
+                    <div class="font-semibold text-2xl tracking-tight">Make a Gift</div>
+                    <div class="text-sm text-teal-700">100% of your donation supports veterans in re-entry directly</div>
+                </div>
+                <button onclick="hideDonateModal()" class="text-slate-400 hover:text-slate-600 p-2 -mr-2">
+                    <i class="fa-solid fa-times text-xl"></i>
+                </button>
+            </div>
+
+            <div class="p-7">
+                <!-- Donation Amounts -->
+                <div class="grid grid-cols-4 gap-2 mb-6">
+                    <button onclick="selectDonationAmount(this, 25)" class="donation-amount border border-slate-200 active:bg-teal-50 rounded-2xl py-3 text-sm font-semibold">25</button>
+                    <button onclick="selectDonationAmount(this, 50)" class="donation-amount border border-slate-200 rounded-2xl py-3 text-sm font-semibold">50</button>
+                    <button onclick="selectDonationAmount(this, 100)" class="donation-amount border border-slate-200 rounded-2xl py-3 text-sm font-semibold">100</button>
+                    <button onclick="selectDonationAmount(this, 250)" class="donation-amount border border-slate-200 rounded-2xl py-3 text-sm font-semibold">250</button>
+                </div>
+
+                <div class="mb-5">
+                    <label class="text-xs tracking-wider text-slate-500 font-medium mb-1.5 block">OTHER AMOUNT</label>
+                    <div class="relative">
+                        <div class="absolute left-4 top-3.5 text-slate-400">$</div>
+                        <input type="number" id="custom-amount" placeholder="Enter amount" 
+                               class="border border-slate-200 focus:border-teal-600 pl-8 w-full rounded-2xl py-[13px] text-sm font-medium outline-none">
+                    </div>
+                </div>
+
+                <!-- Frequency -->
+                <div class="mb-6">
+                    <div class="text-xs tracking-wider text-slate-500 font-medium mb-2">FREQUENCY</div>
+                    <div class="flex bg-slate-100 rounded-full p-1 text-sm font-medium">
+                        <div onclick="selectFrequency(this, 'one-time')" id="freq-onetime"
+                             class="flex-1 text-center py-2 rounded-full bg-white shadow cursor-pointer">One-time</div>
+                        <div onclick="selectFrequency(this, 'monthly')" id="freq-monthly"
+                             class="flex-1 text-center py-2 rounded-full cursor-pointer">Monthly</div>
+                    </div>
+                </div>
+
+                <!-- Info note -->
+                <div class="bg-emerald-50 border border-emerald-100 text-emerald-700 text-xs px-4 py-3 rounded-2xl mb-6 leading-relaxed">
+                    Your gift is tax-deductible. You will receive an email receipt immediately.
+                </div>
+
+                <button onclick="processDonation()"
+                        class="w-full bg-teal-700 hover:bg-teal-800 transition text-white font-semibold h-12 rounded-full flex items-center justify-center gap-x-2">
+                    <span id="donate-button-text">Donate $100</span>
+                </button>
+
+                <div class="text-[10px] text-center text-slate-400 mt-4">
+                    Secure checkout powered by our fiscal sponsor. We never store your payment information.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div id="success-toast" class="hidden fixed bottom-6 left-1/2 -translate-x-1/2 bg-slate-900 text-white px-5 py-3 rounded-full flex items-center gap-x-3 shadow-lg z-[200]">
+        <i class="fa-solid fa-check-circle text-emerald-400"></i>
+        <span id="toast-message" class="text-sm font-medium pr-1"></span>
+    </div>
+
+    <script>
+        // Tailwind script configuration
+        function initTailwind() {
+            document.documentElement.style.setProperty('--accent', '#0D9488');
+        }
+
+        // Navbar scroll effect
+        function initNavbar() {
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 20) {
+                    navbar.classList.add('nav-scrolled');
+                } else {
+                    navbar.classList.remove('nav-scrolled');
+                }
+            });
+        }
+
+        // Mobile menu
+        function initMobileMenu() {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                if (menu.classList.contains('hidden')) {
+                    menu.classList.remove('hidden');
+                    btn.innerHTML = '<i class="fa-solid fa-times text-xl"></i>';
+                } else {
+                    menu.classList.add('hidden');
+                    btn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+                }
+            });
+
+            // Close when clicking nav links
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.add('hidden');
+                    btn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+                });
+            });
+        }
+
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const btn = document.getElementById('mobile-menu-btn');
+            menu.classList.add('hidden');
+            btn.innerHTML = '<i class="fa-solid fa-bars text-xl"></i>';
+        }
+
+        // Animated counters
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        counters.forEach(counter => {
+                            const target = parseInt(counter.getAttribute('data-target'));
+                            const duration = 1600;
+                            const start = 0;
+                            const increment = target / (duration / 16);
+                            let current = start;
+                            
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    if (counter.getAttribute('data-target') === '97') {
+                                        counter.textContent = '97%';
+                                    } else {
+                                        counter.textContent = target.toLocaleString();
+                                    }
+                                    clearInterval(timer);
+                                } else {
+                                    if (counter.getAttribute('data-target') === '97') {
+                                        counter.textContent = Math.floor(current) + '%';
+                                    } else {
+                                        counter.textContent = Math.floor(current).toLocaleString();
+                                    }
+                                }
+                            }, 16);
+                        });
+                        observer.disconnect();
+                    }
+                });
+            }, { threshold: 0.6 });
+
+            const impactSection = document.getElementById('impact');
+            if (impactSection) observer.observe(impactSection);
+        }
+
+        // Donation modal
+        let selectedAmount = 100;
+        let selectedFrequency = 'one-time';
+
+        function showDonateModal() {
+            const modal = document.getElementById('donate-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Default selection
+            const defaultBtn = document.querySelector('.donation-amount:nth-child(3)');
+            if (defaultBtn) {
+                selectDonationAmount(defaultBtn, 100);
+            }
+            
+            // Default frequency
+            selectFrequency(document.getElementById('freq-onetime'), 'one-time');
+            
+            // Update button text initially
+            updateDonateButton();
+        }
+
+        function hideDonateModal() {
+            const modal = document.getElementById('donate-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        function selectDonationAmount(element, amount) {
+            // Deselect all
+            document.querySelectorAll('.donation-amount').forEach(el => el.classList.remove('active'));
+            
+            // Select this one
+            element.classList.add('active');
+            selectedAmount = amount;
+            
+            // Clear custom amount
+            document.getElementById('custom-amount').value = '';
+            
+            updateDonateButton();
+        }
+
+        function updateDonateButton() {
+            const btnText = document.getElementById('donate-button-text');
+            let amount = selectedAmount;
+            
+            const custom = parseFloat(document.getElementById('custom-amount').value);
+            if (!isNaN(custom) && custom > 0) {
+                amount = custom;
+            }
+            
+            const freqText = selectedFrequency === 'monthly' ? ' / month' : '';
+            btnText.textContent = `Donate $${amount}${freqText}`;
+        }
+
+        // Listen for custom amount changes
+        document.addEventListener('DOMContentLoaded', () => {
+            const customInput = document.getElementById('custom-amount');
+            if (customInput) {
+                customInput.addEventListener('input', () => {
+                    // Deselect preset buttons when custom is used
+                    document.querySelectorAll('.donation-amount').forEach(el => el.classList.remove('active'));
+                    updateDonateButton();
+                });
+            }
+            
+            // Keyboard support for modal
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    const modal = document.getElementById('donate-modal');
+                    if (!modal.classList.contains('hidden')) {
+                        hideDonateModal();
+                    }
+                }
+            });
+        });
+
+        function selectFrequency(element, frequency) {
+            // Reset styles
+            document.getElementById('freq-onetime').classList.remove('bg-white', 'shadow');
+            document.getElementById('freq-monthly').classList.remove('bg-white', 'shadow');
+            
+            element.classList.add('bg-white', 'shadow');
+            selectedFrequency = frequency;
+            
+            updateDonateButton();
+        }
+
+        function processDonation() {
+            const custom = parseFloat(document.getElementById('custom-amount').value);
+            const amount = (!isNaN(custom) && custom > 0) ? custom : selectedAmount;
+            
+            const button = document.querySelector('#donate-modal button');
+            const originalText = button.innerHTML;
+            
+            button.disabled = true;
+            button.innerHTML = `
+                <span class="flex items-center gap-x-2">
+                    <i class="fa-solid fa-spinner fa-spin"></i> 
+                    <span>Processing...</span>
+                </span>
+            `;
+            
+            // Simulate payment processing
+            setTimeout(() => {
+                hideDonateModal();
+                
+                // Show success
+                showToast(`Thank you! Your $${amount} ${selectedFrequency} gift was received.`);
+                
+                // Reset button
+                button.disabled = false;
+                button.innerHTML = originalText;
+                
+                // Optional: Show receipt hint
+                setTimeout(() => {
+                    showToast('A receipt has been sent to your email.');
+                }, 3200);
+            }, 1450);
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('success-toast');
+            const msg = document.getElementById('toast-message');
+            
+            msg.textContent = message;
+            toast.classList.remove('hidden');
+            toast.classList.add('flex');
+            
+            setTimeout(() => {
+                toast.classList.add('opacity-0', 'transition-opacity');
+                setTimeout(() => {
+                    toast.classList.remove('flex', 'opacity-0');
+                    toast.classList.add('hidden');
+                    toast.style.opacity = '1';
+                }, 180);
+            }, 3400);
+        }
+
+        // Contact form handler
+        function handleContactSubmit(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('contact-form');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span class="flex items-center gap-x-2 justify-center"><i class="fa-solid fa-spinner fa-spin"></i> Sending...</span>`;
+            
+            // Simulate sending
+            setTimeout(() => {
+                showToast('Thank you. Your message has been sent.');
+                
+                // Reset form
+                form.reset();
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalBtnText;
+                
+                // Scroll to top of contact a bit
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1050);
+        }
+
+        // Smooth scroll enhancement for older browsers + active nav
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href').substring(1);
+                    const target = document.getElementById(targetId);
+                    
+                    if (target) {
+                        e.preventDefault();
+                        const navHeight = 80;
+                        const elementPosition = target.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.scrollY - navHeight;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        }
+
+        // Initialize everything
+        function initializeSite() {
+            initTailwind();
+            initNavbar();
+            initMobileMenu();
+            animateCounters();
+            initSmoothScroll();
+            
+            // Make sure custom donation input updates button
+            const customInput = document.getElementById('custom-amount');
+            if (customInput) {
+                customInput.addEventListener('keyup', updateDonateButton);
+                customInput.addEventListener('change', updateDonateButton);
+            }
+            
+            // Pre-select a default donation amount in case user opens modal directly
+            console.log('%c[Integrity Care] Website initialized successfully.', 'color:#64748b');
+        }
+
+        // Boot the site
+        window.addEventListener('DOMContentLoaded', initializeSite);
+        
+        // Expose a couple utilities for debugging / future use
+        window.IntegrityCare = {
+            donate: () => showDonateModal(),
+            reset: () => location.reload()
+        };
+    </script>
 </body>
 </html>
