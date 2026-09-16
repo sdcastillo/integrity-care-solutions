@@ -1,14 +1,22 @@
 (function () {
   'use strict';
 
-  // TODO: Replace with your real Google OAuth client ID from Google Cloud Console.
-  // Create a new OAuth 2.0 Client ID (Web application) in the same project you used
-  // for predictiveinsightsai.com. Add https://my-integrity-hub.org as an Authorized
-  // JavaScript origin. The callback path is /callback (see callback.html).
-  var CLIENT_ID = 'ABC123';
+  // TODO: Replace these placeholders with your Auth0 tenant values.
+  // Create a new Auth0 tenant (or application) and set:
+  // - Domain: your-tenant.auth0.com (or custom domain)
+  // - Client ID: the SPA application client ID
+  // - Callback: https://my-integrity-hub.org/callback
+  // - Logout: https://my-integrity-hub.org/
+  // - Allowed Web Origins: https://my-integrity-hub.org
+  // - Allowed Callback URLs: https://my-integrity-hub.org/callback
+  // - Allowed Logout URLs: https://my-integrity-hub.org/
+  var AUTH0_DOMAIN = 'YOUR_TENANT.auth0.com';
+  var AUTH0_CLIENT_ID = 'ABC123';
 
   var AUTH_KEY = 'ics_auth_v1';
   var CALLBACK_PATH = '/callback';
+
+  var auth0Client = null;
 
   function isAuthenticated() {
     try {
@@ -32,10 +40,6 @@
     } catch (e) {}
   }
 
-  function isGmail(email) {
-    return typeof email === 'string' && /@gmail\.com$/i.test(email.trim());
-  }
-
   function getReturnUrl() {
     var params = new URLSearchParams(window.location.search);
     var ret = params.get('return');
@@ -50,20 +54,113 @@
     window.location.replace(CALLBACK_PATH + '?return=' + ret);
   }
 
-  // Expose a small API for the login page.
+  async function initAuth0() {
+    if (auth0Client) return auth0Client;
+    if (!window.auth0 || !window.auth0.createAuth0Client) {
+      throw new Error('Auth0 SDK not loaded');
+    }
+    auth0Client = await window.auth0.createAuth0Client({
+      domain: AUTH0_DOMAIN,
+      clientId: AUTH0_CLIENT_ID,
+      authorizationParams: {
+        redirect_uri: window.location.origin + CALLBACK_PATH
+      },
+      cacheLocation: 'localstorage'
+    });
+    return auth0Client;
+  }
+
+  async function handleCallbackIfPresent() {
+    if (!/\/callback(\.html)?$/.test(window.location.pathname)) return false;
+    try {
+      var client = await initAuth0();
+      if (window.location.search.includes('code=') || window.location.search.includes('error=')) {
+        await client.handleRedirectCallback();
+        var user = await client.getUser();
+        if (user && user.email) {
+          setAuthenticated(user.email);
+        } else {
+          setAuthenticated('');
+        }
+        var target = getReturnUrl();
+        window.location.replace(target);
+        return true;
+      }
+    } catch (e) {
+      console.error('Auth0 callback error', e);
+    }
+    return false;
+  }
+
+  async function ensureAuthenticated() {
+    if (isAuthenticated()) return true;
+    try {
+      var client = await initAuth0();
+      var isAuth = await client.isAuthenticated();
+      if (isAuth) {
+        var user = await client.getUser();
+        setAuthenticated(user ? user.email : '');
+        return true;
+      }
+    } catch (e) {
+      console.error('Auth0 check error', e);
+    }
+    redirectToLogin();
+    return false;
+  }
+
+  async function login() {
+    try {
+    var client = await initAuth0();
+      await client.loginWithRedirect({
+        authorizationParams: {
+          redirect_uri: window.location.origin + CALLBACK_PATH,
+          appState: { target: getReturnUrl() }
+        }
+      });
+    } catch (e) {
+      console.error('Login error', e);
+      alert('Sign-in failed. Check the Auth0 config in auth.js.');
+    }
+  }
+
+  async function logout() {
+    try {
+      var client = await initAuth0();
+      clearAuth();
+      await client.logout({
+        logoutParams: {
+          returnTo: window.location.origin + '/'
+        }
+      });
+    } catch (e) {
+      clearAuth();
+      window.location.replace('/');
+    }
+  }
+
+  // Expose API
   window.ICSAuth = {
-    CLIENT_ID: CLIENT_ID,
+    AUTH0_DOMAIN: AUTH0_DOMAIN,
+    AUTH0_CLIENT_ID: AUTH0_CLIENT_ID,
     isAuthenticated: isAuthenticated,
     setAuthenticated: setAuthenticated,
     clearAuth: clearAuth,
-    isGmail: isGmail,
     getReturnUrl: getReturnUrl,
-    redirectToLogin: redirectToLogin
+    redirectToLogin: redirectToLogin,
+    login: login,
+    logout: logout,
+    initAuth0: initAuth0,
+    handleCallbackIfPresent: handleCallbackIfPresent,
+    ensureAuthenticated: ensureAuthenticated
   };
 
-  // Gate: if not authenticated, send to the login/callback page.
-  // Skip the gate on the callback page itself.
-  if (!/\/callback(\.html)?$/.test(window.location.pathname) && !isAuthenticated()) {
-    redirectToLogin();
-  }
+  // Auto-run on load
+  (async function () {
+    var handled = await handleCallbackIfPresent();
+    if (handled) return;
+    if (!/\/callback(\.html)?$/.test(window.location.pathname)) {
+      await ensureAuthenticated();
+    }
+  })();
 })();
