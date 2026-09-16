@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in — Integrity Care Solutions</title>
+  <link rel="icon" href="/ICRfavicon.ico">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="/auth.js"></script>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --card: #1a222c;
+      --accent: #e8a33d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 1.5rem;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .logo { width: 64px; height: 64px; border-radius: 50%; margin-bottom: 1rem; }
+    h1 { font-size: 1.4rem; margin: 0 0 0.5rem; }
+    p { color: var(--muted); font-size: 0.95rem; line-height: 1.5; margin: 0 0 1.5rem; }
+    #btn { margin: 0 auto; }
+    .note { font-size: 0.8rem; color: var(--muted); margin-top: 1.25rem; }
+    .err { color: #f87171; font-size: 0.85rem; margin-top: 1rem; min-height: 1.2em; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img class="logo" src="/images/myintegritylogo.jpg" alt="Integrity Care Solutions">
+    <h1>Sign in to continue</h1>
+    <p>This site is for members. Please sign in with your Google account to view the full site.</p>
+    <div id="btn"></div>
+    <div class="err" id="err"></div>
+    <p class="note">Only @gmail.com accounts are accepted. This is a soft gate — it keeps casual visitors out but is not hard security.</p>
+  </div>
+
+  <script>
+    (function () {
+      var errEl = document.getElementById('err');
+
+      function showErr(msg) { errEl.textContent = msg || ''; }
+
+      function handleCredential(response) {
+        try {
+          var payload = JSON.parse(atob(response.credential.split('.')[1]));
+          var email = payload.email || '';
+          if (!window.ICSAuth.isGmail(email)) {
+            showErr('Please use a Gmail account (@gmail.com).');
+            return;
+          }
+          window.ICSAuth.setAuthenticated(email);
+          window.location.replace(window.ICSAuth.getReturnUrl());
+        } catch (e) {
+          showErr('Sign-in failed. Please try again.');
+        }
+      }
+
+      function init() {
+        if (!window.google || !window.google.accounts || !window.google.accounts.id) {
+          showErr('Google sign-in is still loading. Refresh in a moment.');
+          return;
+        }
+        google.accounts.id.initialize({
+          client_id: window.ICSAuth.CLIENT_ID,
+          callback: handleCredential,
+          auto_select: false,
+          cancel_on_tap_outside: true
+        });
+        google.accounts.id.renderButton(
+          document.getElementById('btn'),
+          { theme: 'filled_black', size: 'large', type: 'standard', text: 'signin_with', shape: 'rectangular' }
+        );
+      }
+
+      // If already authed, bounce straight back.
+      if (window.ICSAuth.isAuthenticated()) {
+        window.location.replace(window.ICSAuth.getReturnUrl());
+        return;
+      }
+
+      if (document.readyState === 'complete') init();
+      else window.addEventListener('load', init);
+    })();
+  </script>
+</body>
+</html>
