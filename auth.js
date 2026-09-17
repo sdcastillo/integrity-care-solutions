@@ -11,7 +11,7 @@
   // - Allowed Callback URLs: https://my-integrity-hub.org/callback
   // - Allowed Logout URLs: https://my-integrity-hub.org/
   var AUTH0_DOMAIN = 'YOUR_TENANT.auth0.com';
-  var AUTH0_CLIENT_ID = 'ABC123';
+  var AUTH0_CLIENT_ID = 'xHEG1KLZLatf1hTMJvOA7mkhot4cXgnx';
 
   var AUTH_KEY = 'ics_auth_v1';
   var CALLBACK_PATH = '/callback';
