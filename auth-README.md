@@ -3,7 +3,7 @@
 Client-side gate using Auth0 SPA SDK (auth0-spa-js). Not hard security — anyone can bypass by hitting files directly or disabling JS. Fine for keeping casual visitors out.
 
 ## Files
-- `auth.js` — gate logic + config. Replace `AUTH0_DOMAIN` and `AUTH0_CLIENT_ID` placeholders.
+- `auth.js` — gate logic + config. Replace `AUTH0_DOMAIN` placeholder (client ID already set from serviceAuthorization.md).
 - `callback.html` — the sign-in page. Redirects back to the page the user was trying to view.
 
 ## Setup
@@ -13,7 +13,7 @@ Client-side gate using Auth0 SPA SDK (auth0-spa-js). Not hard security — anyon
    - Allowed Callback URLs: `https://my-integrity-hub.org/callback`
    - Allowed Logout URLs: `https://my-integrity-hub.org/`
    - Allowed Web Origins: `https://my-integrity-hub.org`
-4. Copy the **Domain** and **Client ID** into `auth.js`.
+4. Copy the **Domain** into `auth.js` (client ID is already populated).
 5. Merge this branch and let GitHub Pages deploy.
 
 ## How it works
