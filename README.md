@@ -34,6 +34,9 @@ The organization partners with employers, training providers, and community orga
 - Pure HTML + Tailwind CSS (via CDN)
 - Font Awesome icons
 - Static site (no build process required)
+- Optional on-server LLM helper (Ollama + FastAPI), documented separately so the public site does not depend on the model
+
+See: [ethical-self-hosted-llm](https://github.com/sdcastillo/ethical-self-hosted-llm) — how the Hetzner + Tailscale + Nginx stack was built so inference stays local and the nonprofit homepage stays static.
 
 ---
 
@@ -45,3 +48,4 @@ The organization partners with employers, training providers, and community orga
    ```bash
    git clone https://github.com/sdcastillo/integrity-care-solutions.git
    cd integrity-care-solutions
+   ```
