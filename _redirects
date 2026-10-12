@@ -1,1 +1,16 @@
 /contact.html /Contact.html 301
+
+# Security (audit 2026-10-11, M4): repo/build files are not site pages.
+# Redirects run before static assets on Cloudflare, so these paths stop serving the files.
+/package.json / 302
+/package-lock.json / 302
+/wrangler.json / 302
+/README.md / 302
+/.gitignore / 302
+/.assetsignore / 302
+/serviceAuthorization.md / 302
+/astro.config.mjs / 302
+/tsconfig.json / 302
+/worker-configuration.d.ts / 302
+/src/* / 302
+/public/* / 302

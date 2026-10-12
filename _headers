@@ -1,0 +1,6 @@
+# Security (audit 2026-10-11, M3): basic response headers. No CSP on purpose (Tailwind CDN, inline scripts, Formspree).
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=()

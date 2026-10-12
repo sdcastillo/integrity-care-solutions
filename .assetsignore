@@ -1,0 +1,17 @@
+# Security (audit 2026-10-11, M4): keep repo/build files out of Workers static assets.
+# (Only used if this repo root is deployed as Workers static assets; _redirects covers Cloudflare Pages.)
+.git
+.github
+node_modules
+.wrangler
+package.json
+package-lock.json
+wrangler.json
+README.md
+.gitignore
+serviceAuthorization.md
+astro.config.mjs
+tsconfig.json
+worker-configuration.d.ts
+src
+public
