@@ -9,9 +9,10 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
 	site: "https://example.com",
 	integrations: [mdx(), sitemap()],
+	// Astro 6+ adapter: keep build-time image handling (no Cloudflare Images binding)
+	// and no sessions KV, so the upgrade provisions no new Cloudflare resources.
+	session: false,
 	adapter: cloudflare({
-		platformProxy: {
-			enabled: true,
-		},
+		imageService: "compile",
 	}),
 });
