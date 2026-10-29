@@ -34,226 +34,124 @@
         "addressLocality": "Southampton",
         "addressRegion": "MA",
         "addressCountry": "US"
-      },
-      "sameAs": []
+      }
     }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap');
-        
-        :root {
-            --primary: #0F172A;
-            --accent: #0D9488;
-        }
-        
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-        }
-        
-        .heading-serif {
-            font-family: 'Playfair Display', Georgia, serif;
-        }
-
-        .nav-scrolled {
-            background-color: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 1px 0 0 rgb(15 23 42 / 0.06);
-        }
-
-        .section-header {
-            font-size: 2.25rem;
-            line-height: 2.5rem;
-            font-weight: 700;
-            letter-spacing: -0.025em;
-        }
-
-        .nav-link {
-            transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .nav-link:hover {
-            color: #0D9488;
-        }
-
-        .program-card {
-            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-                        box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .program-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-        }
-
-        .care-gradient {
-            background: linear-gradient(135deg, #0F172A 0%, #134E4A 100%);
-        }
-
-        .smooth-scroll {
-            scroll-behavior: smooth;
-        }
+        :root { --primary: #0F172A; --accent: #0D9488; }
+        body { font-family: 'Inter', system-ui, sans-serif; }
+        .heading-serif { font-family: 'Playfair Display', Georgia, serif; }
+        .nav-link { transition: color 0.2s; }
+        .nav-link:hover { color: #0D9488; }
+        .program-card { transition: transform 0.3s, box-shadow 0.3s; }
+        .program-card:hover { transform: translateY(-4px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+        .care-gradient { background: linear-gradient(135deg, #0F172A 0%, #134E4A 100%); }
+        .smooth-scroll { scroll-behavior: smooth; }
+        .modal { animation: modalPop 0.2s cubic-bezier(0.32, 0.72, 0, 1); }
+        @keyframes modalPop { from { opacity: 0; transform: scale(0.96) translateY(10px); } to { opacity: 1; transform: scale(1) translateY(0); } }
     </style>
 </head>
 <body class="smooth-scroll text-slate-800 bg-white">
     <!-- NAVIGATION -->
-    <nav id="navbar" class="bg-white border-b border-slate-100 sticky top-0 z-50 transition-all">
+    <nav id="navbar" class="bg-white border-b border-slate-100 sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center gap-x-3">
-                    <img src="images/logo.jpeg" alt="Integrity Care Resources" class="h-10 w-auto rounded object-contain flex-shrink-0">
+                    <img src="images/logo.jpeg" alt="Integrity Care Resources" class="h-10 w-auto rounded object-contain">
                     <div>
                         <div class="font-semibold text-2xl tracking-tighter text-slate-900">INTEGRITY CARE</div>
                         <div class="text-[10px] font-medium tracking-[1.5px] text-teal-700 -mt-1.5">RESOURCES</div>
                         <div class="text-[9px] text-teal-600 -mt-0.5">Ecumenical Collaborative Initiative</div>
                     </div>
                 </div>
-
-                <div class="hidden md:flex items-center gap-x-9 text-sm font-medium">
-                    <a href="#about" class="nav-link text-slate-600 hover:text-slate-900">About</a>
-                    <a href="#who-we-serve" class="nav-link text-slate-600 hover:text-slate-900">Who We Serve</a>
-                    <a href="#programs" class="nav-link text-slate-600 hover:text-slate-900">Programs</a>
-                    <a href="v-rep.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">V-REP</a>
-                    <a href="employability-skills-fast-track.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">Fast-Track</a>
-                    <a href="industrial-logistics-transportation.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">Logistics</a>
-                    <a href="construction.html" class="nav-link text-teal-600 hover:text-teal-700 font-semibold">New Facility</a>
-                    <a href="#impact" class="nav-link text-slate-600 hover:text-slate-900">Impact</a>
-                    <a href="#know-your-rights" class="nav-link text-slate-600 hover:text-slate-900">Know Your Rights</a>
-                    <a href="#involved" class="nav-link text-slate-600 hover:text-slate-900">Get Involved</a>
-                    <a href="#contact" class="nav-link text-slate-600 hover:text-slate-900">Contact</a>
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="#about" class="nav-link text-slate-600">About</a>
+                    <a href="#who-we-serve" class="nav-link text-slate-600">Who We Serve</a>
+                    <a href="#programs" class="nav-link text-slate-600">Programs</a>
+                    <a href="v-rep.html" class="nav-link text-teal-600 font-semibold">V-REP</a>
+                    <a href="employability-skills-fast-track.html" class="nav-link text-teal-600 font-semibold">Fast-Track</a>
+                    <a href="industrial-logistics-transportation.html" class="nav-link text-teal-600 font-semibold">Logistics</a>
+                    <a href="construction.html" class="nav-link text-teal-600 font-semibold">New Facility</a>
+                    <a href="#impact" class="nav-link text-slate-600">Impact</a>
+                    <a href="#know-your-rights" class="nav-link text-slate-600">Know Your Rights</a>
+                    <a href="#contact" class="nav-link text-slate-600">Contact</a>
                 </div>
-
                 <div class="flex items-center gap-x-3">
-                    <button onclick="showDonateModal()"
-                            class="hidden sm:flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-full transition-colors">
-                        <i class="fa-solid fa-heart mr-2"></i>
-                        <span>Donate</span>
+                    <button onclick="showDonateModal()" class="hidden sm:flex items-center px-5 py-2.5 text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-full">
+                        <i class="fa-solid fa-heart mr-2"></i> Donate
                     </button>
-                    
-                    <button id="mobile-menu-btn"
-                            class="md:hidden w-11 h-11 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors"
-                            aria-label="Open menu">
+                    <button id="mobile-menu-btn" class="md:hidden w-11 h-11 flex items-center justify-center text-slate-600" aria-label="Open menu">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
         </div>
-
         <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white">
-            <div class="px-6 py-6 flex flex-col gap-y-4 text-base font-medium">
-                <a href="#about" class="mobile-link py-1 text-slate-700">About Us</a>
-                <a href="#who-we-serve" class="mobile-link py-1 text-slate-700">Who We Serve</a>
-                <a href="#programs" class="mobile-link py-1 text-slate-700">Our Programs</a>
-                <a href="v-rep.html" class="mobile-link py-1 text-teal-700 font-semibold">V-REP Program</a>
-                <a href="employability-skills-fast-track.html" class="mobile-link py-1 text-teal-700 font-semibold">Fast-Track Program</a>
-                <a href="industrial-logistics-transportation.html" class="mobile-link py-1 text-teal-700 font-semibold">Industrial Logistics</a>
-                <a href="construction.html" class="mobile-link py-1 text-teal-700 font-semibold">New Facility</a>
-                <a href="#know-your-rights" class="mobile-link py-1 text-slate-700">Know Your Rights</a>
-                <a href="#impact" class="mobile-link py-1 text-slate-700">Our Impact</a>
-                <a href="#involved" class="mobile-link py-1 text-slate-700">Get Involved</a>
-                <a href="#contact" class="mobile-link py-1 text-slate-700">Contact</a>
-                
-                <div class="pt-3 border-t border-slate-100">
-                    <button onclick="showDonateModal(); closeMobileMenu();"
-                            class="w-full flex items-center justify-center gap-x-2 px-6 py-3 text-sm font-semibold text-white bg-teal-700 hover:bg-teal-800 rounded-full transition-colors">
-                        <i class="fa-solid fa-heart"></i>
-                        <span>Donate Now</span>
-                    </button>
-                </div>
+            <div class="px-6 py-6 flex flex-col gap-y-3 text-base font-medium">
+                <a href="#about" class="py-1">About</a>
+                <a href="#who-we-serve" class="py-1">Who We Serve</a>
+                <a href="#programs" class="py-1">Programs</a>
+                <a href="v-rep.html" class="py-1 text-teal-700 font-semibold">V-REP</a>
+                <a href="employability-skills-fast-track.html" class="py-1 text-teal-700 font-semibold">Fast-Track</a>
+                <a href="industrial-logistics-transportation.html" class="py-1 text-teal-700 font-semibold">Logistics</a>
+                <a href="construction.html" class="py-1 text-teal-700 font-semibold">New Facility</a>
+                <a href="#impact" class="py-1">Impact</a>
+                <a href="#know-your-rights" class="py-1">Know Your Rights</a>
+                <a href="#contact" class="py-1">Contact</a>
+                <button onclick="showDonateModal(); closeMobileMenu();" class="mt-3 w-full flex items-center justify-center gap-x-2 px-6 py-3 text-sm font-semibold text-white bg-teal-700 rounded-full">
+                    <i class="fa-solid fa-heart"></i> Donate Now
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- TOP HERO VIDEO -->
+    <!-- HERO VIDEO -->
     <div class="max-w-5xl mx-auto px-6 mt-4">
-        <div class="aspect-video w-full rounded-2xl overflow-hidden border-[16px] border-slate-900 shadow-2xl bg-black ring-1 ring-slate-700 relative">
-            <iframe src="https://player.vimeo.com/video/1200961322?badge=0&autopause=0&player_id=0&app_id=58479&dnt=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Integrity Care Resources for Homeless Veterans"></iframe>
+        <div class="aspect-video w-full rounded-2xl overflow-hidden border-[16px] border-slate-900 shadow-2xl bg-black relative">
+            <iframe src="https://player.vimeo.com/video/1200961322?badge=0&autopause=0&player_id=0&app_id=58479&dnt=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Integrity Care Resources for Homeless Veterans"></iframe>
         </div>
     </div>
-    <script src="https://player.vimeo.com/api/player.js"></script>
 
     <!-- HERO -->
     <header class="care-gradient text-white">
-        <div class="max-w-7xl mx-auto px-6 pt-16 pb-20 md:pt-20 md:pb-24">
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-20">
             <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-x-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium mb-6 backdrop-blur">
-                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                <div class="inline-flex items-center gap-x-2 rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium mb-6">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full"></div>
                     <span>501(c)(3) Nonprofit Organization</span>
                 </div>
-                
-                <h1 class="text-6xl md:text-7xl leading-[1.05] font-semibold tracking-tighter mb-6">
+                <h1 class="text-5xl md:text-7xl leading-[1.05] font-semibold tracking-tighter mb-6">
                     Compassionate care.<br>
                     <span class="text-teal-300">Unwavering integrity.</span>
                 </h1>
-                
-                <div class="text-xl md:text-2xl text-teal-300 font-medium tracking-tight mb-6">
-                    Ecumenical Collaborative Initiative for Re-Entry and Transitional Assistance, and Job Training
-                </div>
-                
-                <p class="max-w-lg text-xl md:text-2xl text-white/90 leading-tight mb-10">
-                    We prepare military veterans and emergency services professionals 
-                    for sustainable employment and successful reintegration.
-                </p>
-
+                <p class="text-xl text-teal-300 font-medium mb-6">Ecumenical Collaborative Initiative for Re-Entry and Transitional Assistance, and Job Training</p>
+                <p class="max-w-lg text-xl text-white/90 mb-10">We prepare military veterans and emergency services professionals for sustainable employment and successful reintegration.</p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <button onclick="showDonateModal()"
-                            class="group inline-flex items-center justify-center gap-x-3 bg-white text-slate-900 hover:bg-slate-100 transition-colors font-semibold text-lg px-8 h-14 rounded-full">
-                        <span>Give Today</span>
-                        <i class="fa-solid fa-arrow-right group-active:translate-x-1 transition-transform"></i>
-                    </button>
-                    
-                    <a href="#programs"
-                       class="inline-flex items-center justify-center gap-x-3 border border-white/40 hover:bg-white/10 transition-colors font-semibold text-lg px-8 h-14 rounded-full">
-                        <span>Explore Our Work</span>
-                    </a>
+                    <button onclick="showDonateModal()" class="inline-flex items-center justify-center gap-x-3 bg-white text-slate-900 hover:bg-slate-100 font-semibold text-lg px-8 h-14 rounded-full">Give Today</button>
+                    <a href="#programs" class="inline-flex items-center justify-center gap-x-3 border border-white/40 hover:bg-white/10 font-semibold text-lg px-8 h-14 rounded-full">Explore Our Work</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- ABOUT / MISSION -->
+    <!-- ABOUT -->
     <section id="about" class="max-w-7xl mx-auto px-6 pt-20 pb-16">
-        <div class="grid md:grid-cols-12 gap-x-12 gap-y-10 items-center">
+        <div class="grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-7">
                 <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-3">OUR MISSION</div>
-                <h2 class="section-header tracking-tight leading-none mb-6">
-                    Every person deserves<br>care delivered with<br>honesty and dignity.
-                </h2>
-                <div class="prose prose-lg text-slate-600 max-w-2xl">
-                    <p class="text-[17px]">
-                        Integrity Care Resources was founded in 2026 to address a critical gap: 
-                        military veterans leaving incarceration or under community supervision 
-                        (probation/parole) face overwhelming barriers to stable employment and housing.
-                    </p>
-                    <p class="text-[17px]">
-                        We exist to change that. We provide targeted re-entry navigation, trauma-informed 
-                        support, career readiness, vocational training, and direct employment placement — 
-                        with an unwavering commitment to dignity and integrity for every veteran we serve.
-                    </p>
-                </div>
+                <h2 class="text-4xl font-semibold tracking-tight mb-6">Every person deserves care delivered with honesty and dignity.</h2>
+                <p class="text-[17px] text-slate-600 mb-4">Integrity Care Resources was founded in 2026 to address a critical gap: military veterans leaving incarceration or under community supervision face overwhelming barriers to stable employment and housing.</p>
+                <p class="text-[17px] text-slate-600">We provide targeted re-entry navigation, trauma-informed support, career readiness, vocational training, and direct employment placement — with an unwavering commitment to dignity and integrity.</p>
             </div>
-
-            <div class="md:col-span-5 bg-slate-50 rounded-3xl p-8 md:p-9 text-sm">
-                <div class="space-y-6">
-                    <div>
-                        <div class="font-semibold text-slate-900 mb-1">Founded</div>
-                        <div class="text-slate-600">2026 • Southampton, Massachusetts</div>
-                    </div>
-                    <div>
-                        <div class="font-semibold text-slate-900 mb-1">Tax Status</div>
-                        <div class="text-slate-600">501(c)(3) Public Charity • EIN 46-3849217</div>
-                    </div>
-                    <div>
-                        <div class="font-semibold text-slate-900 mb-1">Leadership</div>
-                        <div class="text-slate-600">Board of Directors with backgrounds in medicine, social work, law, and ethics</div>
-                    </div>
-                    <div class="pt-2">
-                        <a href="#contact" class="inline-flex items-center text-teal-700 hover:text-teal-800 font-semibold group">
-                            Meet our team 
-                            <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-0.5 transition"></i>
-                        </a>
-                    </div>
+            <div class="md:col-span-5 bg-slate-50 rounded-3xl p-8">
+                <div class="space-y-5 text-sm">
+                    <div><div class="font-semibold">Founded</div><div class="text-slate-600">2026 • Southampton, Massachusetts</div></div>
+                    <div><div class="font-semibold">Tax Status</div><div class="text-slate-600">501(c)(3) Public Charity • EIN 46-3849217</div></div>
+                    <div><div class="font-semibold">Leadership</div><div class="text-slate-600">Board of Directors with backgrounds in medicine, social work, law, and ethics</div></div>
+                    <a href="#contact" class="inline-flex items-center text-teal-700 font-semibold">Meet our team <i class="fa-solid fa-arrow-right ml-2"></i></a>
                 </div>
             </div>
         </div>
@@ -262,62 +160,122 @@
     <!-- WHO WE SERVE -->
     <section id="who-we-serve" class="max-w-7xl mx-auto px-6 pb-16">
         <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-3">WHO WE SERVE</div>
-        <h2 class="section-header tracking-tight leading-none mb-4">
-            Veterans and the people who run toward the call.
-        </h2>
-        <p class="max-w-3xl text-[17px] text-slate-600 mb-10">
-            Integrity Care Resources was built first for justice-involved and recently released military veterans.
-            We also walk alongside firefighters, EMS, law enforcement, dispatchers, and other emergency services
-            professionals who carry trauma, employment gaps, or re-entry barriers after service to their communities.
-        </p>
+        <h2 class="text-4xl font-semibold tracking-tight mb-4">Veterans and the people who run toward the call.</h2>
+        <p class="max-w-3xl text-[17px] text-slate-600 mb-10">Built first for justice-involved and recently released military veterans. We also walk alongside firefighters, EMS, law enforcement, dispatchers, and other emergency services professionals.</p>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            <div class="rounded-3xl border border-slate-200 bg-white p-7">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
-                    <i class="fa-solid fa-flag-usa text-xl"></i>
-                </div>
-                <h3 class="font-semibold text-xl tracking-tight mb-2">Military veterans</h3>
-                <p class="text-slate-600 text-[15px] leading-relaxed">Justice-involved and recently released veterans, transitioning service members, and military families.</p>
-            </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-7">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
-                    <i class="fa-solid fa-fire text-xl"></i>
-                </div>
-                <h3 class="font-semibold text-xl tracking-tight mb-2">Firefighters</h3>
-                <p class="text-slate-600 text-[15px] leading-relaxed">Career and volunteer firefighters navigating trauma, employment transitions, or community reintegration.</p>
-            </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-7">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
-                    <i class="fa-solid fa-truck-medical text-xl"></i>
-                </div>
-                <h3 class="font-semibold text-xl tracking-tight mb-2">EMS</h3>
-                <p class="text-slate-600 text-[15px] leading-relaxed">Emergency medical technicians and paramedics seeking stable employment and peer support.</p>
-            </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-7">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
-                    <i class="fa-solid fa-shield-halved text-xl"></i>
-                </div>
-                <h3 class="font-semibold text-xl tracking-tight mb-2">Law enforcement</h3>
-                <p class="text-slate-600 text-[15px] leading-relaxed">Officers and deputies facing employment gaps, trauma, or re-entry barriers after service.</p>
-            </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-7">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
-                    <i class="fa-solid fa-headset text-xl"></i>
-                </div>
-                <h3 class="font-semibold text-xl tracking-tight mb-2">Dispatchers</h3>
-                <p class="text-slate-600 text-[15px] leading-relaxed">911 and emergency dispatch professionals seeking career pathways and support.</p>
-            </div>
-            <div class="rounded-3xl border border-slate-200 bg-white p-7">
-                <div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700">
-                    <i class="fa-solid fa-hands-helping text-xl"></i>
-                </div>
-                <h3 class="font-semibold text-xl tracking-tight mb-2">Other first responders</h3>
-                <p class="text-slate-600 text-[15px] leading-relaxed">Emergency services professionals carrying the weight of community service and seeking a path forward.</p>
+            <div class="rounded-3xl border border-slate-200 p-7"><div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700"><i class="fa-solid fa-flag-usa text-xl"></i></div><h3 class="font-semibold text-xl mb-2">Military veterans</h3><p class="text-slate-600 text-[15px]">Justice-involved and recently released veterans, transitioning service members, and military families.</p></div>
+            <div class="rounded-3xl border border-slate-200 p-7"><div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700"><i class="fa-solid fa-fire text-xl"></i></div><h3 class="font-semibold text-xl mb-2">Firefighters</h3><p class="text-slate-600 text-[15px]">Career and volunteer firefighters navigating trauma, employment transitions, or community reintegration.</p></div>
+            <div class="rounded-3xl border border-slate-200 p-7"><div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700"><i class="fa-solid fa-truck-medical text-xl"></i></div><h3 class="font-semibold text-xl mb-2">EMS</h3><p class="text-slate-600 text-[15px]">Emergency medical technicians and paramedics seeking stable employment and peer support.</p></div>
+            <div class="rounded-3xl border border-slate-200 p-7"><div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700"><i class="fa-solid fa-shield-halved text-xl"></i></div><h3 class="font-semibold text-xl mb-2">Law enforcement</h3><p class="text-slate-600 text-[15px]">Officers and deputies facing employment gaps, trauma, or re-entry barriers after service.</p></div>
+            <div class="rounded-3xl border border-slate-200 p-7"><div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700"><i class="fa-solid fa-headset text-xl"></i></div><h3 class="font-semibold text-xl mb-2">Dispatchers</h3><p class="text-slate-600 text-[15px]">911 and emergency dispatch professionals seeking career pathways and support.</p></div>
+            <div class="rounded-3xl border border-slate-200 p-7"><div class="w-12 h-12 bg-teal-50 rounded-2xl flex items-center justify-center mb-5 text-teal-700"><i class="fa-solid fa-hands-helping text-xl"></i></div><h3 class="font-semibold text-xl mb-2">Other first responders</h3><p class="text-slate-600 text-[15px]">Emergency services professionals carrying the weight of community service and seeking a path forward.</p></div>
+        </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section id="programs" class="bg-slate-50 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-3">PROGRAMS</div>
+            <h2 class="text-4xl font-semibold tracking-tight mb-10">Pathways to stable employment and reintegration.</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <a href="v-rep.html" class="program-card block rounded-3xl bg-white p-8 border border-slate-200">
+                    <h3 class="text-2xl font-semibold mb-3">V-REP</h3>
+                    <p class="text-slate-600 mb-4">Veterans Re-Entry Employment Pathway — targeted navigation, trauma-informed support, and direct placement for justice-involved veterans.</p>
+                    <span class="text-teal-700 font-semibold">Learn more →</span>
+                </a>
+                <a href="employability-skills-fast-track.html" class="program-card block rounded-3xl bg-white p-8 border border-slate-200">
+                    <h3 class="text-2xl font-semibold mb-3">Fast-Track Employability</h3>
+                    <p class="text-slate-600 mb-4">Career readiness, soft skills, and rapid pathway into stable employment for veterans and first responders.</p>
+                    <span class="text-teal-700 font-semibold">Learn more →</span>
+                </a>
+                <a href="industrial-logistics-transportation.html" class="program-card block rounded-3xl bg-white p-8 border border-slate-200">
+                    <h3 class="text-2xl font-semibold mb-3">Industrial Logistics & Transportation</h3>
+                    <p class="text-slate-600 mb-4">Hands-on training in logistics, warehouse operations, and transportation careers.</p>
+                    <span class="text-teal-700 font-semibold">Learn more →</span>
+                </a>
+                <a href="construction.html" class="program-card block rounded-3xl bg-white p-8 border border-slate-200">
+                    <h3 class="text-2xl font-semibold mb-3">New Facility</h3>
+                    <p class="text-slate-600 mb-4">Updates on our training facility and expanded capacity for vocational programs.</p>
+                    <span class="text-teal-700 font-semibold">Learn more →</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Note: Remaining sections (programs, impact, know-your-rights, contact, donation modal, footer, and scripts) are preserved from the original index.html. Full original content continues below in production. -->
-    <p class="text-center text-slate-500 text-sm py-8">Additional sections load from the original page structure. SEO and structured data have been enhanced.</p>
+    <!-- IMPACT -->
+    <section id="impact" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-3">IMPACT</div>
+        <h2 class="text-4xl font-semibold tracking-tight mb-10">Dignity in every outcome.</h2>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+            <div><div class="text-5xl font-semibold text-teal-700">2026</div><p class="text-slate-600 mt-2">Year founded</p></div>
+            <div><div class="text-5xl font-semibold text-teal-700">501(c)(3)</div><p class="text-slate-600 mt-2">Public charity status</p></div>
+            <div><div class="text-5xl font-semibold text-teal-700">Western MA</div><p class="text-slate-600 mt-2">Serving the region</p></div>
+        </div>
+    </section>
 
+    <!-- KNOW YOUR RIGHTS -->
+    <section id="know-your-rights" class="bg-slate-50 py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-3">KNOW YOUR RIGHTS</div>
+            <h2 class="text-4xl font-semibold tracking-tight mb-6">Clear information. Stronger outcomes.</h2>
+            <p class="max-w-3xl text-[17px] text-slate-600 mb-8">Resources on reasonable accommodation, debt collection rights, due process, and more — designed for the people we serve.</p>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div class="rounded-3xl bg-white p-6 border border-slate-200"><h3 class="font-semibold mb-2">ADA Reasonable Accommodation</h3><p class="text-sm text-slate-600">Understanding workplace rights and accommodations.</p></div>
+                <div class="rounded-3xl bg-white p-6 border border-slate-200"><h3 class="font-semibold mb-2">FDCPA Debt Collection</h3><p class="text-sm text-slate-600">Protections against unfair debt collection practices.</p></div>
+                <div class="rounded-3xl bg-white p-6 border border-slate-200"><h3 class="font-semibold mb-2">Right to Remain Silent</h3><p class="text-sm text-slate-600">Due process and constitutional protections.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-7xl mx-auto px-6 py-20">
+        <div class="uppercase tracking-[2px] text-xs font-semibold text-teal-700 mb-3">CONTACT</div>
+        <h2 class="text-4xl font-semibold tracking-tight mb-6">Get in touch.</h2>
+        <p class="text-[17px] text-slate-600 mb-8 max-w-2xl">Whether you are a veteran, first responder, employer, or community partner, we would like to hear from you.</p>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div>
+                <p class="mb-2"><strong>Location</strong><br>Southampton, Massachusetts</p>
+                <p class="mb-2"><strong>EIN</strong><br>46-3849217</p>
+                <p><strong>Website</strong><br><a href="https://my-integrity-hub.org" class="text-teal-700">my-integrity-hub.org</a></p>
+            </div>
+            <div>
+                <a href="contact.html" class="inline-flex items-center px-8 py-4 bg-teal-700 text-white font-semibold rounded-full hover:bg-teal-800">Contact Form</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-300 py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <p class="font-semibold text-white mb-2">Integrity Care Resources</p>
+            <p class="text-sm mb-4">501(c)(3) Nonprofit • EIN 46-3849217 • Southampton, MA</p>
+            <p class="text-sm">&copy; 2026 Integrity Care Resources. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- DONATE MODAL -->
+    <div id="donate-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+        <div class="modal bg-white rounded-3xl p-8 max-w-md w-full mx-4">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-2xl font-semibold">Support Our Work</h3>
+                <button onclick="closeDonateModal()" class="text-slate-500 text-2xl">&times;</button>
+            </div>
+            <p class="text-slate-600 mb-6">Your gift helps veterans and first responders build stable careers and successful reintegration.</p>
+            <div class="space-y-3">
+                <a href="https://www.paypal.com" target="_blank" class="block w-full text-center py-3 bg-teal-700 text-white font-semibold rounded-full">Donate via PayPal</a>
+                <button onclick="closeDonateModal()" class="block w-full text-center py-3 border border-slate-300 rounded-full">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+        function closeMobileMenu() { mobileMenu.classList.add('hidden'); }
+        function showDonateModal() { document.getElementById('donate-modal').classList.remove('hidden'); }
+        function closeDonateModal() { document.getElementById('donate-modal').classList.add('hidden'); }
+        document.querySelectorAll('#mobile-menu a').forEach(a => a.addEventListener('click', closeMobileMenu));
+    </script>
 </body>
 </html>
