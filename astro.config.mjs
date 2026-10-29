@@ -7,11 +7,12 @@ import cloudflare from "@astrojs/cloudflare";
 
 // https://astro.build/config
 export default defineConfig({
-	site: "https://example.com",
+	site: "https://my-integrity-hub.org",
 	integrations: [mdx(), sitemap()],
 	adapter: cloudflare({
-		platformProxy: {
-			enabled: true,
-		},
+		// platformProxy disabled — was causing TypeError: Cannot read properties of undefined (reading 'fetch')
+		// platformProxy: {
+		// 	enabled: true,
+		// },
 	}),
 });
